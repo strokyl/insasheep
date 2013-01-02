@@ -1,0 +1,8 @@
+1/ FPGA et outils de conception actuel d'ASIC
+    1) Langages de description VHDL et ASIC
+    2) FPGA
+    3) ASIC et SoC
+
+2/ SoC open source
+    1) Qu'est ce qu'un SoC open source
+    2) L'avancé de la communauter open source sur ce domaine
