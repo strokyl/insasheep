@@ -1,0 +1,58 @@
+\documentclass{report}
+
+\usepackage{pdfpages}
+\usepackage[cyr]{aeguill}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage[francais]{babel}
+\usepackage{listingsutf8}
+\usepackage{graphics}
+\DeclareUnicodeCharacter{B0}{\textdegree}
+\renewcommand{\contentsname}{Sommaire}
+
+\date{\today}
+\author{}
+\title{}
+\makeatother
+\title{Rapport de projet tutoré : Développement d'un System-On-Chip open-source}
+\author{\bsc{DUZAN} Luc \and \bsc{LONGO} Mathieu \and \bsc{FARACHE} Gabriel \and \bsc{MICHAUD} Clément }
+
+\date{20 janvier 2012}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter*{Introduction}
+
+\chapter{FPGA et outils de conception actuel d'ASIC}
+
+\section{FPGA et ASIC}
+    \include{fpga_asic}
+
+\section{Langages de description Verilog et VHDL}
+    \include{langage}
+
+\section{Le monde de l'open source et son avancement sur les FPGA}
+    \include{open_source}
+
+\chapter{L'adaptation de MilkyMist sur la Nexys3}
+
+\section{Portabilité d'une architecture matériel}
+    \include{portabilite}
+
+\section{Adapter le système logiciel associé}
+    \include{systeme_logiciel}
+
+\section{Reconfiguration du materiel à la volée}
+    \include{reconfigurable}
+
+
+\chapter*{Conclusion}
+
+\include{annexe}
+
+\end{document}
+
