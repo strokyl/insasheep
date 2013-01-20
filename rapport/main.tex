@@ -1,7 +1,6 @@
 \documentclass{report}
-
 \usepackage{pdfpages}
-\usepackage[cyr]{aeguill}
+%\usepackage[cyr]{aeguill}
 \usepackage[utf8]{inputenc}
 \usepackage{xspace}
 \usepackage[francais]{babel}
@@ -38,17 +37,18 @@
 \section{Le monde de l'open source et son avancement sur les FPGA}
     \include{open_source}
 
-\chapter{L'adaptation de MilkyMist sur la Nexys3}
+\chapter{L'adaptation de Milkymist sur la Nexys3}
 
 \section{Portabilité d'une architecture matériel}
     \include{portabilite}
 
 \section{Adapter le système logiciel associé}
-    \include{systeme_logiciel}
+    \input{systeme_logiciel}
+    \newpage
 
 \section{Reconfiguration du materiel à la volée}
-    \include{reconfigurable}
-
+    \input{reconfigurable}
+	\newpage
 
 \chapter*{Conclusion}
 
