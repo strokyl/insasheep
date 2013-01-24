@@ -1,0 +1,15 @@
+﻿RUBOW, Erik. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : University of California, San Diego, Cours, 2008, 5p. Disponible sur <http://cseweb.ucsd.edu/classes/fa08/cse237a/topicresearch/erubow_tr_report.pdf> (Consulté le 24 janvier 2013).
+
+ACOSTA, Roberto. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : Massachusetts Institute of Technology, 2009, 83p. Disponible sur <http://18.7.29.232/bitstream/handle/1721.1/55201/609411873.pdf> (Consulté le 24 janvier 2013).
+
+BAXTER, Julius, BENNETT, Jeremy et opencores.org. \textit{Practical System-on-Chip}. \textbf{In} : \textit{Open Source Hardware User Group} \textbf{[en ligne]}. (Modifié le 29 mars 2012). Disponible sur <http://oshug.org/presentations/openrisc-oshug17-final.pdf> (Consulté le 24 janvier 2013).
+
+GAISLER, Jiri. \textit{Industrial use of open-source IP cores}. \textit{45th IFIP WG 10.4 - Workshop on "Open Source and Dependability"}. Moorea polynésie française, 5-9 mars 2004. Disponible sur <http://webhost.laas.fr/TSF/IFIPWG/Workshops&Meetings/45/06-Gaisler.pdf> (Consulté le 24 janvier 2013).
+
+INMAN, Kurt and FRITSKY, Lauren. \textit{What Is an IP Core?}. \textbf{In} : \textit{wiseGEEK} \textbf{[en ligne]}. Disponible sur <http://www.wisegeek.com/what-is-an-ip-core.htm> (Consulté le 24 janvier 2013).
+
+Mohamed A. Salem and Jamil I. Khatib. An introduction to open-source hardware development. EETimes. Modifié le 07 janvier 2004. Disponible sur <http://eetimes.com/electronics-news/4155052/An-introduction-to-open-source-hardware-development>
+
+OSHW. \textit{Definition of Free Cultural Works} \textbf{[en ligne]}. (modifié le 9 janvier 2013). Disponible sur : http://freedomdefined.org/OSHW. (consulté le 24 janvier 2013).
+
+WITZ, Jean-François, CHAMBON, Olivier. \textit{Matériel OpenSource (OpenHardware) et la recherche}. \textbf{In} : \textit{PLUME} \textbf{[en ligne]}. (Modifié le 29 août 2011). Disponible sur <https://www.projet-plume.org/ressource/openhardware> (Consulté le 24 janvier 2013).

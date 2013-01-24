@@ -1,0 +1,22 @@
+﻿
+Register-transfer level. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 01 janver 2013). Disponible sur : http://en.wikipedia.org/w/index.php?title=Register-transfer_level&oldid=530759637. (consulté le 24 janvier 2013).
+
+THOMAS, Donald E. et MOORBY, Philip R. \texit{The Verilog® Hardware Description Language.} \textbf{[en ligne]}. Springer. Etats-Unis d'Amérique : 2002, 408p. Format google book. Disponible sur <http://books.google.fr/books?id=DxQGrz7q-SwC&printsec=frontcover&hl=fr#v=onepage&q&f=false> (Consulté le 24 janvier 2013).
+
+Milkymist. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 13 janvier 2013). Disponible sur : http://en.wikipedia.org/w/index.php?title=Milkymist&oldid=532830955 (consulté le 24 janvier 2013).
+
+KASHAP, Satish. Lec 08 Hardware Description Language (HDL). [18 mars 2012] [enregistrement vidéo] In : Youtube [1h 07' 54"]. Disponible sur : http://www.youtube.com/watch?v=rdAPXzxeaxs. (consulté le 20 janvier 2013).
+
+GIOMI, Jean-Charles et TARROUX, Gerard. \textit{Integrated circuit fabrication using state machine extraction from ...}. Brevet 5537580. 21 décembre 1994.
+
+Hardware description language. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 14 janvier 2013). Disponible sur : http://en.wikipedia.org/w/index.php?title=Hardware_description_language&oldid=532956772 (consulté le 24 janvier 2013).
+
+SMITH, Douglas J. VHDL & Verilog Compared & Contrasted Plus Modeled Example Written in VHDL, Verilog and C. In Rajesh Bawankule's Verilo Center. \textbf{[en ligne]}. (Denière mise à jour du site : 12 février 2003) Disponible sur http://www.angelfire.com/in/rajesh52/verilogvhdl.html (consulté le 07 janvier 2013).
+
+CHAKRABARTI, Indrajit. \textit{VERILOG Hardware Description Language} \textbf{[en ligne]}. Inde : IIT Kharagpur, Cours, 2007, 24p. Dispobible sur <http://www.smdp.iitkgp.ernet.in/PDF\%5CVLSI_DSP\%5CIC-Verilog.pdf> (consutlté le 05 janvier 2013).
+
+Verilog. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 7 septembre 2012). Disponible sur : http://fr.wikipedia.org/w/index.php?title=Verilog&oldid=82794321. (consulté le 20 janvier 2013).
+
+DON, Thomas. \textit{The Verilog Hardware Description Language}. \textbf{[en ligne]}. Etats-Unis d'Amérique : University of Iowa, Cours, 1998, 11p. Disponible sur <http://www.engineering.uiowa.edu/~hpca/LectureNotes/VerilogTutorialSpring11.pdf> (Consulté le 05 janvier 2013).
+
+VHDL. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 4 décembre 2012). Disponible sur : http://fr.wikipedia.org/w/index.php?title=VHDL&oldid=86139857. (consulté le 20 janvier 2013).
