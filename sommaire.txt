@@ -1,10 +1,20 @@
-1/ FPGA et outils de conception actuel d'ASIC
-    1) FPGA vs ASIC (puisque les 2 sont liés au SoC)
-    2) Langages de description Verilog, VHDL et autres
-    3) Le monde de l'open source (un bref rappel de ce que c'est et de ce qu'on y gagne et ensuite en parler dans le domaine du FPGA)
-
-
-2/ L'daptation de MilkyMist sur la Nexys3
-    1) Portabilité d'une architecture matériel.
-    2) Adapter le système logiciel associé.
-    3) Pour aller plus loin : the reconfigurable hardware.
+Intro
+    contexte  & problématique (historique et pourquoi on a fait des fpga)
+    ce que nous devons faire
+    annonce et explication du plan
+I - Conception du matériel
+    1.FPGA & ASIC -> "Moteur, conception"
+    2.VHDL, Verilog, Migel -> "langage"
+    3.open source
+II - Adaptation
+    1.projet milkymist 
+        *ce qui existe (on peut aller dans le détail)
+        *il faut décrire et terminé par des piste d'améliorations, c'est à dire ce qu'on va faire (fait office de transition)
+    2.Le travail
+        *ce qu'on va faire (plus en détail que dans l'intro, prendre le descriptif du sujet sur l'intranet)
+        *le portage
+        *le développement du/des module(s)
+Conclusion 
+    ->synthétiser 
+        *on dit ce qu'on a fait (documentations, petits programme tests, ...) == état actuel
+        *ce qu'on va faire
