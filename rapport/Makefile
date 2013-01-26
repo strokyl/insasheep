@@ -20,7 +20,7 @@ all: $(PDF)
 	pdflatex $<
 
 clean:
-	rm -f *.aux $(AUX) $(DVI) $(PS) $(PDF) $(AUX) $(LOG) $(SNM) $(OUT) $(NAV) $(TOC) $(BBL) $(BLG) $(LOF) $(LOT) *~
+	rm -f *.aux *.pdf $(AUX) $(DVI) $(PS) $(PDF) $(AUX) $(LOG) $(SNM) $(OUT) $(NAV) $(TOC) $(BBL) $(BLG) $(LOF) $(LOT) *~
 
 read:
 	evince main.pdf &
