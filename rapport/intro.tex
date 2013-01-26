@@ -1,0 +1,63 @@
+Les systèmes électroniques numériques sont constitués de bascules (permettant de
+sauvegarder des états logiques) et de portes logiques (et, ou, non, ou exclusif par
+exemple) interconnectés entre elles. Ces portes sont elles même constituées de
+transistors qui sont donc les briques élémentaires de l'électronique numérique. En
+effet, ils peuvent être utilisés comme de minuscules interrupteurs pilotés. Il est
+possible de graver un enchevêtrement complexe de transistors sur une seule plaque de
+silicium, on parle de circuit intégré.  Concevoir un circuit intégré consiste alors à
+choisir des portes logiques et des bascules et à définir des connexions entre elles
+afin d'obtenir le comportement désiré.  Les portes logiques sont aussi décrites par
+des réseaux de transistors.  Au final, un circuit intégré est construit en gravant un
+complexe réseau de transistors sur une seule plaque de silicium.
+
+Historiquement ce réseau complexe était dessiné à la main sur des feuilles spéciales
+(feuilles de mylar) ce qui limitait fortement la complexité des circuits intégrés. De
+plus, il n'était pas possible de tester la conception sans la graver. La montée en
+puissance des ordinateurs a alors permis la mise en place de langages de description
+de matériel (appelé HDL pour \textit{hardware description language}). Les HDL
+permettent de modéliser le comportement des circuits logiques et également de décrire
+les structures de ces circuits logiques, on peut alors simuler le comportement de la
+structure décrite et vérifier qu'elle se comporte de manière conforme au modèle. Il
+est souvent possible de déduire de manière automatique la description structurelle
+d'un circuit à l'aide de sa description comportementale. L'apparition de ses langages
+a alors révolutionné le monde de la conception des circuits intégrés. Les concepteurs
+décrivent alors leurs circuits grâce aux HDL, les simulent de manière virtuelle et
+génèrent automatiquement à l'aide de synthétiseurs les dessins physiques qui
+représentent le circuit intégré, ces dessins appelés netlists sont ensuite envoyés à
+une fonderie qui s'occupe alors de la fabrication. Une fonderie est une entreprise
+spécialisée dans la fabrication de circuits. Ces nouvelles techniques de productions
+permettent alors de produire des circuits intégrés spécifiques à des attentes
+particulières plutôt que d'utiliser des microcontrôleurs et de les programmer afin
+d'obtenir le comportement attendu, il s'agit d'ASIC pour \textit{Application Specific
+Integrated Circuit}. Cependant la conception et surtout la fabrication d'ASIC ne
+peuvent être rentabilisées que pour de gros volumes de production, de plus une erreur
+de conception sur un ASIC peut coûter très cher. Mais l'apparition des FPGA (pour
+\textit{Field Programmable Gate Array}), qui sont des circuits intégrés logiques
+reprogrammables après leur conception, marque encore une fois une révolution.  Ils
+permettent de tester de manière plus poussée la conception d'ASIC en créant des
+prototypes et peuvent même être vendus une fois programmés à la place d'ASIC pour des
+petits volumes de production. Les FPGA de nos jours sont assez performant pour
+contenir l'intégralité des composants nécessaires au fonctionnement d'un système
+complet (microprocesseurs, mémoire, GPIO par exemple), on parle alors de SoC. Les SoC
+(\textit{Systen On Chip}) désignent un système complet qui est contenu sur une seul
+puce que ce soit un FPGA ou un ASIC.
+
+Dans notre projet tutoré, nous allons nous intéresser plus particulièrement au
+MilkyMist SoC, qui est un SoC open source, c'est à dire que le code HDL qui le décrit
+est libre de droit.  Ce SoC a été conçu pour être programmé sur un FPGA spécifique le
+Virtex-4 XC4VLX25.  Notre but est d'adapter le code de ce SoC pour le rendre
+compatible avec le Xiling Spartan 6 qui est utilisé à l'INSA de Toulouse.  Nous
+allons aussi ajouter un module à MilkyMist permettant d'exploiter la propriété de
+certains FPGA qui est le pouvoir d'être reprogrammé à la volée. C'est à dire que nous
+allons permettre au système MilkyMist de pouvoir ajouter à chaud (sans redémarrer le
+système) des périphériques (à partir de leurs descriptions structurelles) sur le FPGA
+et de les connecter au SoC. 
+
+Ce rapport ayant pour but de clarifier le travail de notre projet tutoré, nous allons
+dans un premier temps détailler la conception des circuits intégrés.  Pour cela, on
+parlera d'abord des supports pouvant recevoir des circuits intégrés (FPGA et ASIC),
+nous parlerons ensuite de la conception du matériel à l'aide des langages de
+description de matériel tel que VHDL, Verilog et Migel et on fera un état sur
+l'avancement de la communauté Open Source dans ce domaine.  Dans la deuxième partie,
+nous parlerons ensuite du projet MilkyMist et de l'intention de notre contribution
+sur ce projet.

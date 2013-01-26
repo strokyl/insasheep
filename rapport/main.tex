@@ -25,22 +25,23 @@
 \tableofcontents
 
 \chapter*{Introduction}
+    \input{intro}
 
-\chapter{FPGA et outils de conception actuel d'ASIC}
+\chapter{Conception du matériel}
 
-\section{FPGA et ASIC}
-    \include{fpga_asic}
+\section{Technologie de conception}
+    \input{fpga_asic}
 
-\section{Langages de description Verilog et VHDL}
-    \include{langage}
+\section{Langage de description de circuit logique}
+    \input{langage}
 
 \section{Le monde de l'open source et son avancement sur les FPGA}
-    \include{open_source}
+    \input{open_source}
 
-\chapter{L'adaptation de Milkymist sur la Nexys3}
+\chapter{Adaptation d'un System On Chip libre : MilkyMist}
 
-\section{Portabilité d'une architecture matériel}
-    \include{portabilite}
+\section{Le projet MilkyMist}
+    \input{portabilite}
 
 \section{Adapter le système logiciel associé}
     \input{systeme_logiciel}
@@ -52,7 +53,7 @@
 
 \chapter*{Conclusion}
 
-\include{annexe}
+\input{annexe}
 
 \end{document}
 
