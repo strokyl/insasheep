@@ -8,6 +8,7 @@
 \usepackage{graphics}
 \DeclareUnicodeCharacter{B0}{\textdegree}
 \renewcommand{\contentsname}{Sommaire}
+\usepackage[T1]{fontenc}
 
 \date{\today}
 \author{}
@@ -31,25 +32,28 @@
 
 \section{Technologie de conception}
     \input{fpga_asic}
+    \newpage
 
 \section{Langage de description de circuit logique}
     \input{langage}
+    \newpage
 
 \section{Le monde de l'open source et son avancement sur les FPGA}
     \input{open_source}
+    \newpage
 
 \chapter{Adaptation d'un System On Chip libre : MilkyMist}
 
 \section{Le projet MilkyMist}
     \input{portabilite}
-
+    \newpage
 \section{Adapter le système logiciel associé}
     \input{systeme_logiciel}
     \newpage
 
 \section{Reconfiguration du materiel à la volée}
     \input{reconfigurable}
-	\newpage
+    \newpage
 
 \chapter*{Conclusion}
 

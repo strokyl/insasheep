@@ -3,10 +3,14 @@
 \vspace{15px}
 Verilog et Very high speed integrated circuit Hardware Description Language ou VHDL sont tous deux des Hardware Description Language ou HDL soit en français Langage de Description de Matériel. Les HDL utilisent une méthode de description de flux de processus résultant d'un modèle de flux de données avec des informations de synchronisation (le temps). Cette méthode consiste en une abstraction au niveau des portes logiques et des transitors. Cette méthode s'appelle Register-Transfer Level ou RTL et a été défini à cause de l'explosion de la complexité des circuits électroniques depuis les années 1970 (loi de Moore). En effet, les concepteurs de matériel micro-électronique avaient besoin d'une méthode de description logique des matériel numériques de plus haut niveau pour limiter la complexité de la conception et cela sans que cette dernière ne soit spécifique à une technologie en particulier. Les HDL utilisent donc cette méthode pour représenter des circuits à un niveau élevé. A partir de cette représentation des circuits, des représentations de plus bas niveaux et le cablage peuvent être déduit. Les HDL permettent donc de décrire un circuit électronique tant au niveau comportemental que structurel, c'est-à-dire les flux de signaux transitant entre les différents registres. C'est pour cette simplification dans la conception et l'utilisation des matériels que les HDL sont largement utilisés dans l'industrie.
 \newpage
-\begin{figure}[h!]
-\includegraphics{rtl_example.png}
-\caption{Schéma représentant un circuit électronique}  
-\end{figure} 
+%\begin{figure}[h!]
+%\includegraphics{rtl_example.png}
+%\caption{Schéma représentant un circuit électronique}  
+%\end{figure}
+\begin{center}
+\includegraphics[scale=0.4]{rtl_example.png}
+\end{center}
+
 \par
 Le schéma ci-dessus montre comment est représenté un circuit. Nous constatons qu'il est ici totalement fait abstraction des comment ce dernier est câblé. Nous ne connaissons que ce qui entre et ce qui sort de ce dernier. Un HDL décrira quant à lui le "comportement" externe, générale du circuit.
 \\
