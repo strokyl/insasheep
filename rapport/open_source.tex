@@ -1,7 +1,37 @@
 \vspace{15px}
-Dans cette partie nous allons parler des matériels open-source, c'est à dire que les matériels, ou plutôt leurs conceptions, sont crées de manière communautaire ou par des sociétés privée. Ils ne sont pas soumis à des brevets ultra-restricitfs mais qui sont le plus souvent sous licence GPL (General Public License) ou assimilé plus souples.
+\begin{minipage}{0.40\linewidth}
+\includegraphics{oshw-logo.jpg}
+\end{minipage}\hfill
+\begin{minipage}{0.55\linewidth}
+Dans cette partie nous allons parler des matériels open-source, c'est à dire que les matériels, ou plutôt leurs conceptions, sont crées de manière communautaire ou par des sociétés privée. Ils ne sont pas soumis à des brevets ultra-restricitfs mais qui sont le plus souvent sous licence GPL (General Public License) ou assimilé plus souples. 
+\end{minipage}
 \medskip
-Le materiel open-source est très peu developpé contrairement à son homologue loigiciel. Il n'y a que peu d'acteurs sur cette scène alors qu'il y en a des dizaines pour l'open-source logiciel. Cependant, ce pan de l'open-source tend de plus en plus à se developper ces derniers temps. Pour preuve, en 2010 a été publié le \textbf{Open Source Hardware} (\textbf{OSHW}). Il s'agit d'une définition de ce qu'est un matériel open-source et des idéaux de ce dernier.
+Le materiel open-source est très peu developpé contrairement à son homologue loigiciel. Il n'y a que peu d'acteurs sur cette scène alors qu'il y en a des dizaines pour l'open-source logiciel. Cependant, ce pan de l'open-source tend de plus en plus à se developper ces derniers temps. Pour preuve, en 2010 a été publié le \textbf{Open Source Hardware} (\textbf{OSHW}). Il s'agit d'une définition de ce qu'est un matériel open-source et des idéaux de ce dernier..
 \medskip
-La plus grosse communauter à l'heure actuelle est OpenCores (http://opencores.org). Fondée en 1999 par Damjan Lampret, OpenCores (OC) a commendé a developpé \textit{OpenRISC 1000}. Le développent s'est poursuivi jusqu'en 2007. Durant cette période OC a été supporté par \textit{Flextronics}. A partir de 2007, \textit{OpenRISC 1000} est passé dans une phase de déploiement commerciale grâce à \textit{ORSoC AB}. En mars 2012, il y avait plus de 147 000 utitilisateurs enregistrés et plus de 900 projets en cours sur cette architecure matériel. \textit{ORPSoC} est l'implémentation de SoC de référence sur cette architecture.
+Il y a d'autres projets en cours, que ce soit dans le domaine des ordinateurs eux-mêmes, dans leur composants (CPU (\textit{Central Processing Unit}, le coeur de la machine), carte graphique, ...), voir même dans d'autres secteurs tels que la téléphonie et le GPS. Voici la liste des projets open-source relatifs aux ordinateurs : \textit{Arduino}, \textit{Beagle Board}, \textit{Bug Labs}, \textit{CuBox}, \textit{Ethernut}, \textit{GP32}, \textit{Maple}, \textit{PLAICE}, \textit{Raspberry Pi}, \textit{Simputer}, \textit{Pandora}, \textit{PC532} qui date des années 1990, \textit{Minimig} qui est une nouvelle implémentation de l'Amiga 500 utilisant des FPGA, \textit{Milkymist One} qui est un carte-ordinateur implémentant tous les principes logiques à travers des fichiers de conception créés avec \textit{Verilog}. Ces fichiers sont open-source, donc disponible à tout le monde. Dans la plupart des autres matériel open-source, ces fichiers sont confidentiels et propriétaire. Bien évidemment, cette carte utilise \textit{Milkymist SoC} comme CPU.
 \medskip
+En parlant de CPU, nous pouvons aussi lister les différents projets : \textit{Amber}, \textit{LEON}, \textit{OpenCores}, \textit{OpenSPARC}, \textit{OpenRISC} qui est plus un groupe de développeur visant à créer des CPU RISK ayant des performances très importantes. Enfin, le \textit{Milkymist SoC}, coupellé au micro-processeur \textit{LatticeMico32}, qui possède un ensemble de SoC développé de manières indépendant et open-source. Nous constatons qu'il y a bien moins de projet open-source concernant les CPU que les ordinateurs eux-mêmes.
+\medskip
+La plus grosse communauter à l'heure actuelle est OpenCores (\URL{www.opencores.org}). Fondée en 1999 par Damjan Lampret, OpenCores (OC) a commendé a developpé \textit{OpenRISC 1000}. Le développent s'est poursuivi jusqu'en 2007. Durant cette période OC a été supporté par \textit{Flextronics}. A partir de 2007, \textit{OpenRISC 1000} est passé dans une phase de déploiement commerciale grâce à \textit{ORSoC AB}. En mars 2012, il y avait plus de 147 000 utitilisateurs enregistrés et plus de 900 projets en cours sur cette architecure matériel. \textit{ORPSoC} est l'implémentation de SoC de référence sur cette architecture. Cepedant, le \textit{Raspberry Pi} (raspi), l'ordinateur à 29\$ sortie courant 2012 grossit de plus en plus. De nombreuses cartes electroniques complémentaire au raspi sont sortient, toutes dans un prix raisonable. Un projet de sortir une caméra est même en cours et son prix devrait lui aussi être extremement raisonable compte tenu de la technologie impliqué. 
+\medskip
+Il faut savoir que contrairement aux idées reçus, les entreprises qui font de l'open-source hardware ont de (très) bons résultats. En effet, les 13 plus grosses sociétés qui ont ce genre d'activités ont toutes plus d'un million de dollars de chiffre d'affaire (en dollars et en 2010) :
+\begin{itemize}
+\item Adafruit Industries : plus d'1 million
+\item Arduino : plus d'1 million
+\item BeagleBoard : 1 million
+\item Bug Labs : 1 million
+\item Chumby : plus d'1 million
+\item Dangerous Prototypes
+\item DIY Drones : 1 million
+\item Evil Mad Scientist  Labs
+\item Liquidware : plus d'1 million
+\item MakerBot Industries : 1 million
+\item Maker Shed : plus d'1 million
+\item Parallax : plus d'1 million
+\item Seeed Studios : 1 million
+\item Solarbotics : plus d'1 million
+\item SparkFun Electronics : 10 millions
+\end{itemize} 
+Ces entreprises ne sont qu'un échantillon, il existe bien d'autres entreprises de ce type qui dépassent ou approche le million de chiffre d'affaire. De plus ces chiffres datent de 2010, on peut donc légitimement supposé que ces chiffres ont évolués de manières positives ces deux dernières années. De plus, selon les prévisions, en 2015, le chiffre d'affaire cumulé de toutes les entreprises de matériel open-source devrait avoisiné le milliard de dollars.
+\medskip
+Ce secteur a donc un avenir radieux qui s'offre à lui, de plus en plus de projet voient le jour et ceux qui sont déjà présents ne font que s'améliorer grâce au travail que donne toutes les personnes possédant ce genre de matériel, car c'est bien là le leitmotiv de l'open-source : la progression par la participation.
