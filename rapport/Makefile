@@ -16,8 +16,21 @@ LOT=$(TEX:.tex=.lot)
 
 all: $(PDF)
 
-%.pdf: %.tex
-	pdflatex $<
+main.dvi: main.tex
+	latex main.tex
+	latex main.tex
+
+%.dvi: %.tex
+	latex $<
+
+%.ps: %.dvi
+	dvips $<
+
+%.pdf: %.ps
+	ps2pdf $<
+
+#%.pdf: %.tex
+#	pdflatex $<
 
 clean:
 	rm -f *.aux *.pdf $(AUX) $(DVI) $(PS) $(PDF) $(AUX) $(LOG) $(SNM) $(OUT) $(NAV) $(TOC) $(BBL) $(BLG) $(LOF) $(LOT) *~
