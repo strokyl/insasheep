@@ -1,4 +1,4 @@
-﻿RUBOW, Erik. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : University of California, San Diego, Cours, 2008, 5p. Disponible sur <http://cseweb.ucsd.edu/classes/fa08/cse237a/topicresearch/erubow_tr_report.pdf> (Consulté le 24 janvier 2013).
+RUBOW, Erik. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : University of California, San Diego, Cours, 2008, 5p. Disponible sur <http://cseweb.ucsd.edu/classes/fa08/cse237a/topicresearch/erubow_tr_report.pdf> (Consulté le 24 janvier 2013).
 
 ACOSTA, Roberto. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : Massachusetts Institute of Technology, 2009, 83p. Disponible sur <http://18.7.29.232/bitstream/handle/1721.1/55201/609411873.pdf> (Consulté le 24 janvier 2013).
 
@@ -13,3 +13,8 @@ Mohamed A. Salem and Jamil I. Khatib. An introduction to open-source hardware de
 OSHW. \textit{Definition of Free Cultural Works} \textbf{[en ligne]}. (modifié le 9 janvier 2013). Disponible sur : http://freedomdefined.org/OSHW. (consulté le 24 janvier 2013).
 
 WITZ, Jean-François, CHAMBON, Olivier. \textit{Matériel OpenSource (OpenHardware) et la recherche}. \textbf{In} : \textit{PLUME} \textbf{[en ligne]}. (Modifié le 29 août 2011). Disponible sur <https://www.projet-plume.org/ressource/openhardware> (Consulté le 24 janvier 2013).
+
+TORRONE, Phillip et FRIED, Limor Fried. \textit{Million dollar baby}. \textit{Foo Camp East 2010} (http://foocamp10.wiki.oreilly.com/wiki/index.php/Main_Page). Sebastopol, Californie, 25-27 juin 2010. Disponible sur <http://www.adafruit.com/pt/fooeastignite2010.pdf> (Consulté le 27 janvier 2013).
+
+List of open-source hardware projects. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 17 janver 2013). Disponible sur : http://en.wikipedia.org/w/index.php?title=List_of_open-source_hardware_projects&oldid=533515806. (consulté le 27 janvier 2013).
+
