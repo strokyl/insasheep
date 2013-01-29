@@ -31,6 +31,13 @@
 
 \chapter{Conception du matériel}
 
+<<<<<<< Updated upstream
+\section{Technologie de conception}
+    \input{fpga_asic}
+    \newpage
+
+=======
+>>>>>>> Stashed changes
 \section{Langage de description de circuit logique}
     \input{langage}
     \newpage

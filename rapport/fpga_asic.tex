@@ -1,1 +1,74 @@
-A FAIRE
+\subsection{ASIC}
+
+\subsubsection{Netlist} Une fois la conception réalisée à l'aide de langages de
+descriptions matériel, on peux obtenir une netlist du circuits intégrés. Cette
+netlist contient dans un premier temps, une liste qui défini les composants utilisés
+dans ce circuit intégré, chaque composant est définie par les différents points de
+connexion (appelé \textit{port}) qu'il possède et par ses propriétés élémentaires. Un
+composant peut être quelque chose d'élémentaire comme un transistor ou une résistance
+tout comme un complexe circuit intégré. Ensuite la netlist va alors décrire des
+connexions entre des composants. Chaque composant décrit dans le réseau est forcement
+un des composants de la liste précédemment décrite, on dit alors que ce composant est
+une instance de la définition donnée dans la liste de composants. Les connexions sont
+décrites par une liste de fils. Un fil connecte un port donné d'une instance avec un
+autre port donné d'une autre instance. Pour limiter la redondance, on peut
+hiérarchiser les netlists, c'est à dire que l'on peut ranger une partie d'une réseau
+dans une définition d'un composant. De cette manière si cette partie est répétée
+plusieurs fois dans le réseau, on peux l'insérer comme on insérerait un composant
+élémentaire, et la description de cette partie est alors donnée qu'une seule fois.
+
+\subsubsection{Fabrication d'ASIC}
+
+
+\includegraphics{asic.png}
+
+A partir de la description en netlist, il est possible d'obtenir un fichier
+(généralement au format GDSII) qui représente le dessin physique du circuit intégré.
+C'est à dire qu'il représente entre autre les formes géométriques à graver sur le
+silicium, c'est ce fichier qui est envoyé aux fondeurs. Ce fichier permet alors
+d'obtenir les masques nécessaires à la gravure du système. Ce procédé utilisant le
+plus souvent la lithographie est très complexe et ne sera pas détaillé dans ce
+rapport. La fabrication d'ASIC demande un fort investissement en matériels, c'est
+pour cela qu'on observe une séparation entre les entreprises qui conçoivent les
+circuits intégrés et les fonderies car il faut une très grande production pour
+amortir les investissements. Seul quelques entreprises tel que Intel,
+STMicroelectronics, Texas Instruments qui produisent de très grands volumes peuvent
+se permettre de faire en même temps la conception et la réalisation de leurs
+circuits. Les ASIC ne peuvent alors être réalisé pour un prix raisonnable en petit
+volume.
+
+
+\subsection{FPGA}
+
+
+\includegraphics[width=12cm]{fpga.png}
+
+Les FPGA (\textit{Field Programmable Gate Array}) sont des circuits logiques
+programmable. En effet \textit{Field Programmage} signifie programmable sur le champ,
+le circuit peut être programmé après sa fabrication pour réaliser n'importe qu'elle
+fonctions logiques. La configuration d'un FPGA est obtenu à l'aide de langages HDL
+qui permettent aussi de concevoir les ASIC, c'est pour cela que les FPGA peuvent être
+utilisés pour faire des prototypes d'ASIC.
+
+Les FPGA sont constitué d'un nombre très importants de bloques logiques rangés en
+matrice (d'où le \textit{Gate Array} de FPGA). C'est bloques logiques peuvent être
+configurés pour effectué des fonctions logiques élémentaires (et, ou, ou exclusif,
+non) ou quelques fonctions logiques plus complexes. Ils peuvent aussi être configurer
+en bascule ou en d'autres éléments permettant de mémoriser de l'information. Ces
+bloques logiques peuvent également être connectés de manière arbitraire entre eux.
+C'est en définissant les fonctions réalisées par ces bloques logiques et des
+connexions entre eux que l'on peut configurer un FPGA pour obtenir le fonctionnement
+attendu. Cette configuration est générée de manière automatique à partir de
+description en HDL. De nos jours le nombre de bloques logiques sur les FPGA se compte
+en millions. 
+
+Les cartes FPGA contiennent en plus du réseau de bloques logiques programmable des
+périphériques. Cela permet d'économiser des portes, de plus certains périphériques
+tel que les GPIO ne peuvent pas être programmés à l'aide de bloques logiques. Il
+n'est donc pas rare de voir des cartes FPGA embarquait des GPIO, de la RAM, des
+cartes réseaux par exemple. Dans notre projet tuteuré, la différence des
+périphériques utilisés par la carte FPGA utilisé à l'INSA et celle utilisé par
+MilkyMist entrainent des problèmes de portabilités.
+
+\includegraphics[width=8cm]{porte.png}
+

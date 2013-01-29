@@ -1,1 +1,9 @@
 http://comelec.enst.fr/hdl/hdl_intro.html
+http://milkymist.org/3/thesis/thesis.pdf
+http://milkymist.org/3/
+http://fr.wikipedia.org/wiki/Transistor
+http://fr.wikipedia.org/wiki/Application_Specific_Integrated_Circuit
+http://fr.wikipedia.org/wiki/Hardware_description_language
+http://fr.wikipedia.org/wiki/Netlist
+http://fr.wikipedia.org/wiki/Fonderie_(%C3%A9lectronique)
+http://fr.wikipedia.org/wiki/Application_Specific_Integrated_Circuit
