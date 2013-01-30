@@ -9,7 +9,10 @@
 \usepackage{graphics}
 \DeclareUnicodeCharacter{B0}{\textdegree}
 \renewcommand{\contentsname}{Sommaire}
+\usepackage{natbib}
 \usepackage[T1]{fontenc}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+
 
 \date{\today}
 \author{}
@@ -27,6 +30,7 @@
 \tableofcontents
 
 \chapter*{Introduction}
+    \addcontentsline{toc}{chapter}{Introduction}
     \input{intro}
 
 \chapter{Conception du matériel}
@@ -64,9 +68,17 @@
     \newpage
 
 \chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+    \input{conclusion}
 
 \newpage
 \input{annexe}
+
+
+\nocite{*}
+\bibliographystyle{plain}
+
+\bibliography{bib}
 
 \end{document}
 
