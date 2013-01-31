@@ -73,20 +73,22 @@
   \vspace{1cm}
   4IR 2012-2013 
   
-  \vfill {\bf R\'esum\'e du projet} \medskip \\ \fbox{
-      \begin{minipage}{0.9\textwidth}
-      Dans notre projet tutoré, nous allons nous intéresser particulièrement au
-      MilkyMist SoC, qui est un SoC open source, c’est à dire que le code HDL qui le
-      décrit est libre de droit. Ce SoC a été conçu pour être programmé sur un FPGA
-      spécifique le Virtex-4 XC4VLX25. Notre but est d’adapter le code de ce SoC pour
-      le rendre compatible avec le Xilinx Spartan 6 qui est utilisé à l’INSA de
-      Toulouse. Nous allons aussi ajouter un module à MilkyMist permettant d’ex-
-      ploiter la propriété de certains FPGA qui est de pouvoir être reprogrammé à la
-      volée. C’est à dire que nous allons permettre au système MilkyMist de pouvoir
-      ajouter à chaud (sans redémarrer le système) des périphériques (à partir de
-      leurs descriptions structurelles) sur le FPGA et de les connecter au SoC.
-\end{minipage} 
-} \end{titlepage}
+  \vfill {\bf R\'esum\'e du projet}\medskip \\
+  \fbox{
+    \begin{minipage}{0.9\textwidth}
+      Dans notre projet tutoré, nous allons nous intéresser plus particulièrement au
+      \textit{Milkymist} SoC, qui est un SoC \textit{open-source}, c'est à dire que le code HDL qui le décrit
+      est libre de droit.  Ce SoC a été conçu pour être programmé sur un FPGA spécifique le
+      Virtex-4 XC4VLX25.  Notre but est d'adapter le code de ce SoC pour le rendre
+      compatible avec le Xilinx Spartan6 qui est utilisé à l'INSA de Toulouse.  Nous
+      allons aussi ajouter un module à \textit{Milkymist} permettant d'exploiter la propriété de
+      certains FPGA qui est de pouvoir être reprogrammé à la volée. C'est-à-dire que nous
+      allons permettre au système \textit{Milkymist} de pouvoir ajouter à chaud (sans redémarrer le
+      système) des périphériques (à partir de leurs descriptions structurelles) sur le FPGA
+      et de les connecter au SoC.
+    \end{minipage} 
+  }
+\end{titlepage}
 
 \tableofcontents
 
@@ -95,16 +97,17 @@
 
 \chapter{Conception du matériel}
 
-\section{Langage de description de circuit logique} \input{langage} \newpage
+\section{Langage de description de circuits logiques} \input{langage} \newpage
 
 \section{Technologie de fabrication} \input{fpga_asic}
 
-\section{Le monde de l'open source et son avancement sur les FPGA}
+\section{Le monde de l'\textit{open source} et son avancement sur les FPGA}
 \input{open_source} \newpage
 
-\chapter{Adaptation d'un System On Chip libre : MilkyMist} \newpage
+\chapter{Adaptation d'un \textit{System-on-Chip} libre : \textit{Milkymist}}
 
-\section{Le projet MilkyMist} \input{milky_mist} \newpage
+\section{Le projet \textit{Milkymist}}
+\input{milky_mist} \newpage
 
 \section{Le travail à réaliser}
 
@@ -116,7 +119,7 @@
 \input{systeme_logiciel}
 \newpage
 
-\subsection{Reconfiguration du materiel à la volée}
+\subsection{Reconfiguration du matériel à la volée}
 \input{reconfigurable}
 \newpage
 
@@ -130,10 +133,10 @@
   %\input{references}
   
   \bibitem{RUBOW}
-RUBOW, Erik. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : University of California, San Diego, Cours, 2008, 5p. Disponible sur \url{http://cseweb.ucsd.edu/classes/fa08/cse237a/topicresearch/erubow\_tr\_report.pdf} (Consulté le 24 janvier 2013).
+RUBOW, Erik. \textit{Open Source Hardware}. \textbf{[en ligne]}. États-Unis d'Amérique : University of California, San Diego, Cours, 2008, 5p. Disponible sur \url{http://cseweb.ucsd.edu/classes/fa08/cse237a/topicresearch/erubow\_tr\_report.pdf} (Consulté le 24 janvier 2013).
 
 \bibitem{ACOSTA}
-ACOSTA, Roberto. \textit{Open Source Hardware}. \textbf{[en ligne]}. Etats-Unis d'Amérique : Massachusetts Institute of Technology, 2009, 83p. Disponible sur \url{http://18.7.29.232/bitstream/handle/1721.1/55201/609411873.pdf} (Consulté le 24 janvier 2013).
+ACOSTA, Roberto. \textit{Open Source Hardware}. \textbf{[en ligne]}. États-Unis d'Amérique : Massachusetts Institute of Technology, 2009, 83p. Disponible sur \url{http://18.7.29.232/bitstream/handle/1721.1/55201/609411873.pdf} (Consulté le 24 janvier 2013).
 
 \bibitem{BAXTER_BENNETT}
 BAXTER, Julius, BENNETT, Jeremy et opencores.org. \textit{Practical System-on-Chip}. \textbf{In} : \textit{Open Source Hardware User Group} \textbf{[en ligne]}. (Modifié le 29 mars 2012). Disponible sur \url{http://oshug.org/presentations/openrisc-oshug17-final.pdf} (Consulté le 24 janvier 2013).
@@ -160,7 +163,6 @@ TORRONE, Phillip et FRIED, Limor. \textit{Million dollar baby}. \textit{Foo Camp
 List of open-source hardware projects. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 17 janver 2013). Disponible sur : \url{http://en.wikipedia.org/w/index.php?title=List\_of\_open-source\_hardware\_projects\&oldid=533515806}. (Consulté le 27 janvier 2013).
 
 %DUZAN Luc
-
 
 \bibitem{ASIC_WIKI}
 Application-specific integrated circuit. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 08 janver 2013). Disponible sur : \url{http://en.wikipedia.org/wiki/Application-specific\_integrated\_circuit}. (Consulté le 20 janvier 2013).

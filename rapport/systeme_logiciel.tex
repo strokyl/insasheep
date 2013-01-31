@@ -1,47 +1,46 @@
-\vspace{15px}
-Après avoir créée l'architecture qui correspond au cahier des charges du SoC,
-il faut encore adapter ou 'porter' le système d'exploitation (Operating System
-en anglais) qui va le cadencer, c'est-à-dire récupérer un noyau existant
+Après avoir créé l'architecture qui correspond au cahier des charges du SoC,
+il faut encore adapter le système d'exploitation (\textit{Operating System}) qui va le cadencer. C'est-à-dire qu'il faut récupérer un noyau existant
 souvent proche de l'architecture que l'on vient de réaliser et modifier le code
 pour qu'il soit entièrement compatible avec le nouveau matériel \cite{MILKY_SITE}.  Il faut tout
 d'abord faire la différence entre un système d'exploitation classique que l'on
-trouve sur les PC actuels qui permet le traitement de tâches multiples plus ou
-moins en même temps grâce au système du temps partagé (time sharing), qui
-contient une unité de translation des adresses physiques en adresses virtuelles
-(MMU), qui gère les tâches de manière avancée et qui possède souvent des appels
+trouve sur les PC actuels permettant le traitement de tâches multiples plus ou
+moins en même temps grâce au système du temps partagé (time sharing) et contenant une unité de translation des adresses physiques en adresses virtuelles
+(MMU) qui gère les tâches de manière avancée et possède souvent des appels
 système particuliers. En revanche les systèmes d'exploitation conçus pour les
-{\bf SoC} sont souvent des systèmes temps réel (Real Time OS) qui effectuent
+SoC sont souvent des systèmes temps réel (\textit{Real Time OS}) qui effectuent
 une tâche en continu. En effet, ceux-ci n'ont en général qu'un seul but comme
-par exemple le traitement d'une vidéo dans le cas de la {\bf Milkymist One}.
-\medskip Le noyau d'un système d'exploitation étant entièrement dépendant de
-l'architecture du {\bf SoC}, il faut généralement faire beaucoup de
+par exemple le traitement d'une vidéo dans le cas de la \textit{Milkymist One}.
+
+
+Le noyau d'un système d'exploitation étant entièrement dépendant de
+l'architecture du SoC, il faut généralement faire beaucoup de
 modifications dans le code que l'on veut porter. C'est pourquoi il est
 intéressant de sélectionner un noyau utilisé sur une architecture proche de la
 nouvelle pour limiter ces modifications qui en appellent souvent beaucoup
-d'autres.  Concrètement, l'un des noyaux les plus utilisés pour le {\bf SoC}
+d'autres.  Concrètement, l'un des noyaux les plus utilisés pour le SoC
 est celui d'Unix. Les distributions fondées sur ce noyau et adaptés à ces
 systèmes sont appelés 'linux embedded' pour embarqué. Le noyau qui se trouve à
 la base de toutes les distributions unix a déjà été porté sur une multitude
 d'architectures différentes comme les ARM, AVR, PIC, MIPS, SPARC, PowerPC,
-etc... Une version très connue de ce linux spécial system-on-chip est appelé
-{\bf uClinux} \cite{UCLINUX}.  \medskip
+etc... Une version très connue de ce linux spécial \textit{System-on-Chip} est appelé
+{\bf $\mu$Clinux} \cite{UCLINUX}.  \medskip
 
 \begin{center} \includegraphics[scale=0.4]{uclinux.eps} \end{center}
-\vspace{15px} {\Large Quelques informations sur la Milkymist.}
+\vspace{15px} {\Large Quelques informations sur la \textit{Milkymist}.}
 
 
 Une partie de notre projet sera de porter le noyau utilisé dans la Milkymist \cite{MILKY_SITE}
 pour qu'il fonctionne sur la {\bf Nexys3}. Il est important de noter que le
-projet Milkymist est l'un des premiers projets d'architecture matérielle
-complètement open source. Le code de son gestionnaire de mémoire a d'ailleurs
+projet \textit{Milkymist} est l'un des premiers projets d'architecture matérielle
+complètement \textit{open-source}. Le code de son gestionnaire de mémoire a d'ailleurs
 été utilisé par la NASA pour construire un système totalement différent du
 traitement vidéo.
 
-La Milkymist utilisant le processeur open source LatticeMico32 \cite{LATTICE}, il est possible
-de lui associer un noyau uClinux mais aussi un noyau {\bf RTEMS} pour
-'Real-Time Executive for Multiprocessor Systems'. Une multitude de drivers ont
+La \textit{Milkymist} utilisant le processeur open source LatticeMico32 \cite{LATTICE}, il est possible
+de lui associer un noyau $\mu$Clinux mais aussi un noyau {\bf RTEMS} pour
+\textit{Real-Time Executive for Multiprocessor Systems}. Une multitude de drivers ont
 également du être développés pour dialoguer avec les nombreux périphériques
-présents sur la carte tel que les ports USB pour brancher une souris et/ou un
+présents sur la carte tels que les ports USB pour brancher une souris et/ou un
 clavier, un port midi pour éventuellement ajouter des interactions avec un
 instrument de musique, un contrôleur VGA pour afficher le résultat du
 traitement, une carte son.
@@ -49,11 +48,10 @@ traitement, une carte son.
 Une fois cette étape d'adaptation terminée nous pourrons ensuite nous lancer
 dans le développement de modules propres à la fonctionnalité que nous donnerons
 au système. Pour cela il suffira de développer les drivers qui accompagneront
-le module. Au final, ce travail tombera dans le domaine de l'open source pour
+le module. Au final, ce travail tombera dans le domaine de l'\textit{open-source} pour
 que toute la communauté puisse profiter de ce portage sur la Nexys3.
 
 Finalement ce portage ne devrait pas être très long vu que la carte possède
-plus ou moins le même matériel que la Milkymist. C'est pourquoi nous avons
-décider de nous lancer dans un projet traitant un domaine en vogue : le {\bf
-reconfigurable computing}.
+plus ou moins le même matériel que la \textit{Milkymist}. C'est pourquoi nous avons
+décider de nous lancer dans un projet traitant un domaine en vogue : le \textit{reconfigurable computing}.
 
