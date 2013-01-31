@@ -24,6 +24,25 @@
 \usepackage{breakurl}
 \usepackage[T1]{fontenc}
 \usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{fancyhdr}
+\usepackage{lastpage} 
+
+\pagestyle{fancy}
+
+
+\lhead{}
+\chead{}
+\rhead{} 
+
+\renewcommand{\headrulewidth}{0pt}
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+\lfoot{Etat de l'art associé au projet tuteuré}
+
+\cfoot{}
+
+\rfoot{Page \thepage}
 
 \begin{document}
 
@@ -238,6 +257,7 @@ uClinux. \textit{Embedded Linux/Microcontroller Project} \textbf{[en ligne]}. Di
 \bibitem{NEUMANN}
 Wikipedia. \textit{Architecture de Von Neumann} \textbf{[en ligne]}. Disponible sur : \url{http://fr.wikipedia.org/wiki/Architecture_de_von_Neumann}. (Consulté le 20 janvier 2013).
 \end{thebibliography}
+
 
 \end{document}
 
