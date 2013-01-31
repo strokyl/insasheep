@@ -1,5 +1,0 @@
-SALEH, Resve; MIRABBASI, Shahriar; LEMIEUX, Lemieux; GRECU, Cristian. System-on-Chip: Reuse and Integration \textbf{[en ligne]. In :} \textit{Proceedings of the IEEE}, vol. 94, No. 6, June 2006. Disponible sur : http://eecs.wsu.edu/~pande/Journal_Papers/Paper_IEEE_Proceedings.pdf (Consulté le 05/01/2013)
-
-M. WINZKER. \textit{Advenced FPGA Design}. \textbf{[en ligne]} Buenos Aires : Universidad Tecnológica Nacional. Cours, 2010, 15 slides. Disponible sur : http://www.electron.frba.utn.edu.ar/dplab/CursoLP/Lecture_FPGA_5.pdf (Consulté le 05/01/2013)
-
-BOURDEAUDUCQ, Sébastien. \textit{A performance-driven SoC architecture for video synthesis}. \textbf{[en ligne]} Master of Science Thesis in System-on-Chip Design, Stockholm, Royal Institute of Technology, 2010. 109. Disponible sur : http://milkymist.org/3/thesis/thesis.pdf (Consulté le 01/01/2013)
