@@ -11,19 +11,10 @@
 \renewcommand{\contentsname}{Sommaire}
 \usepackage{natbib}
 \usepackage[T1]{fontenc}
-%\usepackage[nottoc, notlof, notlot]{tocbibind}
-
-%\date{\today}
-
-%\makeatother
-%\title{Rapport de projet tutoré : Développement d'un System-On-Chip open-source}
-%\author{\bsc{DUZAN} Luc \and \bsc{LONGO} Matthieu \and \bsc{FARACHE} Gabriel \and \bsc{MICHAUD} Clément }
-%\location{Toulouse}
-%\date{31 janvier 2012}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
 
 \begin{document}
 
-%\maketitle
 
 \begin{titlepage}
   \centering
@@ -44,73 +35,69 @@
   MICHAUD Clément\\
   \vspace{1cm}
   \par
-  {\tt \{duzan, farache, longo, cmichaud\}@etud.insa-toulouse.fr}\\
+  {\tt duzan@etud.insa-toulouse.fr}\\
+  {\tt farache@etud.insa-toulouse.fr}\\
+  {\tt longo@etud.insa-toulouse.fr}\\
+  {\tt cmichaud@etud.insa-toulouse.fr}\\
   \vspace{1cm}
   4IR 2012-2013 
   
-  \vfill
-  {\bf R\'esum\'e du projet}
-  \medskip
-  \fbox{%
-    \begin{minipage}{0.9\textwidth}
-      texte ioyreioyrezioy rez ioy ioy ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez zioyzfeio yf yfez iofez ioyfezioy fezioy fezioyfez  iofez ioy ioyfez ioez ioyfezioyfe ioyfezioy fezioffezio fezio  iyf ioyfez ioyfez ioyf yioifezy fez fez ioyfez ioyfezfez ioyfez ioy ioyfez ioyfez ioyfe
-      texte ioyreioyrezioy rez ioy ioy ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez ioyrez zioyzfeio yf yfez iofez ioyfezioy fezioy fezioyfez  iofez ioy ioyfez ioez ioyfezioyfe ioyfezioy fezioffezio fezio  iyf ioyfez ioyfez ioyf yioifezy fez fez ioyfez ioyfezfez ioyfez ioy ioyfez ioyfez ioyfe
-    \end{minipage}%
-  }
-\end{titlepage}
+  \vfill {\bf R\'esum\'e du projet} \medskip \\ \fbox{
+      \begin{minipage}{0.9\textwidth}
+      Dans notre projet tutoré, nous allons nous intéresser particulièrement au
+      MilkyMist SoC, qui est un SoC open source, c’est à dire que le code HDL qui le
+      décrit est libre de droit. Ce SoC a été conçu pour être programmé sur un FPGA
+      spécifique le Virtex-4 XC4VLX25. Notre but est d’adapter le code de ce SoC pour
+      le rendre compatible avec le Xilinx Spartan 6 qui est utilisé à l’INSA de
+      Toulouse. Nous allons aussi ajouter un module à MilkyMist permettant d’ex-
+      ploiter la propriété de certains FPGA qui est de pouvoir être reprogrammé à la
+      volée. C’est à dire que nous allons permettre au système MilkyMist de pouvoir
+      ajouter à chaud (sans redémarrer le système) des périphériques (à partir de
+      leurs descriptions structurelles) sur le FPGA et de les connecter au SoC.
+\end{minipage} 
+} \end{titlepage}
 
 \tableofcontents
 
-\chapter*{Introduction}
-    \addcontentsline{toc}{chapter}{Introduction}
-    \input{intro}
+\chapter*{Introduction} \addcontentsline{toc}{chapter}{Introduction}
+\input{intro}
 
 \chapter{Conception du matériel}
 
-\section{Langage de description de circuit logique}
-    \input{langage}
-    \newpage
+\section{Langage de description de circuit logique} \input{langage} \newpage
 
-\section{Technologie de fabrication}
-    \input{fpga_asic}
+\section{Technologie de fabrication} \input{fpga_asic}
 
 \section{Le monde de l'open source et son avancement sur les FPGA}
-    \input{open_source}
-    \newpage
+\input{open_source} \newpage
 
-\chapter{Adaptation d'un System On Chip libre : MilkyMist}
-\newpage
+\chapter{Adaptation d'un System On Chip libre : MilkyMist} \newpage
 
-\section{Le projet MilkyMist}
-    \input{milky_mist}
-    \newpage
+\section{Le projet MilkyMist} \input{milky_mist} \newpage
 
 \section{Le travail à réaliser}
 
 \subsection{Portage sur le Nexys3}
-    \input{portabilite}
-    \newpage
+
+input{portabilite} \newpage
 
 \subsection{Adapter le système logiciel associé}
-    \input{systeme_logiciel}
-    \newpage
+\input{systeme_logiciel}
+\newpage
 
 \subsection{Reconfiguration du materiel à la volée}
-    \input{reconfigurable}
-    \newpage
+\input{reconfigurable}
+\newpage
 
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
-    \input{conclusion}
-
-\newpage
-\input{annexe}
+\input{conclusion}
 
 
-\nocite{*}
-\bibliographystyle{plain}
 
-\bibliography{bib}
+\begin{ref}
+    \input{references}
+\end{ref}
 
 \end{document}
 
