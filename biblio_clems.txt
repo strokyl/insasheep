@@ -23,3 +23,5 @@ http://www.electron.frba.utn.edu.ar/dplab/CursoLP/Lecture_FPGA_5.pdf
 http://milkymist.org/3/thesis/thesis.pdf
 
 http://milkymist.org/3/
+
+http://www.oshug.org/presentations/openrisc-oshug17-final.pdf
