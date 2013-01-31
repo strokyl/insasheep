@@ -3,7 +3,7 @@ Après avoir créée l'architecture qui correspond au cahier des charges du SoC,
 il faut encore adapter ou 'porter' le système d'exploitation (Operating System
 en anglais) qui va le cadencer, c'est-à-dire récupérer un noyau existant
 souvent proche de l'architecture que l'on vient de réaliser et modifier le code
-pour qu'il soit entièrement compatible avec le nouveau matériel.  Il faut tout
+pour qu'il soit entièrement compatible avec le nouveau matériel \cite{MILKY_SITE}.  Il faut tout
 d'abord faire la différence entre un système d'exploitation classique que l'on
 trouve sur les PC actuels qui permet le traitement de tâches multiples plus ou
 moins en même temps grâce au système du temps partagé (time sharing), qui
@@ -24,20 +24,20 @@ systèmes sont appelés 'linux embedded' pour embarqué. Le noyau qui se trouve 
 la base de toutes les distributions unix a déjà été porté sur une multitude
 d'architectures différentes comme les ARM, AVR, PIC, MIPS, SPARC, PowerPC,
 etc... Une version très connue de ce linux spécial system-on-chip est appelé
-{\bf uClinux}.  \medskip
+{\bf uClinux} \cite{UCLINUX}.  \medskip
 
 \begin{center} \includegraphics[scale=0.4]{uclinux.eps} \end{center}
 \vspace{15px} {\Large Quelques informations sur la Milkymist.}
 
 
-Une partie de notre projet sera de porter le noyau utilisé dans la Milkymist
+Une partie de notre projet sera de porter le noyau utilisé dans la Milkymist \cite{MILKY_SITE}
 pour qu'il fonctionne sur la {\bf Nexys3}. Il est important de noter que le
 projet Milkymist est l'un des premiers projets d'architecture matérielle
 complètement open source. Le code de son gestionnaire de mémoire a d'ailleurs
 été utilisé par la NASA pour construire un système totalement différent du
 traitement vidéo.
 
-La Milkymist utilisant le processeur open source LatticeMico32, il est possible
+La Milkymist utilisant le processeur open source LatticeMico32 \cite{LATTICE}, il est possible
 de lui associer un noyau uClinux mais aussi un noyau {\bf RTEMS} pour
 'Real-Time Executive for Multiprocessor Systems'. Une multitude de drivers ont
 également du être développés pour dialoguer avec les nombreux périphériques
