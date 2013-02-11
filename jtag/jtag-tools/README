@@ -1,0 +1,31 @@
+
+########################################################################################################
+
+AUTHOR: Clément MICHAUD
+DATE: February 11th, 2013
+INSTITUTE: INSA Toulouse (France)
+
+DESCRIPTION: Toolset for the Digilent Nexys3 FPGA board
+
+########################################################################################################
+
+
+This is a toolset including 2 softwares: 
+	one to dump memory from flash of Digilent Nexys3
+	one to program memory to flash of Digilent Nexys3
+
+
+Makefile
+	There is a make that allows you to use the tools. You have to program the board before using the tools.
+	To run the tools, please execute the commands below:
+	
+	make install  	# this installs the libfpgalink library that programs the board (must be installed only once)
+	make fpga     	# Programs the FPGA with the controller.
+	make compile  	# Compile all the tools developed in C.
+
+	the tools will be in the directory build/
+
+
+
+More about the tools
+	Be carful, the base address you are going to use in the tools must be in hexadecimal with the form 0xHHHHHH where H must be hexadecimal digits.
