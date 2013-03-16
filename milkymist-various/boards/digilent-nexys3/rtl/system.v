@@ -1016,7 +1016,7 @@ wire [15:0] ram_dq;
 `endif
 wire ram_oe_n;
 wire ram_we_n;
-
+wire mem_data_oe_int;
 // psram #(
 // 	.adr_width(24),
 // 	.init_timing(16'h2ee0)
@@ -1050,7 +1050,7 @@ wire ram_we_n;
 // 	.psram_lb(ram_lb),
 // 	.psram_ub(ram_ub)
 // );
-assign ram_adr[25:24] = {2'b0}; 
+//assign ram_adr[25:24] = {2'b0}; 
 
 //---------------------------------------------------------------------------
 // Multiplexing FLASH signals
@@ -1139,20 +1139,20 @@ psram_ctrlr psram (
     .fml_di(fml_di),
     .fml_do(fml_do),
 
-    .mem_addr_int(ram_adr),
+    .mem_addr_int(ram_adr[22:0]),
     .mem_data_i_int(ram_do),
     .mem_data_o_int(ram_di),
     .mem_clk_en(mem_clk_en),
-    .mem_data_oe_int(),
+    .mem_data_oe_int(mem_data_oe_int),
     .mem_be_int({ram_ub,ram_lb}),
     .mem_wen_int(ram_we_n),
-    .mem_oen_int(ram_oen),
-    .mem_cen_int(ram_cen_int),
+    .mem_oen_int(ram_oe_n),
+    .mem_cen_int(ram_ce_n),
     .mem_adv_int(mem_adv_n),
     .mem_cre_int(ram_cre),
     .mem_wait_int(mem_wait)
 );
-
+assign ram_adr[25:23] = {3'b0};
 //---------------------------------------------------------------------------
 // Monitor ROM / RAM
 //---------------------------------------------------------------------------
