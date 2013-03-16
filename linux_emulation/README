@@ -1,0 +1,3 @@
+compMilkyKern.sh : compile le noyau, créer le filesystem et lance l'émulation. NE PAS OUBLIER DE CHANGER lES PATH.
+lm32-rtems.sh : le patch de fernand pour corriger le bud de rtems4.11 et binutils.
+qemu_system_lm32.sh : installe qemu-system-lm32.
