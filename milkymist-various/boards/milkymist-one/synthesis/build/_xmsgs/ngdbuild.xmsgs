@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : GRPac97_clk was distributed to a DCM but new TNM constraints were not derived. The requirement for derived TNM constraints is that the distributed TNM is referenced by no more than a single PERIOD constraint. Non-PERIOD referencers are also not allowed. This TNM is used in the following user groups or specifications:
+&lt;TIMESPEC &quot;TSac97_clk&quot; = PERIOD &quot;GRPac97_clk&quot; 80 HIGH 50%;&gt; [system.ucf(205)]
+&lt;TIMESPEC &quot;TSac97_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPac97_clk&quot; TIG;&gt; [system.ucf(343)]
+&lt;TIMESPEC &quot;TSac97_async2&quot; = FROM &quot;GRPac97_clk&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(344)]
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : GRPsys was distributed to a DCM but new TNM constraints were not derived. This TNM is used in the following user groups or specifications:
+&lt;TIMESPEC &quot;TSvga_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPvga&quot; TIG;&gt; [system.ucf(339)]
+&lt;TIMESPEC &quot;TSvga_async2&quot; = FROM &quot;GRPvga&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(340)]
+&lt;TIMESPEC &quot;TSac97_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPac97_clk&quot; TIG;&gt; [system.ucf(343)]
+&lt;TIMESPEC &quot;TSac97_async2&quot; = FROM &quot;GRPac97_clk&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(344)]
+&lt;TIMESPEC &quot;TSvideoin_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPvideoin&quot; TIG;&gt; [system.ucf(346)]
+&lt;TIMESPEC &quot;TSvideoin_async2&quot; = FROM &quot;GRPvideoin&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(347)]
+&lt;TIMESPEC &quot;TSusb_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPusb&quot; TIG;&gt; [system.ucf(350)]
+&lt;TIMESPEC &quot;TSusb_async2&quot; = FROM &quot;GRPusb&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(351)]
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : GRPinput was distributed to a DCM but new TNM constraints were not derived. This TNM is used in the following user groups or specifications:
+&lt;TIMESPEC &quot;TSusb_async3&quot; = FROM &quot;GRPinput&quot; TO &quot;GRPusb&quot; TIG;&gt; [system.ucf(354)]
+&lt;TIMESPEC &quot;TSusb_async4&quot; = FROM &quot;GRPusb&quot; TO &quot;GRPinput&quot; TIG;&gt; [system.ucf(355)]
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">GRPclkin50</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TSclkin50</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clk24_pll = PERIOD &quot;clk24_pll&quot; TSclkin50 / 0.48 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="190" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">GRPac97_clk</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TSac97_clk</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM and PERIOD are derived only if the PERIOD constraint is the only referencing constraint and if an output of the clock manager block drives flip-flops, latches or RAMs.  
+This TNM is used in the following user groups and/or specifications:
+<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TSac97_clk&quot; = PERIOD &quot;GRPac97_clk&quot; 80 HIGH 50%;&gt; [system.ucf(205)]
+&lt;TIMESPEC &quot;TSac97_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPac97_clk&quot; TIG;&gt; [system.ucf(343)]
+&lt;TIMESPEC &quot;TSac97_async2&quot; = FROM &quot;GRPac97_clk&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(344)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC &quot;TSac97_clk&quot; = PERIOD &quot;GRPac97_clk&quot; 80 HIGH 50%;&gt; [system.ucf(205)]</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC &quot;TSac97_async1&quot; = FROM &quot;GRPsys&quot; TO &quot;GRPac97_clk&quot; TIG;&gt; [system.ucf(343)]</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC &quot;TSac97_async2&quot; = FROM &quot;GRPac97_clk&quot; TO &quot;GRPsys&quot; TIG;&gt; [system.ucf(344)]</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk24_pll</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk24_pll</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_sys_clk_pll = PERIOD &quot;sys_clk_pll&quot; TS_clk24_pll / 3.333333333 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk24_pll</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk24_pll</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_usb_clk_pll = PERIOD &quot;usb_clk_pll&quot; TS_clk24_pll / 3 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk24_pll</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk24_pll</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_sys_clk_n_pll = PERIOD &quot;sys_clk_n_pll&quot; TS_clk24_pll / 3.333333333 PHASE 6.25 ns HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sys_clk_pll</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_sys_clk_pll</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">vga/clkgen_vga</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLKFX</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_vga_vga_iclk_65 = PERIOD &quot;vga_vga_iclk_65&quot; TS_sys_clk_pll / 0.8125 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1212" delta="new" >User specified non-default attribute value (<arg fmt="%s" index="1">12.500000</arg>) was detected for the <arg fmt="%s" index="2">CLKIN_PERIOD</arg> attribute on <arg fmt="%s" index="3">DCM</arg> &quot;<arg fmt="%s" index="4">vga/clkgen_vga</arg>&quot;.  This does not match the PERIOD constraint value (<arg fmt="%s" index="5">12.5 ns.</arg>).  The uncertainty calculation will use the non-default attribute value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="6">DCM</arg> output clocks.
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN1_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">PLL</arg> instance <arg fmt="%s" index="3">PLL_ADV</arg> to <arg fmt="%s" index="4">20.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TSclkin50&quot; = PERIOD &quot;GRPclkin50&quot; 20 ns HIGH 50%;&gt; [system.ucf(5)]</arg>).
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN1_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">PLL</arg> instance <arg fmt="%s" index="3">PLL_ADV</arg> to <arg fmt="%s" index="4">41.666667</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_clk24_pll = PERIOD &quot;clk24_pll&quot; TSclkin50 / 0.48 HIGH 50%&gt;</arg>).
+</msg>
+
+</messages>
+

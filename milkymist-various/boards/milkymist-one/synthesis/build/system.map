@@ -1,0 +1,723 @@
+Release 14.4 Map P.49d (lin64)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -ol high -t 20 -w system.ngd 
+Target Device  : xc6slx45
+Target Package : fgg484
+Target Speed   : -2
+Stepping Level : ES
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Mar 14 17:23:56 2013
+
+Mapping design into LUTs...
+Writing file system.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+WARNING:Pack:1375 - STEPPING Levels are not supported for this device.
+Updating timing models...
+WARNING:Timing:3223 - Timing constraint PATH "TSusb_async3_path" TIG ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint PATH "TSusb_async4_path" TIG ignored during timing analysis.
+WARNING:Timing:3402 - The Clock Modifying COMP, vga/clkgen_vga, has the attribute CLK_FEEDBACK set to NONE.  No phase relationship exists
+   between the input and output clocks of this Clock Modifying COMP. Data paths between these clock domains must be constrained using
+   FROM/TO constraints.
+WARNING:Timing:3224 - The clock vga_clk associated with OFFSET = OUT 5 ns AFTER COMP "vga_clk" does not clock any registered output
+   components.
+WARNING:Timing:3225 - Timing constraint OFFSET = OUT 5 ns AFTER COMP "vga_clk" ignored during timing analysis
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 43 secs 
+Total CPU  time at the beginning of Placer: 43 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:d56c825c) REAL time: 46 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:d56c825c) REAL time: 48 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:d56c825c) REAL time: 48 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:b96ae339) REAL time: 1 mins 17 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:b96ae339) REAL time: 1 mins 17 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:b96ae339) REAL time: 1 mins 17 secs 
+
+Phase 7.3  Local Placement Optimization
+
+Phase 7.3  Local Placement Optimization (Checksum:61fbb778) REAL time: 1 mins 17 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:61fbb778) REAL time: 1 mins 18 secs 
+
+Phase 9.8  Global Placement
+...................
+.................................................................
+................................................................................................
+..............................................................................................................................................
+.........................................
+Phase 9.8  Global Placement (Checksum:cd1140c7) REAL time: 4 mins 32 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:cd1140c7) REAL time: 4 mins 33 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:9cc2cc8e) REAL time: 5 mins 6 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:9cc2cc8e) REAL time: 5 mins 7 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:c4537870) REAL time: 5 mins 8 secs 
+
+Total REAL time to Placer completion: 5 mins 24 secs 
+Total CPU  time to Placer completion: 5 mins 23 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net videoin/in/fifo/set_status
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ac97/transceiver/up_fifo/set_status is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net vga/vgafb/fifo/set_status
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ac97/transceiver/down_fifo/set_status is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem5_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem6_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem8_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage36_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem13_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem23_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage7_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem14_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage19_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage39_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage9_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage10_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usb/navre/Mram_GPR11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem34_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem69_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem60_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem55_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem53_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem50_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem59_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem49_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem61_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem3_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem4_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem24_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem15_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usb/navre/Mram_GPR2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem35_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem37_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem44_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem70_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem80_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem58_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem51_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem52_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem64_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem63_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem54_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem56_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem88_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem1_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem2_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem11_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem12_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem22_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem9_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem7_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem11_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <videoin/in/fifo/Mram_mem10_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage18_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage8_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem25_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem42_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem36_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem38_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem72_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem68_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem79_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem71_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <videoin/dma/burstmem/Mram_mem21_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage6_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage12_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage310_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage38_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage31_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <tmu/fdest/Mram_storage2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem48_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem39_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem47_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem40_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage2_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage3_RAMC_D1_DPO> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage3_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage210_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage410_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage42_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage110_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage16_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage4_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage7_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage46_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage14_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage21_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage41_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem43_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem46_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem41_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem33_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem45_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage23_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage43_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage13_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage33_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage12_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage5_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage8_RAMC_D1_DPO> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage8_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage34_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage2_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage11_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage13_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage8_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage4_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage6_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage7_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage3_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage6_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem78_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem77_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem76_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem67_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem66_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem57_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem62_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem93_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem94_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage14_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage13_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage26_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage1_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage29_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage11_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage5_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage14_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage7_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage2_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage10_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem65_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem73_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem75_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem74_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem81_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem82_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem87_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage1_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage27_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage47_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage10_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage17_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage37_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage15_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage35_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage45_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage25_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage9_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage10_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage8_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage1_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage5_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem91_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem89_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem90_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem92_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage32_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage11_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage24_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage44_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage49_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage15_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetch_fifo/Mram_storage12_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage3_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage9_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <vga/vgafb/pixelfeed/fifo64to16/Mram_storage4_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem13_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem29_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem20_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem85_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem84_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem95_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage22_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage9_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage15_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage16_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage48_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/frag_fifo/Mram_storage17_RAMD_D1_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem5_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem4_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem12_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem6_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem31_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem28_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem27_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem86_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem96_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <tmu/texmem/fetchtexel/fifo64to256/Mram_storage28_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem15_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem16_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem9_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem7_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem25_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem23_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem19_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem21_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem22_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem83_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem14_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem3_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem2_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem8_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem1_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem30_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem32_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem11_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem10_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem24_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem18_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem17_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/vgafb/fifo/Mram_mem26_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:  224
+Slice Logic Utilization:
+  Number of Slice Registers:                 8,985 out of  54,576   16%
+    Number used as Flip Flops:               8,982
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                3
+  Number of Slice LUTs:                     12,246 out of  27,288   44%
+    Number used as logic:                   11,031 out of  27,288   40%
+      Number using O6 output only:           8,260
+      Number using O5 output only:             629
+      Number using O5 and O6:                2,142
+      Number used as ROM:                        0
+    Number used as Memory:                   1,041 out of   6,408   16%
+      Number used as Dual Port RAM:            892
+        Number using O6 output only:           448
+        Number using O5 output only:             2
+        Number using O5 and O6:                442
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           149
+        Number using O6 output only:            34
+        Number using O5 output only:             0
+        Number using O5 and O6:                115
+    Number used exclusively as route-thrus:    174
+      Number with same-slice register load:    113
+      Number with same-slice carry load:        61
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 4,552 out of   6,822   66%
+  Number of MUXCYs used:                     3,500 out of  13,644   25%
+  Number of LUT Flip Flop pairs used:       14,497
+    Number with an unused Flip Flop:         6,400 out of  14,497   44%
+    Number with an unused LUT:               2,251 out of  14,497   15%
+    Number of fully used LUT-FF pairs:       5,846 out of  14,497   40%
+    Number of unique control sets:             474
+    Number of slice register sites lost
+      to control set restrictions:           1,916 out of  54,576    3%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       228 out of     316   72%
+    Number of LOCed IOBs:                      228 out of     228  100%
+    IOB Flip Flops:                            111
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        72 out of     116   62%
+  Number of RAMB8BWERs:                         12 out of     232    5%
+  Number of BUFIO2/BUFIO2_2CLKs:                 2 out of      32    6%
+    Number used as BUFIO2s:                      2
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       9 out of      16   56%
+    Number used as BUFGs:                        9
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       8   12%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                  32 out of     376    8%
+    Number used as ILOGIC2s:                    32
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        36 out of     376    9%
+    Number used as IODELAY2s:                   36
+    Number used as IODRP2s:                      0
+    Number used as IODRP2_MCBs:                  0
+  Number of OLOGIC2/OSERDES2s:                  43 out of     376   11%
+    Number used as OLOGIC2s:                    43
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                           31 out of      58   53%
+  Number of ICAPs:                               1 out of       1  100%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            2 out of       4   50%
+    Number of LOCed PLL_ADVs:                    2 out of       2  100%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.71
+
+Peak Memory Usage:  1112 MB
+Total REAL time to MAP completion:  5 mins 36 secs 
+Total CPU time to MAP completion:   5 mins 35 secs 
+
+Mapping completed.
+See MAP report file "system.mrp" for details.

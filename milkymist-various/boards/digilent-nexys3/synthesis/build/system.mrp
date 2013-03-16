@@ -1,0 +1,538 @@
+Release 14.4 Map P.49d (lin64)
+Xilinx Mapping Report File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -ol high -t 20 -w system.ngd 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Mar 14 16:32:13 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    3
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,105 out of  18,224   11%
+    Number used as Flip Flops:               2,104
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      2,455 out of   9,112   26%
+    Number used as logic:                    2,361 out of   9,112   25%
+      Number using O6 output only:           1,758
+      Number using O5 output only:             100
+      Number using O5 and O6:                  503
+      Number used as ROM:                        0
+    Number used as Memory:                       4 out of   2,176    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     90
+      Number with same-slice register load:     86
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,006 out of   2,278   44%
+  Number of MUXCYs used:                       480 out of   4,556   10%
+  Number of LUT Flip Flop pairs used:        3,070
+    Number with an unused Flip Flop:         1,164 out of   3,070   37%
+    Number with an unused LUT:                 615 out of   3,070   20%
+    Number of fully used LUT-FF pairs:       1,291 out of   3,070   42%
+    Number of unique control sets:              61
+    Number of slice register sites lost
+      to control set restrictions:             116 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        67 out of     232   28%
+    Number of LOCed IOBs:                       67 out of      67  100%
+    IOB Flip Flops:                             33
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        16 out of      32   50%
+  Number of RAMB8BWERs:                          5 out of      64    7%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                  33 out of     248   13%
+    Number used as OLOGIC2s:                    33
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               1 out of       1  100%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            2 out of       2  100%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.70
+
+Peak Memory Usage:  730 MB
+Total REAL time to MAP completion:  58 secs 
+Total CPU time to MAP completion:   55 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:41 - All members of TNM group "clk72_pll" have been optimized out
+   of the design.
+WARNING:MapLib:50 - The period specification "TS_clk72_pll" has been discarded
+   because the group "clk72_pll" has been optimized away.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ram_adr<22> has no load.
+INFO:LIT:395 - The above info message is repeated 24 more times for the
+   following (max. 5 shown):
+   ram_adr<21>,
+   ram_adr<20>,
+   ram_adr<19>,
+   ram_adr<18>,
+   ram_adr<17>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 116 block(s) removed
+   2 block(s) optimized away
+  96 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "ram_adr<22>" is loadless and has been removed.
+ Loadless block "psram/addr_22" (FF) removed.
+  The signal "psram/latch_addr" is loadless and has been removed.
+   Loadless block "psram/latch_addr1" (ROM) removed.
+  The signal "fml_adr<22>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr151" (ROM) removed.
+    The signal "fmlbrg/fml_adr<22>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_22" (FF) removed.
+The signal "ram_adr<21>" is loadless and has been removed.
+ Loadless block "psram/addr_21" (FF) removed.
+  The signal "fml_adr<21>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr141" (ROM) removed.
+    The signal "fmlbrg/fml_adr<21>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_21" (FF) removed.
+The signal "ram_adr<20>" is loadless and has been removed.
+ Loadless block "psram/addr_20" (FF) removed.
+  The signal "fml_adr<20>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr131" (ROM) removed.
+    The signal "fmlbrg/fml_adr<20>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_20" (FF) removed.
+The signal "ram_adr<19>" is loadless and has been removed.
+ Loadless block "psram/addr_19" (FF) removed.
+  The signal "fml_adr<19>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr111" (ROM) removed.
+    The signal "fmlbrg/fml_adr<19>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_19" (FF) removed.
+The signal "ram_adr<18>" is loadless and has been removed.
+ Loadless block "psram/addr_18" (FF) removed.
+  The signal "fml_adr<18>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr101" (ROM) removed.
+    The signal "fmlbrg/fml_adr<18>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_18" (FF) removed.
+The signal "ram_adr<17>" is loadless and has been removed.
+ Loadless block "psram/addr_17" (FF) removed.
+  The signal "fml_adr<17>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr91" (ROM) removed.
+    The signal "fmlbrg/fml_adr<17>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_17" (FF) removed.
+The signal "ram_adr<16>" is loadless and has been removed.
+ Loadless block "psram/addr_16" (FF) removed.
+  The signal "fml_adr<16>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr81" (ROM) removed.
+    The signal "fmlbrg/fml_adr<16>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_16" (FF) removed.
+The signal "ram_adr<15>" is loadless and has been removed.
+ Loadless block "psram/addr_15" (FF) removed.
+  The signal "fml_adr<15>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr71" (ROM) removed.
+    The signal "fmlbrg/fml_adr<15>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_15" (FF) removed.
+The signal "ram_adr<14>" is loadless and has been removed.
+ Loadless block "psram/addr_14" (FF) removed.
+  The signal "fml_adr<14>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr61" (ROM) removed.
+    The signal "fmlbrg/fml_adr<14>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_14" (FF) removed.
+The signal "ram_adr<13>" is loadless and has been removed.
+ Loadless block "psram/addr_13" (FF) removed.
+  The signal "fml_adr<13>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr51" (ROM) removed.
+The signal "ram_adr<12>" is loadless and has been removed.
+ Loadless block "psram/addr_12" (FF) removed.
+  The signal "fml_adr<12>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr41" (ROM) removed.
+The signal "ram_adr<11>" is loadless and has been removed.
+ Loadless block "psram/addr_11" (FF) removed.
+  The signal "fml_adr<11>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr31" (ROM) removed.
+The signal "ram_adr<10>" is loadless and has been removed.
+ Loadless block "psram/addr_10" (FF) removed.
+  The signal "fml_adr<10>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr21" (ROM) removed.
+    The signal "fmlbrg/fml_adr<10>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_10" (FF) removed.
+The signal "ram_adr<9>" is loadless and has been removed.
+ Loadless block "psram/addr_9" (FF) removed.
+  The signal "fml_adr<9>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr271" (ROM) removed.
+    The signal "fmlbrg/fml_adr<9>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_9" (FF) removed.
+The signal "ram_adr<8>" is loadless and has been removed.
+ Loadless block "psram/addr_8" (FF) removed.
+  The signal "fml_adr<8>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr261" (ROM) removed.
+    The signal "fmlbrg/fml_adr<8>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_8" (FF) removed.
+The signal "ram_adr<7>" is loadless and has been removed.
+ Loadless block "psram/addr_7" (FF) removed.
+  The signal "fml_adr<7>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr251" (ROM) removed.
+    The signal "fmlbrg/fml_adr<7>" is loadless and has been removed.
+     Loadless block "fmlbrg/fml_adr_7" (FF) removed.
+The signal "ram_adr<6>" is loadless and has been removed.
+ Loadless block "psram/addr_6" (FF) removed.
+  The signal "fml_adr<6>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr241" (ROM) removed.
+The signal "ram_adr<5>" is loadless and has been removed.
+ Loadless block "psram/addr_5" (FF) removed.
+  The signal "fml_adr<5>" is loadless and has been removed.
+   Loadless block "fmlarb/Mmux_s_adr231" (ROM) removed.
+The signal "ram_adr<4>" is loadless and has been removed.
+ Loadless block "psram/addr_4" (FF) removed.
+The signal "ram_adr<3>" is loadless and has been removed.
+ Loadless block "psram/addr_3" (FF) removed.
+The signal "ram_adr<2>" is loadless and has been removed.
+ Loadless block "psram/addr_2" (FF) removed.
+The signal "ram_adr<1>" is loadless and has been removed.
+ Loadless block "psram/addr_1" (FF) removed.
+The signal "ram_adr<0>" is loadless and has been removed.
+ Loadless block "psram/addr_0" (FF) removed.
+The signal "ram_we_n" is loadless and has been removed.
+ Loadless block "psram/mem_wen_int1" (ROM) removed.
+Loadless block "b_ac97" (CKBUF) removed.
+ The signal "ac97_clk_bio" is loadless and has been removed.
+Loadless block "b_phy_rx_clk" (CKBUF) removed.
+Loadless block "b_phy_tx_clk" (CKBUF) removed.
+Loadless block "b_videoin" (CKBUF) removed.
+Loadless block "clkgen720_b3" (CKBUF) removed.
+ The signal "clk80_n_pll" is loadless and has been removed.
+Loadless block "clkgen720_b4" (CKBUF) removed.
+ The signal "clk180_pll" is loadless and has been removed.
+Loadless block "phy_clk_obuf" (BUF) removed.
+ The signal "clk25" is loadless and has been removed.
+  Loadless block "clk25_buf" (CKBUF) removed.
+   The signal "clk25_pll" is loadless and has been removed.
+Loadless block "workaround" (FF) removed.
+ The signal "usb_clk" is loadless and has been removed.
+  Loadless block "clkgen720_b1" (CKBUF) removed.
+   The signal "clk72_pll" is loadless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "norflash/flash_do<15>" is unused and has been removed.
+ Unused block "norflash/flash_do_15" (FF) removed.
+  The signal "norflash/_n0160_inv" is unused and has been removed.
+   Unused block "norflash/_n0160_inv1" (ROM) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<15>" is unused and
+has been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<15>1" (ROM)
+removed.
+The signal "norflash/flash_do<14>" is unused and has been removed.
+ Unused block "norflash/flash_do_14" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<14>" is unused and
+has been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<14>1" (ROM)
+removed.
+The signal "norflash/flash_do<13>" is unused and has been removed.
+ Unused block "norflash/flash_do_13" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<13>" is unused and
+has been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<13>1" (ROM)
+removed.
+The signal "norflash/flash_do<12>" is unused and has been removed.
+ Unused block "norflash/flash_do_12" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<12>" is unused and
+has been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<12>1" (ROM)
+removed.
+The signal "norflash/flash_do<11>" is unused and has been removed.
+ Unused block "norflash/flash_do_11" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<11>" is unused and
+has been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<11>1" (ROM)
+removed.
+The signal "norflash/flash_do<10>" is unused and has been removed.
+ Unused block "norflash/flash_do_10" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<10>" is unused and
+has been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<10>1" (ROM)
+removed.
+The signal "norflash/flash_do<9>" is unused and has been removed.
+ Unused block "norflash/flash_do_9" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<9>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<9>1" (ROM) removed.
+The signal "norflash/flash_do<8>" is unused and has been removed.
+ Unused block "norflash/flash_do_8" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<8>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<8>1" (ROM) removed.
+The signal "norflash/flash_do<7>" is unused and has been removed.
+ Unused block "norflash/flash_do_7" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<7>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<7>1" (ROM) removed.
+The signal "norflash/flash_do<6>" is unused and has been removed.
+ Unused block "norflash/flash_do_6" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<6>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<6>1" (ROM) removed.
+The signal "norflash/flash_do<5>" is unused and has been removed.
+ Unused block "norflash/flash_do_5" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<5>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<5>1" (ROM) removed.
+The signal "norflash/flash_do<4>" is unused and has been removed.
+ Unused block "norflash/flash_do_4" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<4>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<4>1" (ROM) removed.
+The signal "norflash/flash_do<3>" is unused and has been removed.
+ Unused block "norflash/flash_do_3" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<3>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<3>1" (ROM) removed.
+The signal "norflash/flash_do<2>" is unused and has been removed.
+ Unused block "norflash/flash_do_2" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<2>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<2>1" (ROM) removed.
+The signal "norflash/flash_do<1>" is unused and has been removed.
+ Unused block "norflash/flash_do_1" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<1>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<1>1" (ROM) removed.
+The signal "norflash/flash_do<0>" is unused and has been removed.
+ Unused block "norflash/flash_do_0" (FF) removed.
+  The signal "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<0>" is unused and has
+been removed.
+   Unused block "norflash/wb_sel_i[3]_wb_dat_i[15]_select_5_OUT<0>1" (ROM) removed.
+Unused block "bio_ac97" (BUFIO2) removed.
+Unused block "mem_d_0_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_10_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_11_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_12_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_13_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_14_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_15_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_1_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_2_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_3_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_4_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_5_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_6_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_7_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_8_IOBUF/OBUFT" (TRI) removed.
+Unused block "mem_d_9_IOBUF/OBUFT" (TRI) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| btnl                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btnr                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btns                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clkin100                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| flash_ce_n                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| flash_rst_n                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| led0                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led1                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led2                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led3                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led4                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led5                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led6                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| led7                               | IOB              | OUTPUT    | LVCMOS33             |       | 24       | QUIE | OFF          |          |          |
+| mem_adr<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| mem_adr<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<8>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<9>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<10>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<11>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<12>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<13>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<14>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<15>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<16>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<17>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<18>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<19>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<20>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<21>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<22>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<23>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | OFF          |          |          |
+| mem_adr<24>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| mem_adr<25>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| mem_adv_n                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| mem_clk                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | ODDR         |          |          |
+| mem_d<0>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<1>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<2>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<3>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<4>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<5>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<6>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<7>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<8>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<9>                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<10>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<11>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<12>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<13>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<14>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_d<15>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_oe_n                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| mem_wait                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| mem_we                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| ram_ce_n                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| ram_cre                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| ram_lb                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| ram_ub                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| uart_rx                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| uart_tx                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

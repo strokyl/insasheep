@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">CLK_100MHZ</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_100MHZ</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clk24_pll = PERIOD &quot;clk24_pll&quot; TS_CLK_100MHZ / 0.24 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk24_pll</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk24_pll</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clk80_pll = PERIOD &quot;clk80_pll&quot; TS_clk24_pll / 3.333333333 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk24_pll</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk24_pll</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clk72_pll = PERIOD &quot;clk72_pll&quot; TS_clk24_pll / 3 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN1_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">PLL</arg> instance <arg fmt="%s" index="3">PLL_ADV</arg> to <arg fmt="%s" index="4">10.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_CLK_100MHZ = PERIOD CLK_100MHZ 10.00 ns;&gt; [system.ucf(5)]</arg>).
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN1_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">PLL</arg> instance <arg fmt="%s" index="3">PLL_ADV</arg> to <arg fmt="%s" index="4">41.666667</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_clk24_pll = PERIOD &quot;clk24_pll&quot; TS_CLK_100MHZ / 0.24 HIGH 50%&gt;</arg>).
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="new" >FF primitive &apos;<arg fmt="%s" index="1">workaround</arg>&apos; has unconnected output pin
+</msg>
+
+</messages>
+

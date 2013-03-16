@@ -1,0 +1,144 @@
+Release 14.4 ngdbuild P.49d (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -uc
+system.ucf system.ngc
+
+Reading NGO file
+"/home/matt/Desktop/milkymist-various/boards/milkymist-one/synthesis/build/syste
+m.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem - TNM : GRPac97_clk was distributed to a DCM but new
+   TNM constraints were not derived. The requirement for derived TNM constraints
+   is that the distributed TNM is referenced by no more than a single PERIOD
+   constraint. Non-PERIOD referencers are also not allowed. This TNM is used in
+   the following user groups or specifications:
+   <TIMESPEC "TSac97_clk" = PERIOD "GRPac97_clk" 80 HIGH 50%;> [system.ucf(205)]
+   <TIMESPEC "TSac97_async1" = FROM "GRPsys" TO "GRPac97_clk" TIG;>
+   [system.ucf(343)]
+   <TIMESPEC "TSac97_async2" = FROM "GRPac97_clk" TO "GRPsys" TIG;>
+   [system.ucf(344)]
+
+WARNING:ConstraintSystem - TNM : GRPsys was distributed to a DCM but new TNM
+   constraints were not derived. This TNM is used in the following user groups
+   or specifications:
+   <TIMESPEC "TSvga_async1" = FROM "GRPsys" TO "GRPvga" TIG;> [system.ucf(339)]
+   <TIMESPEC "TSvga_async2" = FROM "GRPvga" TO "GRPsys" TIG;> [system.ucf(340)]
+   <TIMESPEC "TSac97_async1" = FROM "GRPsys" TO "GRPac97_clk" TIG;>
+   [system.ucf(343)]
+   <TIMESPEC "TSac97_async2" = FROM "GRPac97_clk" TO "GRPsys" TIG;>
+   [system.ucf(344)]
+   <TIMESPEC "TSvideoin_async1" = FROM "GRPsys" TO "GRPvideoin" TIG;>
+   [system.ucf(346)]
+   <TIMESPEC "TSvideoin_async2" = FROM "GRPvideoin" TO "GRPsys" TIG;>
+   [system.ucf(347)]
+   <TIMESPEC "TSusb_async1" = FROM "GRPsys" TO "GRPusb" TIG;> [system.ucf(350)]
+   <TIMESPEC "TSusb_async2" = FROM "GRPusb" TO "GRPsys" TIG;> [system.ucf(351)]
+
+WARNING:ConstraintSystem - TNM : GRPinput was distributed to a DCM but new TNM
+   constraints were not derived. This TNM is used in the following user groups
+   or specifications:
+   <TIMESPEC "TSusb_async3" = FROM "GRPinput" TO "GRPusb" TIG;>
+   [system.ucf(354)]
+   <TIMESPEC "TSusb_async4" = FROM "GRPusb" TO "GRPinput" TIG;>
+   [system.ucf(355)]
+
+INFO:ConstraintSystem:178 - TNM 'GRPclkin50', used in period specification
+   'TSclkin50', was traced into PLL_ADV instance PLL_ADV. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clk24_pll = PERIOD "clk24_pll" TSclkin50 / 0.48 HIGH
+   50%>
+
+WARNING:ConstraintSystem:190 - The TNM 'GRPac97_clk', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TSac97_clk'. If clock manager
+   blocks are directly or indirectly driven, a new TNM and PERIOD are derived
+   only if the PERIOD constraint is the only referencing constraint and if an
+   output of the clock manager block drives flip-flops, latches or RAMs.  
+   This TNM is used in the following user groups and/or specifications:
+   <TIMESPEC "TSac97_clk" = PERIOD "GRPac97_clk" 80 HIGH 50%;> [system.ucf(205)]
+   <TIMESPEC "TSac97_async1" = FROM "GRPsys" TO "GRPac97_clk" TIG;>
+   [system.ucf(343)]
+   <TIMESPEC "TSac97_async2" = FROM "GRPac97_clk" TO "GRPsys" TIG;>
+   [system.ucf(344)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TSac97_clk" = PERIOD "GRPac97_clk" 80 HIGH 50%;> [system.ucf(205)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TSac97_async1" = FROM "GRPsys" TO "GRPac97_clk" TIG;>
+   [system.ucf(343)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TSac97_async2" = FROM "GRPac97_clk" TO "GRPsys" TIG;>
+   [system.ucf(344)]
+
+INFO:ConstraintSystem:178 - TNM 'clk24_pll', used in period specification
+   'TS_clk24_pll', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC TS_sys_clk_pll = PERIOD "sys_clk_pll" TS_clk24_pll /
+   3.333333333 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk24_pll', used in period specification
+   'TS_clk24_pll', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_usb_clk_pll = PERIOD "usb_clk_pll" TS_clk24_pll / 3
+   HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk24_pll', used in period specification
+   'TS_clk24_pll', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_sys_clk_n_pll = PERIOD "sys_clk_n_pll" TS_clk24_pll /
+   3.333333333 PHASE 6.25 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pll', used in period specification
+   'TS_sys_clk_pll', was traced into DCM_SP instance vga/clkgen_vga. The
+   following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_vga_vga_iclk_65 = PERIOD "vga_vga_iclk_65" TS_sys_clk_pll
+   / 0.8125 HIGH 50%>
+
+Done...
+
+WARNING:NgdBuild:1212 - User specified non-default attribute value (12.500000)
+   was detected for the CLKIN_PERIOD attribute on DCM "vga/clkgen_vga".  This
+   does not match the PERIOD constraint value (12.5 ns.).  The uncertainty
+   calculation will use the non-default attribute value.  This could result in
+   incorrect uncertainty calculated for DCM output clocks.
+INFO:NgdBuild:1222 - Setting CLKIN1_PERIOD attribute associated with PLL
+   instance PLL_ADV to 20.000000 ns based on the period specification (<TIMESPEC
+   "TSclkin50" = PERIOD "GRPclkin50" 20 ns HIGH 50%;> [system.ucf(5)]).
+INFO:NgdBuild:1222 - Setting CLKIN1_PERIOD attribute associated with PLL
+   instance PLL_ADV to 41.666667 ns based on the period specification (<TIMESPEC
+   TS_clk24_pll = PERIOD "clk24_pll" TSclkin50 / 0.48 HIGH 50%>).
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   8
+
+Total memory usage is 498836 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   16 sec
+
+Writing NGDBUILD log file "system.bld"...

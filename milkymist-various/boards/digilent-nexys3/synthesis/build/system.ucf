@@ -1,0 +1,334 @@
+# ==== Clock Input ====
+Net "clkin100" LOC = V10 | IOSTANDARD = LVCMOS33;
+
+Net "clkin100" TNM_NET = CLK_100MHZ;
+TIMESPEC TS_CLK_100MHZ = PERIOD CLK_100MHZ 10.00 ns;
+
+# ==== Flash/PSRAM ====
+NET "mem_adr(0)"  LOC = K18;
+NET "mem_adr(1)"  LOC = K17;
+NET "mem_adr(2)"  LOC = J18;
+NET "mem_adr(3)"  LOC = J16;
+NET "mem_adr(4)"  LOC = G18;
+NET "mem_adr(5)"  LOC = G16;
+NET "mem_adr(6)"  LOC = H16;
+NET "mem_adr(7)"  LOC = H15;
+NET "mem_adr(8)"  LOC = H14;
+NET "mem_adr(9)"  LOC = H13;
+NET "mem_adr(10)" LOC = F18;
+NET "mem_adr(11)" LOC = F17;
+NET "mem_adr(12)" LOC = K13;
+NET "mem_adr(13)" LOC = K12;
+NET "mem_adr(14)" LOC = E18;
+NET "mem_adr(15)" LOC = E16;
+NET "mem_adr(16)" LOC = G13;
+NET "mem_adr(17)" LOC = H12;
+NET "mem_adr(18)" LOC = D18;
+NET "mem_adr(19)" LOC = D17;
+NET "mem_adr(20)" LOC = G14;
+NET "mem_adr(21)" LOC = F14;
+NET "mem_adr(22)" LOC = C18;
+NET "mem_adr(23)" LOC = C17;
+NET "mem_adr(24)" LOC = F16;
+NET "mem_adr(25)" LOC = F15;
+
+NET "mem_d(0)"    LOC = R13;
+NET "mem_d(1)"    LOC = T14;
+NET "mem_d(2)"    LOC = V14;
+NET "mem_d(3)"    LOC = U5;
+NET "mem_d(4)"    LOC = V5;
+NET "mem_d(5)"    LOC = R3;
+NET "mem_d(6)"    LOC = T3;
+NET "mem_d(7)"    LOC = R5;
+NET "mem_d(8)"    LOC = N5;
+NET "mem_d(9)"    LOC = P6;
+NET "mem_d(10)"   LOC = P12;
+NET "mem_d(11)"   LOC = U13;
+NET "mem_d(12)"   LOC = V13;
+NET "mem_d(13)"   LOC = U10;
+NET "mem_d(14)"   LOC = R8;
+NET "mem_d(15)"   LOC = T8;
+
+NET "mem_adr(*)"  IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "mem_d(*)"    IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+
+NET "mem_oe_n"    LOC = L18 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "mem_we"      LOC = M16 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "mem_adv_n"   LOC = H18 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8; 
+NET "mem_wait"    LOC = V4  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "mem_clk"     LOC = R10 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+
+# ==== Flash ====
+NET "flash_ce_n"  LOC = L17 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "flash_rst_n" LOC = T4  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+
+# ==== PSRAM specific ====
+NET "ram_ce_n"    LOC = L15 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8; 
+NET "ram_cre"     LOC = M18 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "ram_ub"      LOC = K15 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "ram_lb"      LOC = K16 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8; 
+
+# ==== UART ====
+NET "uart_rx" LOC = N17 | IOSTANDARD = LVCMOS33;
+NET "uart_tx" LOC = N18 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+
+# ==== Pushbuttons ====
+NET "btnl" LOC = C4 | IOSTANDARD = LVCMOS33;
+NET "btns" LOC = B8 | IOSTANDARD = LVCMOS33;
+NET "btnr" LOC = D9 | IOSTANDARD = LVCMOS33;
+#Net "btnu" LOC = A8 | IOSTANDARD = LVCMOS33;
+#Net "btnr" LOC = D9 | IOSTANDARD = LVCMOS33;
+
+# ==== Switches ====
+#Net "sw<0>" LOC = T10 | IOSTANDARD = LVCMOS33;
+#Net "sw<1>" LOC = T9 | IOSTANDARD = LVCMOS33;
+#Net "sw<2>" LOC = V9 | IOSTANDARD = LVCMOS33;
+#Net "sw<3>" LOC = M8 | IOSTANDARD = LVCMOS33;
+#Net "sw<4>" LOC = N8 | IOSTANDARD = LVCMOS33;
+#Net "sw<5>" LOC = U8 | IOSTANDARD = LVCMOS33;
+#Net "sw<6>" LOC = V8 | IOSTANDARD = LVCMOS33;
+#Net "sw<7>" LOC = T5 | IOSTANDARD = LVCMOS33;
+
+# ==== 7 segment display ====
+#Net "seg<0>" LOC = T17 | IOSTANDARD = LVCMOS33;
+#Net "seg<1>" LOC = T18 | IOSTANDARD = LVCMOS33;
+#Net "seg<2>" LOC = U17 | IOSTANDARD = LVCMOS33;
+#Net "seg<3>" LOC = U18 | IOSTANDARD = LVCMOS33;
+#Net "seg<4>" LOC = M14 | IOSTANDARD = LVCMOS33;
+#Net "seg<5>" LOC = N14 | IOSTANDARD = LVCMOS33;
+#Net "seg<6>" LOC = L14 | IOSTANDARD = LVCMOS33;
+#Net "seg<7>" LOC = M13 | IOSTANDARD = LVCMOS33;
+
+#Net "an<0>" LOC = N16 | IOSTANDARD = LVCMOS33;
+#Net "an<1>" LOC = N15 | IOSTANDARD = LVCMOS33;
+#Net "an<2>" LOC = P18 | IOSTANDARD = LVCMOS33;
+#Net "an<3>" LOC = P17 | IOSTANDARD = LVCMOS33;
+
+# ==== LEDs ====
+Net "led0" LOC = U16 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led1" LOC = V16 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led2" LOC = U15 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led3" LOC = V15 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led4" LOC = M11 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led5" LOC = N11 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led6" LOC = R11 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+Net "led7" LOC = T11 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+
+# # ==== VGA ====
+# NET "vga_b(0)" LOC = D11;
+# NET "vga_b(1)" LOC = C12;
+# NET "vga_b(2)" LOC = B12;
+# NET "vga_b(3)" LOC = A12;
+# NET "vga_b(4)" LOC = C13;
+# NET "vga_b(5)" LOC = A13;
+# NET "vga_b(6)" LOC = D14;
+# NET "vga_b(7)" LOC = C14;
+# NET "vga_g(0)" LOC = C8;
+# NET "vga_g(1)" LOC = C9;
+# NET "vga_g(2)" LOC = A9;
+# NET "vga_g(3)" LOC = D7;
+# NET "vga_g(4)" LOC = D8;
+# NET "vga_g(5)" LOC = D10;
+# NET "vga_g(6)" LOC = C10;
+# NET "vga_g(7)" LOC = B10;
+# NET "vga_r(0)" LOC = C6;
+# NET "vga_r(1)" LOC = B6;
+# NET "vga_r(2)" LOC = A6;
+# NET "vga_r(3)" LOC = C7;
+# NET "vga_r(4)" LOC = A7;
+# NET "vga_r(5)" LOC = B8;
+# NET "vga_r(6)" LOC = A8;
+# NET "vga_r(7)" LOC = D9;
+# 
+# NET "vga_r(*)" IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# NET "vga_g(*)" IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# NET "vga_b(*)" IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# 
+# NET "vga_hsync_n" LOC = A14 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# NET "vga_vsync_n" LOC = C15 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# NET "vga_clk" LOC = A11 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# NET "vga_psave_n" LOC = B14 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+# 
+# NET "vga_sda" LOC = A15 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# NET "vga_sdc" LOC = D15 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# 
+# # ==== Memory card ====
+# NET "mc_d(0)" LOC = A18;
+# NET "mc_d(1)" LOC = E16;
+# NET "mc_d(2)" LOC = C17;
+# NET "mc_d(3)" LOC = A17;
+# NET "mc_cmd" LOC = B18 | IOSTANDARD = LVCMOS33 | PULLUP;
+# NET "mc_clk" LOC = A10 | IOSTANDARD = LVCMOS33;
+# NET "mc_d(*)" IOSTANDARD = LVCMOS33 | PULLUP;
+# 
+# # ==== AC97 ====
+# NET "ac97_clk" LOC = C11 | IOSTANDARD = LVCMOS33;
+# NET "ac97_sin" LOC = C5 | IOSTANDARD = LVCMOS33;
+# NET "ac97_sout" LOC = A4 | IOSTANDARD = LVCMOS33;
+# NET "ac97_sync" LOC = A5 | IOSTANDARD = LVCMOS33;
+# NET "ac97_rst_n" LOC = D6 | IOSTANDARD = LVCMOS33;
+# 
+# NET "ac97_clk" TNM_NET = "GRPac97_clk";
+# TIMESPEC "TSac97_clk" = PERIOD "GRPac97_clk" 80 HIGH 50%;
+# 
+# # ==== USB ====
+# NET "usba_spd" LOC = Y5 | IOSTANDARD = LVCMOS33;
+# NET "usba_oe_n" LOC = Y6 | IOSTANDARD = LVCMOS33;
+# NET "usba_rcv" LOC = V5 | IOSTANDARD = LVCMOS33;
+# NET "usba_vp" LOC = U6 | IOSTANDARD = LVCMOS33;
+# NET "usba_vm" LOC = R7 | IOSTANDARD = LVCMOS33;
+# 
+# NET "usbb_spd" LOC = T7 | IOSTANDARD = LVCMOS33;
+# NET "usbb_oe_n" LOC = R8 | IOSTANDARD = LVCMOS33;
+# NET "usbb_rcv" LOC = R9 | IOSTANDARD = LVCMOS33;
+# NET "usbb_vp" LOC = AB3 | IOSTANDARD = LVCMOS33;
+# NET "usbb_vm" LOC = Y3 | IOSTANDARD = LVCMOS33;
+# 
+# # ==== Ethernet ====
+# NET "phy_irq_n" LOC = L19 | IOSTANDARD = LVCMOS33;
+# NET "phy_rst_n" LOC = R22 | IOSTANDARD = LVCMOS33;
+# NET "phy_mii_clk" LOC = J20 | IOSTANDARD = LVCMOS33;
+# NET "phy_mii_data" LOC = J22 | IOSTANDARD = LVCMOS33;
+# 
+# NET "phy_dv" LOC = V21 | IOSTANDARD = LVCMOS33;
+# NET "phy_rx_clk" LOC = H22 | IOSTANDARD = LVCMOS33;
+# NET "phy_rx_er" LOC = V22 | IOSTANDARD = LVCMOS33;
+# NET "phy_rx_data(0)" LOC = U22;
+# NET "phy_rx_data(1)" LOC = U20;
+# NET "phy_rx_data(2)" LOC = T22;
+# NET "phy_rx_data(3)" LOC = T21;
+# NET "phy_rx_data(*)" IOSTANDARD = LVCMOS33;
+# 
+# NET "phy_tx_en" LOC = N19 | IOSTANDARD = LVCMOS33;
+# NET "phy_tx_clk" LOC = H21 | IOSTANDARD = LVCMOS33;
+# NET "phy_tx_er" LOC = M19 | IOSTANDARD = LVCMOS33;
+# NET "phy_tx_data(0)" LOC = M16;
+# NET "phy_tx_data(1)" LOC = L15;
+# NET "phy_tx_data(2)" LOC = P19;
+# NET "phy_tx_data(3)" LOC = P20;
+# NET "phy_tx_data(*)" IOSTANDARD = LVCMOS33;
+# 
+# NET "phy_col" LOC = W20 | IOSTANDARD = LVCMOS33;
+# NET "phy_crs" LOC = W22 | IOSTANDARD = LVCMOS33;
+# 
+# NET "phy_clk" LOC = M20 | IOSTANDARD = LVCMOS33;
+# 
+# # Timing
+# NET "phy_rx_clk" TNM_NET = "GRPphy_rx_clk";
+# NET "phy_tx_clk" TNM_NET = "GRPphy_tx_clk";
+# TIMESPEC "TSphy_rx_clk" = PERIOD "GRPphy_rx_clk" 40 ns HIGH 50%;
+# TIMESPEC "TSphy_tx_clk" = PERIOD "GRPphy_tx_clk" 40 ns HIGH 50%;
+# TIMESPEC "TSphy_tx_clk_io" = FROM "GRPphy_tx_clk" TO "PADS" 10 ns;
+# TIMESPEC "TSphy_rx_clk_io" = FROM "PADS" TO "GRPphy_rx_clk" 10 ns;
+# 
+# # ==== Video input ====
+# NET "videoin_p(0)" LOC = Y18;
+# NET "videoin_p(1)" LOC = T16;
+# NET "videoin_p(2)" LOC = T15;
+# NET "videoin_p(3)" LOC = U17;
+# NET "videoin_p(4)" LOC = U16;
+# NET "videoin_p(5)" LOC = V19;
+# NET "videoin_p(6)" LOC = V18;
+# NET "videoin_p(7)" LOC = R16;
+# NET "videoin_p(*)" IOSTANDARD = LVCMOS33;
+# 
+# NET "videoin_hs" LOC = V17 | IOSTANDARD = LVCMOS33;
+# NET "videoin_vs" LOC = Y17 | IOSTANDARD = LVCMOS33;
+# NET "videoin_field" LOC = AB14 | IOSTANDARD = LVCMOS33;
+# NET "videoin_llc" LOC = Y11 | IOSTANDARD = LVCMOS33;
+# 
+# NET "videoin_irq_n" LOC = R15 | IOSTANDARD = LVCMOS33 | PULLUP;
+# NET "videoin_rst_n" LOC = W17 | IOSTANDARD = LVCMOS33;
+# # IOSTANDARD = I2C does not work
+# NET "videoin_sda" LOC = AB17 | IOSTANDARD = LVCMOS33 | SLEW = SLOW | PULLUP;
+# NET "videoin_sdc" LOC = AA14 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# 
+# NET "videoin_llc" TNM_NET = "GRPvideoin";
+# TIMESPEC "TSvideoin" = PERIOD "GRPvideoin" 35 ns HIGH 50%;
+# 
+# # ==== MIDI ====
+# NET "midi_tx" LOC = AA21 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# NET "midi_rx" LOC = AB21 | IOSTANDARD = LVCMOS33;
+# 
+# # ==== DMX ====
+# NET "dmxa_r" LOC = AB20 | IOSTANDARD = LVCMOS33;
+# NET "dmxa_de" LOC = T18 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# NET "dmxa_d" LOC = T17 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# 
+# NET "dmxb_r" LOC = Y19 | IOSTANDARD = LVCMOS33;
+# NET "dmxb_de" LOC = AB19 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# NET "dmxb_d" LOC = W18 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+# 
+# # ==== IR ====
+# NET "ir_rx" LOC = C16 | IOSTANDARD = LVCMOS33;
+# 
+# # ==== Expansion connector ====
+# NET "exp(0)" LOC = A20;
+# NET "exp(1)" LOC = F16;
+# NET "exp(2)" LOC = A21;
+# NET "exp(3)" LOC = F17;
+# NET "exp(4)" LOC = B21;
+# NET "exp(5)" LOC = H16;
+# NET "exp(6)" LOC = B22;
+# NET "exp(7)" LOC = H17;
+# NET "exp(8)" LOC = G16;
+# NET "exp(9)" LOC = J16;
+# NET "exp(10)" LOC = G17;
+# NET "exp(11)" LOC = K16;
+# 
+# NET "exp(*)" IOSTANDARD = LVCMOS33;
+# 
+# # avoid floating signals
+# NET "exp(*)" PULLDOWN;
+# 
+# # ==== PCB revision ====
+# NET "pcb_revision(0)" LOC = AA10;
+# NET "pcb_revision(1)" LOC = AB10;
+# NET "pcb_revision(2)" LOC = Y10;
+# NET "pcb_revision(3)" LOC = Y12;
+# 
+# NET "pcb_revision(*)" IOSTANDARD = LVCMOS33;
+# NET "pcb_revision(*)" PULLDOWN;
+# 
+# # ==== Timing fixes ====
+# NET "sys_clk" TNM_NET = "GRPsys";
+# 
+# INST "sdram_adr(*)" TNM = "GRPsdramout";
+# INST "sdram_ba(*)" TNM = "GRPsdramout";
+# INST "sdram_cas_n" TNM = "GRPsdramout";
+# INST "sdram_cke" TNM = "GRPsdramout";
+# INST "sdram_cs_n" TNM = "GRPsdramout";
+# INST "sdram_ras_n" TNM = "GRPsdramout";
+# INST "sdram_we_n" TNM = "GRPsdramout";
+# TIMESPEC "TSsdramout" = FROM FFS TO "GRPsdramout" 10 ns;
+# 
+# NET "vga/vga_iclk" TNM_NET = "GRPvga";
+# TIMESPEC "TSvga_async1" = FROM "GRPsys" TO "GRPvga" TIG;
+# TIMESPEC "TSvga_async2" = FROM "GRPvga" TO "GRPsys" TIG;
+# OFFSET = OUT 5 ns AFTER "vga_clk";
+# 
+# TIMESPEC "TSac97_async1" = FROM "GRPsys" TO "GRPac97_clk" TIG;
+# TIMESPEC "TSac97_async2" = FROM "GRPac97_clk" TO "GRPsys" TIG;
+# 
+# TIMESPEC "TSvideoin_async1" = FROM "GRPsys" TO "GRPvideoin" TIG;
+# TIMESPEC "TSvideoin_async2" = FROM "GRPvideoin" TO "GRPsys" TIG;
+# 
+# NET "usb_clk" TNM_NET = "GRPusb";
+# TIMESPEC "TSusb_async1" = FROM "GRPsys" TO "GRPusb" TIG;
+# TIMESPEC "TSusb_async2" = FROM "GRPusb" TO "GRPsys" TIG;
+# 
+# NET "clkin50_b" TNM_NET = "GRPinput";
+# TIMESPEC "TSusb_async3" = FROM "GRPinput" TO "GRPusb" TIG;
+# TIMESPEC "TSusb_async4" = FROM "GRPusb" TO "GRPinput" TIG;
+# INST "b_videoin" LOC = BUFGMUX_X3Y15;
+# INST "vga/b" LOC = BUFGMUX_X2Y9;
+# INST "b_phy_rx_clk" LOC = BUFGMUX_X3Y5;
+# INST "b_phy_tx_clk" LOC = BUFGMUX_X2Y3;
+# INST "bio_ac97" LOC = BUFIO2_X4Y26;
+# INST "b_ac97" LOC = BUFGMUX_X3Y7;
+# 
+# INST "clkgen600" LOC = PLL_ADV_X0Y1;
+# INST "clkgen720" LOC = PLL_ADV_X0Y2;
+# INST "vga/clkgen_vga" LOC = DCM_X0Y1;
+# 
+# CONFIG STEPPING = "ES";
