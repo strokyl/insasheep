@@ -1061,7 +1061,7 @@ wire [15:0] mem_do;
 
 assign mem_adr    = (~flash_ce_n) ? flash_adr   : ram_adr;
 assign mem_we     = (~flash_ce_n) ? ~flash_we_n : ~ram_we_n;
-assign mem_oe_n   = flash_ce_n; //~mem_oe; // (~flash_ce_n) ? flash_oe_n  : ram_oe_n;
+assign mem_oe_n   = ~mem_oe; // (~flash_ce_n) ? flash_oe_n  : ram_oe_n;
 assign mem_d      = mem_oe_n ? mem_do : 16'bz;
 assign mem_di     = mem_d;
 // assign mem_adv_n  = 1'b1;
@@ -1070,7 +1070,7 @@ assign mem_di     = mem_d;
 // assign ram_lb     = 1'b0;
 // assign ram_ub     = 1'b0;
 
-assign flash_ce_n = 1'b0; //~ram_ce_n;
+assign flash_ce_n = ~(norflash_stb & norflash_cyc);
 
 inout_switch #(
 	.data_width(16)
@@ -1118,8 +1118,8 @@ ODDR2 #(
 	.C0(sys_clk),
 	.C1(~sys_clk),   
 	.CE(mem_clk_en),
-	.D0(1'b0),
-	.D1(1'b1),
+	.D0(1'b1),
+	.D1(1'b0),
 	.R(sys_rst),
 	.S(1'b0),
 	.Q(mem_clk)
@@ -1136,12 +1136,12 @@ psram_ctrlr psram (
     .fml_we(fml_we),
     .fml_eack(fml_eack),
     .fml_sel(fml_sel),
-    .fml_di(fml_di),
-    .fml_do(fml_do),
+    .fml_di(fml_dw),
+    .fml_do(fml_dr),
 
     .mem_addr_int(ram_adr[22:0]),
-    .mem_data_i_int(ram_do),
-    .mem_data_o_int(ram_di),
+    .mem_data_i_int(ram_di),
+    .mem_data_o_int(ram_do),
     .mem_clk_en(mem_clk_en),
     .mem_data_oe_int(mem_data_oe_int),
     .mem_be_int({ram_ub,ram_lb}),
