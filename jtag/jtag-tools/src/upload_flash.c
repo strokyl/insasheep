@@ -45,7 +45,7 @@ int main(int argc, char **argv){
 	int error = 0;
 	int i;
 	int returnError;
-	
+	u8 status;
 
 	if(argc != 3){
 		printf("Usage: %s <input_file> <base_address>\n", argv[0]);
@@ -68,7 +68,6 @@ int main(int argc, char **argv){
 	baseAddress = getHexFromString(argv[2], &returnError);
 
 	currentAddress = baseAddress;
-	unlockBlock(handle, currentAddress);
 	printf("Write data at 0x%x\n", currentAddress);
 
 	while(!feof(file) && error == 0){
@@ -77,7 +76,10 @@ int main(int argc, char **argv){
 		oddByte = (oddByte + 1) % 2;
 		if(oddByte == 0){
 			word = (temp[1] & 0xFF) | ((temp[0] & 0xFF) << 8);
-			u8 status = writeWord(handle, currentAddress, word);
+			if((currentAddress & 0xFFFF) == 0) {
+				unlockBlock(handle, currentAddress);
+			}
+			status = writeWord(handle, currentAddress, word);
 			if(status != 0x80){
 				error = 1;
 			}
@@ -89,9 +91,12 @@ int main(int argc, char **argv){
 		printf("Upload succeded\n");
 	else{
 		printf("Error uploading the file\n");
+		printf("Error at 0x%x with %x\n", --currentAddress, status);
 	}
 	fclose(file);
 
+
+	flLoadStandardFirmware(vp, vp, "D0234", NULL);
 	printf("Disconnecting device...\n");
 	flClose(handle);
 
