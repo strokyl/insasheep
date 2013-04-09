@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/ise_system/system.xst" -ofn "/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/ise_system/system.syr" 
