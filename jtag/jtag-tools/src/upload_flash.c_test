@@ -37,7 +37,6 @@ int main(int argc, char **argv){
 	struct FLContext *handle = NULL;
 	char vp[] = "1443:0007";
 	char c = 1;
-	int cpt;
 	int oddByte = 0;
 	char temp[2]; 
 	u16 word;
@@ -74,11 +73,11 @@ int main(int argc, char **argv){
 	baseAddress = getHexFromString(argv[2], &returnError);
 
 	currentAddress = baseAddress;
-	cpt = 0;
 	
     fseek(file, 0L, SEEK_END); // seek to end of file
     totalSize = ftell(file); // get current file pointer
     fseek(file, 0L, SEEK_SET);
+    totalSize += baseAddress;
    
 	printf("Write data at 0x%x %d\n", currentAddress,currentAddress);
 
@@ -96,13 +95,12 @@ int main(int argc, char **argv){
 				error = 1;
 			}
 
-			printf("%d%%\r", 100*cpt/totalSize);
+			printf("%d%%\r", 100*currentAddress/totalSize);
 		    fflush(stdout);
 			currentAddress++;
-			cpt += 2;
 		}
 	} 
-
+	printf("\nfeof : %d\n",feof(file));
 	fclose(file);
 	if(!error)
 		printf("Upload succeded\n");
@@ -117,6 +115,7 @@ int main(int argc, char **argv){
 
 
 	flLoadStandardFirmware(vp, vp, "D0234", NULL);
+    printf("%x %x %x\n",baseAddress, currentAddress, totalSize);
 	printf("Disconnecting device...\n");
 	flClose(handle);
 	if(addFile == NULL)
