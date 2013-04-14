@@ -5,19 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2326" delta="new" >&quot;<arg fmt="%s" index="1">lm32_instruction_unit.v</arg>&quot; line <arg fmt="%d" index="2">812</arg>: Invalid escape sequence : %<arg fmt="%c" index="3">x</arg>.
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;jtag_tap_spartan6.v&quot; line 43 </arg>&apos;<arg fmt="%s" index="2">sel</arg>&apos; has not been declared
 </msg>
 
-<msg type="warning" file="Xst" num="2323" delta="new" >&quot;<arg fmt="%s" index="1">lm32_instruction_unit.v</arg>&quot; line <arg fmt="%d" index="2">812</arg>: Parameter <arg fmt="%d" index="3">2</arg> is not constant in call of system task <arg fmt="%s" index="4">$display</arg>.
-</msg>
-
-<msg type="info" file="Xst" num="2546" delta="new" >&quot;<arg fmt="%s" index="1">bram.v</arg>&quot; line <arg fmt="%d" index="2">125</arg>: reading initialization file &quot;<arg fmt="%s" index="3">bios.rom</arg>&quot;.
-</msg>
-
-<msg type="error" file="Xst" num="2353" delta="new" >&quot;<arg fmt="%s" index="1">bram.v</arg>&quot; line <arg fmt="%d" index="2">125</arg>: Address <arg fmt="%d" index="3">16384</arg> is invalid in call of system task <arg fmt="%s" index="4">$readmemh</arg>.
-</msg>
-
-<msg type="error" file="Xst" num="2634" delta="new" >&quot;<arg fmt="%s" index="1">bram.v</arg>&quot; line <arg fmt="%d" index="2">126</arg>: For loop stop condition should depend on loop variable or be static.
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;jtag_tap_spartan6.v&quot; line 44 </arg>&apos;<arg fmt="%s" index="2">sel</arg>&apos; has not been declared
 </msg>
 
 </messages>
