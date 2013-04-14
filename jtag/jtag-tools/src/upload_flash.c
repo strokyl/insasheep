@@ -80,7 +80,7 @@ int main(int argc, char **argv){
     totalSize = ftell(file); // get current file pointer
     fseek(file, 0L, SEEK_SET);
    
-	printf("Write data at 0x%x %d\n", currentAddress,currentAddress);
+	printf("Write data at 0x%x of size 0%x\n", currentAddress,totalSize);
 
 	while(!feof(file) && error == 0){
 		c = fgetc(file);
