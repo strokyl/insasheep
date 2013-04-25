@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ise_system.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_system_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_system_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_system_isim_beh.wdb"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1366131389" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1366131389">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1366132140" xil_pn:in_ck="-4534329385926272450" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366132140">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bram.v"/>
+      <outfile xil_pn:name="conbus5x6.v"/>
+      <outfile xil_pn:name="conbus_arb5.v"/>
+      <outfile xil_pn:name="csrbrg.v"/>
+      <outfile xil_pn:name="fmlarb.v"/>
+      <outfile xil_pn:name="fmlarb_dack.v"/>
+      <outfile xil_pn:name="fmlbrg.v"/>
+      <outfile xil_pn:name="fmlbrg_datamem.v"/>
+      <outfile xil_pn:name="fmlbrg_tagmem.v"/>
+      <outfile xil_pn:name="gen_capabilities.v"/>
+      <outfile xil_pn:name="inout_switch.v"/>
+      <outfile xil_pn:name="jtag_cores.v"/>
+      <outfile xil_pn:name="jtag_tap_spartan6.v"/>
+      <outfile xil_pn:name="lm32_adder.v"/>
+      <outfile xil_pn:name="lm32_addsub.v"/>
+      <outfile xil_pn:name="lm32_config.v"/>
+      <outfile xil_pn:name="lm32_cpu.v"/>
+      <outfile xil_pn:name="lm32_dcache.v"/>
+      <outfile xil_pn:name="lm32_debug.v"/>
+      <outfile xil_pn:name="lm32_decoder.v"/>
+      <outfile xil_pn:name="lm32_dp_ram.v"/>
+      <outfile xil_pn:name="lm32_dtlb.v"/>
+      <outfile xil_pn:name="lm32_icache.v"/>
+      <outfile xil_pn:name="lm32_include.v"/>
+      <outfile xil_pn:name="lm32_instruction_unit.v"/>
+      <outfile xil_pn:name="lm32_interrupt.v"/>
+      <outfile xil_pn:name="lm32_itlb.v"/>
+      <outfile xil_pn:name="lm32_jtag.v"/>
+      <outfile xil_pn:name="lm32_load_store_unit.v"/>
+      <outfile xil_pn:name="lm32_logic_op.v"/>
+      <outfile xil_pn:name="lm32_mc_arithmetic.v"/>
+      <outfile xil_pn:name="lm32_multiplier.v"/>
+      <outfile xil_pn:name="lm32_ram.v"/>
+      <outfile xil_pn:name="lm32_shifter.v"/>
+      <outfile xil_pn:name="lm32_top.v"/>
+      <outfile xil_pn:name="monitor.v"/>
+      <outfile xil_pn:name="norflash16.v"/>
+      <outfile xil_pn:name="setup.v"/>
+      <outfile xil_pn:name="sysctl.v"/>
+      <outfile xil_pn:name="sysctl_icap.v"/>
+      <outfile xil_pn:name="system.v"/>
+      <outfile xil_pn:name="tb_system.v"/>
+      <outfile xil_pn:name="uart.v"/>
+      <outfile xil_pn:name="uart_transceiver.v"/>
+      <outfile xil_pn:name="wb_bram.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1366131389" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7581784221587379567" xil_pn:start_ts="1366131389">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1366131389" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2044224686730607537" xil_pn:start_ts="1366131389">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1366131389" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8623258756114729545" xil_pn:start_ts="1366131389">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1366132140" xil_pn:in_ck="-4534329385926272450" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366132140">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bram.v"/>
+      <outfile xil_pn:name="conbus5x6.v"/>
+      <outfile xil_pn:name="conbus_arb5.v"/>
+      <outfile xil_pn:name="csrbrg.v"/>
+      <outfile xil_pn:name="fmlarb.v"/>
+      <outfile xil_pn:name="fmlarb_dack.v"/>
+      <outfile xil_pn:name="fmlbrg.v"/>
+      <outfile xil_pn:name="fmlbrg_datamem.v"/>
+      <outfile xil_pn:name="fmlbrg_tagmem.v"/>
+      <outfile xil_pn:name="gen_capabilities.v"/>
+      <outfile xil_pn:name="inout_switch.v"/>
+      <outfile xil_pn:name="jtag_cores.v"/>
+      <outfile xil_pn:name="jtag_tap_spartan6.v"/>
+      <outfile xil_pn:name="lm32_adder.v"/>
+      <outfile xil_pn:name="lm32_addsub.v"/>
+      <outfile xil_pn:name="lm32_config.v"/>
+      <outfile xil_pn:name="lm32_cpu.v"/>
+      <outfile xil_pn:name="lm32_dcache.v"/>
+      <outfile xil_pn:name="lm32_debug.v"/>
+      <outfile xil_pn:name="lm32_decoder.v"/>
+      <outfile xil_pn:name="lm32_dp_ram.v"/>
+      <outfile xil_pn:name="lm32_dtlb.v"/>
+      <outfile xil_pn:name="lm32_icache.v"/>
+      <outfile xil_pn:name="lm32_include.v"/>
+      <outfile xil_pn:name="lm32_instruction_unit.v"/>
+      <outfile xil_pn:name="lm32_interrupt.v"/>
+      <outfile xil_pn:name="lm32_itlb.v"/>
+      <outfile xil_pn:name="lm32_jtag.v"/>
+      <outfile xil_pn:name="lm32_load_store_unit.v"/>
+      <outfile xil_pn:name="lm32_logic_op.v"/>
+      <outfile xil_pn:name="lm32_mc_arithmetic.v"/>
+      <outfile xil_pn:name="lm32_multiplier.v"/>
+      <outfile xil_pn:name="lm32_ram.v"/>
+      <outfile xil_pn:name="lm32_shifter.v"/>
+      <outfile xil_pn:name="lm32_top.v"/>
+      <outfile xil_pn:name="monitor.v"/>
+      <outfile xil_pn:name="norflash16.v"/>
+      <outfile xil_pn:name="setup.v"/>
+      <outfile xil_pn:name="sysctl.v"/>
+      <outfile xil_pn:name="sysctl_icap.v"/>
+      <outfile xil_pn:name="system.v"/>
+      <outfile xil_pn:name="tb_system.v"/>
+      <outfile xil_pn:name="uart.v"/>
+      <outfile xil_pn:name="uart_transceiver.v"/>
+      <outfile xil_pn:name="wb_bram.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1366132146" xil_pn:in_ck="-4534329385926272450" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2551281379474595105" xil_pn:start_ts="1366132140">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_system_beh.prj"/>
+      <outfile xil_pn:name="tb_system_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1366132146" xil_pn:in_ck="7540809886992866377" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8992701733870593724" xil_pn:start_ts="1366132146">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_system_isim_beh.wdb"/>
+    </transform>
+  </transforms>
+
+</generated_project>

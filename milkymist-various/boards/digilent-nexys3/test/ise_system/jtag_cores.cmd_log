@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/ise_system/jtag_cores.xst" -ofn "/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/ise_system/jtag_cores.syr" 
