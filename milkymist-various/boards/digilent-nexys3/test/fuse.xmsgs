@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/wb_bram.v" Line 25: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_bram</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/wb_bram.v" Line 26: Parameter declaration becomes local in <arg fmt="%s" index="1">wb_bram</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/uart.v" Line 85: Parameter declaration becomes local in <arg fmt="%s" index="1">uart</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 222: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 223: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 225: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 227: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 228: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 229: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 230: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 232: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 233: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 234: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 235: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 236: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 237: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 239: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/fmlbrg.v" Line 240: Parameter declaration becomes local in <arg fmt="%s" index="1">fmlbrg</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 76: &lt;<arg fmt="%s" index="1">psram_clk</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 77: &lt;<arg fmt="%s" index="1">psram_adv_n</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 78: &lt;<arg fmt="%s" index="1">psram_cre</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 79: &lt;<arg fmt="%s" index="1">psram_wait</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 80: &lt;<arg fmt="%s" index="1">psram_ce_n</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 81: &lt;<arg fmt="%s" index="1">psram_oe_n</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 83: &lt;<arg fmt="%s" index="1">psram_ub</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 84: &lt;<arg fmt="%s" index="1">psram_lb</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/tb_system.v" Line 93: &lt;<arg fmt="%s" index="1">psram_dq</arg>&gt; is already implicitly declared earlier.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/matt/Documents/Studies/4IRT/SystemOnChip/milkymist-various/boards/digilent-nexys3/test/system.v" Line 1401: Port <arg fmt="%s" index="1">IOCLK</arg> is not connected to this instance
+</msg>
+
+<msg type="fatal" file="Simulator" num="0" delta="unknown" srcfile="../src/Fuse.cpp" srcline="209" srcrcs="1.133" >Failed to compile one of the generated C files.
+Please recompile with -mt off -v 1 switch to identify which design unit failed.</msg>
+
+</messages>
+
