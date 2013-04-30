@@ -58,7 +58,7 @@
  * SDRAM depth, in bytes (the number of bits you need to address the whole
  * array with byte granularity)
  */
-`define SDRAM_DEPTH 27
+`define SDRAM_DEPTH 23
 
 /*
  * SDRAM column depth (the number of column address bits)

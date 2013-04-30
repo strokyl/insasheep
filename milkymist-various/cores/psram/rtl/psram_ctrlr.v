@@ -75,7 +75,7 @@ reg [14:0] cntr;
 reg [14:0] cntr_reload_val;
 always @(posedge clk or negedge rst_n) begin
     if(~rst_n) begin
-        cntr <= 15001;
+        cntr <= 16'h2ee0;
     end else if(cntr != 0)
         cntr <= cntr - 1'b1;
     else
@@ -217,6 +217,7 @@ always @(*) begin
         s_read6: begin
             mem_clk_en = 1'b1;
             mem_cen_int = 1'b0;
+			mem_oen_int = 1'b0;
             next_state = s_read7;
         end
 

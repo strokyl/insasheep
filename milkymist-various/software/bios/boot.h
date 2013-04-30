@@ -18,6 +18,7 @@
 #ifndef __BOOT_H
 #define __BOOT_H
 
+void specialBoot(void);
 void serialboot(void);
 void netboot(void);
 void fsboot(int devnr);

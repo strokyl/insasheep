@@ -1,0 +1,508 @@
+Release 14.4 - xst P.49d (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: system.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "system.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "system"
+Output Format                      : NGC
+Target Device                      : xc5vlx30t-1-ff665
+
+---- Source Options
+Top Module Name                    : system
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lm32_ram.v" in library work
+Compiling verilog include file "lm32_include.v"
+Compiling verilog include file "lm32_config.v"
+Compiling verilog file "lm32_icache.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_ram> compiled
+Compiling verilog file "lm32_dcache.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_icache> compiled
+Compiling verilog file "lm32_addsub.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_dcache> compiled
+Compiling verilog file "lm32_shifter.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_addsub> compiled
+Compiling verilog file "lm32_multiplier.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_shifter> compiled
+Compiling verilog file "lm32_mc_arithmetic.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_multiplier> compiled
+Compiling verilog file "lm32_logic_op.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_mc_arithmetic> compiled
+Compiling verilog file "lm32_load_store_unit.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_logic_op> compiled
+Compiling verilog file "lm32_interrupt.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_load_store_unit> compiled
+Compiling verilog file "lm32_instruction_unit.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_interrupt> compiled
+Compiling verilog file "lm32_decoder.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_instruction_unit> compiled
+Compiling verilog file "lm32_adder.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <lm32_decoder> compiled
+Compiling verilog file "uart_transceiver.v" in library work
+Module <lm32_adder> compiled
+Compiling verilog file "sysctl_icap.v" in library work
+Module <uart_transceiver> compiled
+Compiling verilog file "lm32_cpu.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <sysctl_icap> compiled
+Compiling verilog file "conbus_arb5.v" in library work
+Module <lm32_cpu> compiled
+Compiling verilog file "uart.v" in library work
+Module <conbus_arb5> compiled
+Compiling verilog file "sysctl.v" in library work
+Module <uart> compiled
+Compiling verilog file "lm32_top.v" in library work
+Compiling verilog include file "lm32_include.v"
+Module <sysctl> compiled
+Compiling verilog file "gen_capabilities.v" in library work
+Compiling verilog include file "setup.v"
+Module <lm32_top> compiled
+Compiling verilog file "csrbrg.v" in library work
+Module <gen_capabilities> compiled
+Compiling verilog file "conbus5x6.v" in library work
+Module <csrbrg> compiled
+Compiling verilog file "bram.v" in library work
+Module <conbus5x6> compiled
+Compiling verilog file "system.v" in library work
+Compiling verilog include file "setup.v"
+Compiling verilog include file "lm32_include.v"
+Module <bram> compiled
+Module <system> compiled
+No errors in compilation
+Analysis of file <"system.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <system> in library <work>.
+
+Analyzing hierarchy for module <conbus5x6> in library <work> with parameters.
+	s0_addr = "000"
+	s1_addr = "001"
+	s2_addr = "010"
+	s3_addr = "011"
+	s4_addr = "10"
+	s5_addr = "11"
+
+Analyzing hierarchy for module <csrbrg> in library <work> with parameters.
+	ACK = "11"
+	DELAYACK1 = "01"
+	DELAYACK2 = "10"
+	IDLE = "00"
+
+Analyzing hierarchy for module <lm32_top> in library <work>.
+
+Analyzing hierarchy for module <bram> in library <work> with parameters.
+	adr_width = "00000000000000000000000000010000"
+	mem_filename = "bios.rom"
+	word_depth = "00000000000000000100000000000000"
+	word_width = "00000000000000000000000000001110"
+
+Analyzing hierarchy for module <uart> in library <work> with parameters.
+	baud = "00000000000000011100001000000000"
+	break_en_default = "1"
+	clk_freq = "00000100110001001011010000000000"
+	csr_addr = "0000"
+	default_divisor = "00000000000000000000000000101011"
+
+Analyzing hierarchy for module <sysctl> in library <work> with parameters.
+	clk_freq = "00000100110001001011010000000000"
+	csr_addr = "0001"
+	ninputs = "00000000000000000000000000000011"
+	noutputs = "00000000000000000000000000000001"
+	systemid = "00010011000000000100110100110001"
+
+Analyzing hierarchy for module <gen_capabilities> in library <work>.
+
+Analyzing hierarchy for module <conbus_arb5> in library <work>.
+
+Analyzing hierarchy for module <lm32_cpu> in library <work> with parameters.
+	breakpoints = "00000000000000000000000000000000"
+	dcache_associativity = "00000000000000000000000000000001"
+	dcache_base_address = "00000000000000000000000000000000"
+	dcache_bytes_per_line = "00000000000000000000000000010000"
+	dcache_limit = "01111111111111111111111111111111"
+	dcache_sets = "00000000000000000000000100000000"
+	eba_reset = "00000000100001100000000000000000"
+	icache_associativity = "00000000000000000000000000000001"
+	icache_base_address = "00000000000000000000000000000000"
+	icache_bytes_per_line = "00000000000000000000000000010000"
+	icache_limit = "01111111111111111111111111111111"
+	icache_sets = "00000000000000000000000100000000"
+	interrupts = "00000000000000000000000000100000"
+	watchpoints = "00000000000000000000000000000000"
+
+Analyzing hierarchy for module <uart_transceiver> in library <work>.
+
+Analyzing hierarchy for module <sysctl_icap> in library <work> with parameters.
+	C1 = "001"
+	C2 = "010"
+	C3 = "011"
+	C4 = "100"
+	C5 = "101"
+	IDLE = "000"
+
+Analyzing hierarchy for module <lm32_instruction_unit> in library <work> with parameters.
+	addr_offset_lsb = "00000000000000000000000000000010"
+	addr_offset_msb = "00000000000000000000000000000011"
+	addr_offset_width = "00000000000000000000000000000010"
+	associativity = "00000000000000000000000000000001"
+	base_address = "00000000000000000000000000000000"
+	bytes_per_line = "00000000000000000000000000010000"
+	limit = "01111111111111111111111111111111"
+	sets = "00000000000000000000000100000000"
+
+Analyzing hierarchy for module <lm32_decoder> in library <work>.
+
+Analyzing hierarchy for module <lm32_load_store_unit> in library <work> with parameters.
+	addr_offset_lsb = "00000000000000000000000000000010"
+	addr_offset_msb = "00000000000000000000000000000011"
+	addr_offset_width = "00000000000000000000000000000010"
+	associativity = "00000000000000000000000000000001"
+	base_address = "00000000000000000000000000000000"
+	bytes_per_line = "00000000000000000000000000010000"
+	limit = "01111111111111111111111111111111"
+	sets = "00000000000000000000000100000000"
+
+Analyzing hierarchy for module <lm32_adder> in library <work>.
+
+Analyzing hierarchy for module <lm32_logic_op> in library <work>.
+
+Analyzing hierarchy for module <lm32_shifter> in library <work>.
+
+Analyzing hierarchy for module <lm32_multiplier> in library <work>.
+
+Analyzing hierarchy for module <lm32_mc_arithmetic> in library <work>.
+
+Analyzing hierarchy for module <lm32_interrupt> in library <work> with parameters.
+	interrupts = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <lm32_ram> in library <work> with parameters.
+	address_width = "00000000000000000000000000000101"
+	data_width = "00000000000000000000000000100000"
+	init_file = "NONE"
+
+Analyzing hierarchy for module <lm32_icache> in library <work> with parameters.
+	addr_offset_lsb = "00000000000000000000000000000010"
+	addr_offset_msb = "00000000000000000000000000000011"
+	addr_offset_width = "00000000000000000000000000000010"
+	addr_set_lsb = "00000000000000000000000000000100"
+	addr_set_msb = "00000000000000000000000000001011"
+	addr_set_width = "00000000000000000000000000001000"
+	addr_tag_lsb = "00000000000000000000000000001100"
+	addr_tag_msb = "00000000000000000000000000011111"
+	addr_tag_width = "00000000000000000000000000010100"
+	associativity = "00000000000000000000000000000001"
+	base_address = "00000000000000000000000000000000"
+	bytes_per_line = "00000000000000000000000000010000"
+	limit = "01111111111111111111111111111111"
+	sets = "00000000000000000000000100000000"
+
+Analyzing hierarchy for module <lm32_dcache> in library <work> with parameters.
+	addr_offset_lsb = "00000000000000000000000000000010"
+	addr_offset_msb = "00000000000000000000000000000011"
+	addr_offset_width = "00000000000000000000000000000010"
+	addr_set_lsb = "00000000000000000000000000000100"
+	addr_set_msb = "00000000000000000000000000001011"
+	addr_set_width = "00000000000000000000000000001000"
+	addr_tag_lsb = "00000000000000000000000000001100"
+	addr_tag_msb = "00000000000000000000000000011111"
+	addr_tag_width = "00000000000000000000000000010100"
+	associativity = "00000000000000000000000000000001"
+	base_address = "00000000000000000000000000000000"
+	bytes_per_line = "00000000000000000000000000010000"
+	limit = "01111111111111111111111111111111"
+	sets = "00000000000000000000000100000000"
+
+Analyzing hierarchy for module <lm32_addsub> in library <work>.
+
+Analyzing hierarchy for module <lm32_ram> in library <work> with parameters.
+	address_width = "00000000000000000000000000001010"
+	data_width = "00000000000000000000000000100000"
+	init_file = "NONE"
+
+Analyzing hierarchy for module <lm32_ram> in library <work> with parameters.
+	address_width = "00000000000000000000000000001000"
+	data_width = "00000000000000000000000000010101"
+	init_file = "NONE"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <system>.
+Module <system> is correct for synthesis.
+ 
+Analyzing module <conbus5x6> in library <work>.
+	s0_addr = 3'b000
+	s1_addr = 3'b001
+	s2_addr = 3'b010
+	s3_addr = 3'b011
+	s4_addr = 2'b10
+	s5_addr = 2'b11
+Module <conbus5x6> is correct for synthesis.
+ 
+Analyzing module <conbus_arb5> in library <work>.
+Module <conbus_arb5> is correct for synthesis.
+ 
+Analyzing module <csrbrg> in library <work>.
+	ACK = 2'b11
+	DELAYACK1 = 2'b01
+	DELAYACK2 = 2'b10
+	IDLE = 2'b00
+Module <csrbrg> is correct for synthesis.
+ 
+Analyzing module <lm32_top> in library <work>.
+Module <lm32_top> is correct for synthesis.
+ 
+Analyzing module <lm32_cpu> in library <work>.
+	breakpoints = 32'sb00000000000000000000000000000000
+	dcache_associativity = 32'sb00000000000000000000000000000001
+	dcache_base_address = 32'b00000000000000000000000000000000
+	dcache_bytes_per_line = 32'sb00000000000000000000000000010000
+	dcache_limit = 32'b01111111111111111111111111111111
+	dcache_sets = 32'sb00000000000000000000000100000000
+	eba_reset = 32'b00000000100001100000000000000000
+	icache_associativity = 32'sb00000000000000000000000000000001
+	icache_base_address = 32'b00000000000000000000000000000000
+	icache_bytes_per_line = 32'sb00000000000000000000000000010000
+	icache_limit = 32'b01111111111111111111111111111111
+	icache_sets = 32'sb00000000000000000000000100000000
+	interrupts = 32'sb00000000000000000000000000100000
+	watchpoints = 32'sb00000000000000000000000000000000
+Module <lm32_cpu> is correct for synthesis.
+ 
+Analyzing module <lm32_instruction_unit> in library <work>.
+	addr_offset_lsb = 32'sb00000000000000000000000000000010
+	addr_offset_msb = 32'sb00000000000000000000000000000011
+	addr_offset_width = 32'sb00000000000000000000000000000010
+	associativity = 32'sb00000000000000000000000000000001
+	base_address = 32'b00000000000000000000000000000000
+	bytes_per_line = 32'sb00000000000000000000000000010000
+	limit = 32'b01111111111111111111111111111111
+	sets = 32'sb00000000000000000000000100000000
+WARNING:Xst:2326 - "lm32_instruction_unit.v" line 812: Invalid escape sequence : %x.
+WARNING:Xst:2323 - "lm32_instruction_unit.v" line 812: Parameter 2 is not constant in call of system task $display.
+"lm32_instruction_unit.v" line 812: $display : Instruction bus error. Address: %x
+Module <lm32_instruction_unit> is correct for synthesis.
+ 
+Analyzing module <lm32_icache> in library <work>.
+	addr_offset_lsb = 32'sb00000000000000000000000000000010
+	addr_offset_msb = 32'sb00000000000000000000000000000011
+	addr_offset_width = 32'sb00000000000000000000000000000010
+	addr_set_lsb = 32'sb00000000000000000000000000000100
+	addr_set_msb = 32'sb00000000000000000000000000001011
+	addr_set_width = 32'sb00000000000000000000000000001000
+	addr_tag_lsb = 32'sb00000000000000000000000000001100
+	addr_tag_msb = 32'sb00000000000000000000000000011111
+	addr_tag_width = 32'sb00000000000000000000000000010100
+	associativity = 32'sb00000000000000000000000000000001
+	base_address = 32'b00000000000000000000000000000000
+	bytes_per_line = 32'sb00000000000000000000000000010000
+	limit = 32'b01111111111111111111111111111111
+	sets = 32'sb00000000000000000000000100000000
+Module <lm32_icache> is correct for synthesis.
+ 
+Analyzing module <lm32_ram.2> in library <work>.
+	address_width = 32'sb00000000000000000000000000001010
+	data_width = 32'sb00000000000000000000000000100000
+	init_file = "NONE"
+Module <lm32_ram.2> is correct for synthesis.
+ 
+Analyzing module <lm32_ram.3> in library <work>.
+	address_width = 32'sb00000000000000000000000000001000
+	data_width = 32'sb00000000000000000000000000010101
+	init_file = "NONE"
+Module <lm32_ram.3> is correct for synthesis.
+ 
+Analyzing module <lm32_decoder> in library <work>.
+Module <lm32_decoder> is correct for synthesis.
+ 
+Analyzing module <lm32_load_store_unit> in library <work>.
+	addr_offset_lsb = 32'sb00000000000000000000000000000010
+	addr_offset_msb = 32'sb00000000000000000000000000000011
+	addr_offset_width = 32'sb00000000000000000000000000000010
+	associativity = 32'sb00000000000000000000000000000001
+	base_address = 32'b00000000000000000000000000000000
+	bytes_per_line = 32'sb00000000000000000000000000010000
+	limit = 32'b01111111111111111111111111111111
+	sets = 32'sb00000000000000000000000100000000
+Module <lm32_load_store_unit> is correct for synthesis.
+ 
+Analyzing module <lm32_dcache> in library <work>.
+	addr_offset_lsb = 32'sb00000000000000000000000000000010
+	addr_offset_msb = 32'sb00000000000000000000000000000011
+	addr_offset_width = 32'sb00000000000000000000000000000010
+	addr_set_lsb = 32'sb00000000000000000000000000000100
+	addr_set_msb = 32'sb00000000000000000000000000001011
+	addr_set_width = 32'sb00000000000000000000000000001000
+	addr_tag_lsb = 32'sb00000000000000000000000000001100
+	addr_tag_msb = 32'sb00000000000000000000000000011111
+	addr_tag_width = 32'sb00000000000000000000000000010100
+	associativity = 32'sb00000000000000000000000000000001
+	base_address = 32'b00000000000000000000000000000000
+	bytes_per_line = 32'sb00000000000000000000000000010000
+	limit = 32'b01111111111111111111111111111111
+	sets = 32'sb00000000000000000000000100000000
+Module <lm32_dcache> is correct for synthesis.
+ 
+Analyzing module <lm32_adder> in library <work>.
+Module <lm32_adder> is correct for synthesis.
+ 
+Analyzing module <lm32_addsub> in library <work>.
+Module <lm32_addsub> is correct for synthesis.
+ 
+Analyzing module <lm32_logic_op> in library <work>.
+Module <lm32_logic_op> is correct for synthesis.
+ 
+Analyzing module <lm32_shifter> in library <work>.
+Module <lm32_shifter> is correct for synthesis.
+ 
+Analyzing module <lm32_multiplier> in library <work>.
+Module <lm32_multiplier> is correct for synthesis.
+ 
+Analyzing module <lm32_mc_arithmetic> in library <work>.
+Module <lm32_mc_arithmetic> is correct for synthesis.
+ 
+Analyzing module <lm32_interrupt> in library <work>.
+	interrupts = 32'sb00000000000000000000000000100000
+Module <lm32_interrupt> is correct for synthesis.
+ 
+Analyzing module <lm32_ram.1> in library <work>.
+	address_width = 32'sb00000000000000000000000000000101
+	data_width = 32'sb00000000000000000000000000100000
+	init_file = "NONE"
+Module <lm32_ram.1> is correct for synthesis.
+ 
+Analyzing module <bram> in library <work>.
+	adr_width = 32'sb00000000000000000000000000010000
+	mem_filename = "bios.rom"
+	word_depth = 32'sb00000000000000000100000000000000
+	word_width = 32'sb00000000000000000000000000001110
+INFO:Xst:2546 - "bram.v" line 125: reading initialization file "bios.rom".
+ERROR:Xst:2353 - "bram.v" line 125: Address 16384 is invalid in call of system task $readmemh.
+ERROR:Xst:2634 - "bram.v" line 126: For loop stop condition should depend on loop variable or be static.
+ 
+Found 2 error(s). Aborting synthesis.
+--> 
+
+
+Total memory usage is 582076 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/flonesan/developments/milkymist-various/boards/mlx-1000/test/ise_system/tb_system_isim_beh.exe" -prj "/home/flonesan/developments/milkymist-various/boards/mlx-1000/test/ise_system/tb_system_beh.prj" "work.tb_system" "work.glbl" 
