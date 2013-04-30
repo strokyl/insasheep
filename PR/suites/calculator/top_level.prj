@@ -1,0 +1,3 @@
+verilog work "displayer.v"
+verilog work "calculator.v"
+verilog work "top_level.v"
