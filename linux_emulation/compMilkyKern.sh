@@ -2,6 +2,8 @@
 HOME_PATH=/home/gabriel
 OPENWRT_PATH=$HOME_PATH/Documents/INSA_2011_-/4IR_B1_S2/Ptut/openwrt-milkymist
 LINUX_MILKY_PATH=$HOME_PATH/Documents/INSA_2011_-/4IR_B1_S2/Ptut/linux-milkymist
+DINSA_PATH=$HOME_PATH/Documents/INSA_2011_-/4IR_B1_S2/Ptut/d_insasheep
+DBIOS_PATH=$DINSA_PATH/bios
 
 echo "Source startise"
 source startise 2>&1 > /dev/null 
@@ -17,5 +19,6 @@ export QEMU_AUDIO_DRV=none
 echo "Create filesystem"
 cd $OPENWRT_PATH
 #ARCH=lm32 CROSS_COMPILE=lm32-rtems4.11- make
+cp $LINUX_MILKY_PATH/arch/lm32/boot/simpleImage.milkymist_one $DBIOS_PATH/simpleImage.milkymist_one
 echo "Launch qemu"
 qemu-system-lm32  -M milkymist -kernel $LINUX_MILKY_PATH/arch/lm32/boot/simpleImage.milkymist_one -append "root=/dev/ram console=ttyS0 init=/bin/sh" -initrd $OPENWRT_PATH/bin/lm32/openwrt-lm32-root.bin -nographic

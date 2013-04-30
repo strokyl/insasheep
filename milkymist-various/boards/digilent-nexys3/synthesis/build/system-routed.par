@@ -1,36 +1,37 @@
-Release 14.4 par P.49d (lin64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 12.3 par M.70d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-matt-laptop::  Thu Mar 14 16:33:12 2013
+MATA-PC::  Sun Apr 14 21:54:45 2013
 
 par -ol high -w system.ncd system-routed.ncd 
 
 
 Constraints file: system.pcf.
-Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/14.4/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '6slx16.nph' in environment
+/media/30FD58A66C5042BE/Documents/Xilinx/12.3/ISE_DS/ISE/.
    "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
 
 
-Device speed data version:  "PRODUCTION 1.23 2012-12-04".
+Device speed data version:  "PRODUCTION 1.12c 2010-09-15".
 
 
 
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,105 out of  18,224   11%
-    Number used as Flip Flops:               2,104
-    Number used as Latches:                      0
-    Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      2,455 out of   9,112   26%
-    Number used as logic:                    2,361 out of   9,112   25%
-      Number using O6 output only:           1,758
-      Number using O5 output only:             100
-      Number using O5 and O6:                  503
+  Number of Slice Registers:                 2,334 out of  18,224   12%
+    Number used as Flip Flops:               2,237
+    Number used as Latches:                     96
+    Number used as Latch-thrus:                  1
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,589 out of   9,112   28%
+    Number used as logic:                    2,480 out of   9,112   27%
+      Number using O6 output only:           1,879
+      Number using O5 output only:             108
+      Number using O5 and O6:                  493
       Number used as ROM:                        0
     Number used as Memory:                       4 out of   2,176    1%
       Number used as Dual Port RAM:              0
@@ -39,18 +40,17 @@ Slice Logic Utilization:
         Number using O6 output only:             4
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     90
-      Number with same-slice register load:     86
+    Number used exclusively as route-thrus:    105
+      Number with same-slice register load:    101
       Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,006 out of   2,278   44%
-  Number of MUXCYs used:                       480 out of   4,556   10%
-  Number of LUT Flip Flop pairs used:        3,070
-    Number with an unused Flip Flop:         1,164 out of   3,070   37%
-    Number with an unused LUT:                 615 out of   3,070   20%
-    Number of fully used LUT-FF pairs:       1,291 out of   3,070   42%
+  Number of occupied Slices:                   972 out of   2,278   42%
+  Number of LUT Flip Flop pairs used:        3,180
+    Number with an unused Flip Flop:         1,082 out of   3,180   34%
+    Number with an unused LUT:                 591 out of   3,180   18%
+    Number of fully used LUT-FF pairs:       1,507 out of   3,180   47%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -63,7 +63,8 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        67 out of     232   28%
     Number of LOCed IOBs:                       67 out of      67  100%
-    IOB Flip Flops:                             33
+    IOB Flip Flops:                             10
+    IOB Latches:                                16
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                        16 out of      32   50%
@@ -78,8 +79,8 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                  33 out of     248   13%
-    Number used as OLOGIC2s:                    33
+  Number of OLOGIC2/OSERDES2s:                  26 out of     248   10%
+    Number used as OLOGIC2s:                    26
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
@@ -98,36 +99,36 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 5 secs 
-Finished initial Timing Analysis.  REAL time: 5 secs 
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 11 secs 
 
 WARNING:Par:288 - The signal mem_wait_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 16747 unrouted;      REAL time: 6 secs 
+Phase  1  : 17631 unrouted;      REAL time: 11 secs 
 
-Phase  2  : 14636 unrouted;      REAL time: 7 secs 
+Phase  2  : 15472 unrouted;      REAL time: 13 secs 
 
-Phase  3  : 6810 unrouted;      REAL time: 15 secs 
+Phase  3  : 7798 unrouted;      REAL time: 23 secs 
 
-Phase  4  : 6810 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
+Phase  4  : 7803 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
 
 Updating file: system-routed.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 47 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 47 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 47 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 47 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 47 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 27 secs 
-Total REAL time to Router completion: 27 secs 
-Total CPU time to Router completion: 27 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
+Total REAL time to Router completion: 50 secs 
+Total CPU time to Router completion: 51 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -145,19 +146,34 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|             sys_clk | BUFGMUX_X3Y13| No   |  782 |  0.533     |  1.379      |
+|             sys_clk | BUFGMUX_X3Y13| No   |  812 |  0.534     |  1.438      |
++---------------------+--------------+------+------+------------+-------------+
+|iosw/m0_ce_m1_ce_OR_ |              |      |      |            |             |
+|               414_o |         Local|      |   16 |  1.257     |  3.684      |
 +---------------------+--------------+------+------+------------+-------------+
 |sysctl/icap/icap_clk |              |      |      |            |             |
-|                  _r |         Local|      |    1 |  0.000     |  1.627      |
+|                  _r |         Local|      |    1 |  0.000     |  2.006      |
++---------------------+--------------+------+------+------------+-------------+
+|psram/state_FSM_FFd2 |              |      |      |            |             |
+|                     |         Local|      |   12 |  0.470     |  2.730      |
++---------------------+--------------+------+------+------------+-------------+
+|psram/state_FSM_FFd5 |              |      |      |            |             |
+|                     |         Local|      |    7 |  0.213     |  2.040      |
++---------------------+--------------+------+------+------------+-------------+
+|norflash_stb_norflas |              |      |      |            |             |
+|    h_cyc_AND_1290_o |         Local|      |   35 |  1.048     |  4.141      |
++---------------------+--------------+------+------+------------+-------------+
+|psram/state_FSM_FFd4 |              |      |      |            |             |
+|                     |         Local|      |    7 |  0.724     |  2.313      |
++---------------------+--------------+------+------+------------+-------------+
+|psram/state_FSM_FFd3 |              |      |      |            |             |
+|                     |         Local|      |    6 |  0.605     |  1.501      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
 only delays for the net. Note this is different from Clock Skew which
 is reported in TRCE timing report. Clock Skew is the difference between
 the minimum and maximum path delays which includes logic delays.
-
-* The fanout is the number of component pins not the individual BEL loads,
-for example SLICE loads not FF loads.
 
 Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
@@ -170,8 +186,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk80_pll = PERIOD TIMEGRP "clk80_pll" | SETUP       |     1.102ns|    11.398ns|       0|           0
-   TS_clk24_pll / 3.33333333 HIGH 50%       | HOLD        |     0.295ns|            |       0|           0
+  TS_clk80_pll = PERIOD TIMEGRP "clk80_pll" | SETUP       |     0.037ns|    12.463ns|       0|           0
+   TS_clk24_pll / 3.33333333 HIGH 50%       | HOLD        |     0.404ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_CLK_100MHZ = PERIOD TIMEGRP "CLK_100MH | MINLOWPULSE |     6.666ns|     3.334ns|       0|           0
   Z" 10 ns HIGH 50%                         |             |            |            |        |            
@@ -191,9 +207,9 @@ Derived Constraints for TS_CLK_100MHZ
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_100MHZ                  |     10.000ns|      3.334ns|      9.118ns|            0|            0|            0|      1707562|
-| TS_clk24_pll                  |     41.667ns|     20.000ns|     37.993ns|            0|            0|            0|      1707562|
-|  TS_clk80_pll                 |     12.500ns|     11.398ns|          N/A|            0|            0|      1707562|            0|
+|TS_CLK_100MHZ                  |     10.000ns|      3.334ns|      9.970ns|            0|            0|            0|      2227370|
+| TS_clk24_pll                  |     41.667ns|     20.000ns|     41.543ns|            0|            0|            0|      2227370|
+|  TS_clk80_pll                 |     12.500ns|     12.463ns|          N/A|            0|            0|      2227370|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -205,10 +221,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 28 secs 
-Total CPU time to PAR completion: 29 secs 
+Total REAL time to PAR completion: 55 secs 
+Total CPU time to PAR completion: 55 secs 
 
-Peak Memory Usage:  661 MB
+Peak Memory Usage:  446 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -1,16 +1,27 @@
-Release 14.4 ngdbuild P.49d (lin64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 12.3 ngdbuild M.70d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/14.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -uc
-system.ucf system.ngc
+Command Line:
+/media/30FD58A66C5042BE/Documents/Xilinx/12.3/ISE_DS/ISE/bin/lin64/unwrapped/ngd
+build -uc system.ucf system.ngc
 
 Reading NGO file
-"/home/matt/Desktop/milkymist-various/boards/digilent-nexys3/synthesis/build/sys
-tem.ngc" ...
+"/media/30FD58A66C5042BE/Documents/INSA_2011_-/4IR_B1_S2/Ptut/insasheep/milkymis
+t-various/boards/digilent-nexys3/synthesis/build/system.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file "system.ucf" ...
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance 'clkgen600/PLL_ADV'
+   of type PLL_ADV has been changed from 'VIRTEX5' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance 'clkgen720/PLL_ADV'
+   of type PLL_ADV has been changed from 'VIRTEX5' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
 Resolving constraint associations...
 Checking Constraint Associations...
 INFO:ConstraintSystem:178 - TNM 'CLK_100MHZ', used in period specification
@@ -54,12 +65,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   3
 
-Total memory usage is 415712 kilobytes
+Total memory usage is 367752 kilobytes
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
-Total CPU time to NGDBUILD completion:   5 sec
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "system.bld"...

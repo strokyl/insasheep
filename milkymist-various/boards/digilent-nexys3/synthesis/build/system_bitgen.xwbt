@@ -1,7 +1,7 @@
-INFILE=/home/matt/Desktop/milkymist-various/boards/digilent-nexys3/synthesis/build/system-routed.ncd
-OUTFILE=/home/matt/Desktop/milkymist-various/boards/digilent-nexys3/synthesis/build/system.bit
+INFILE=/media/30FD58A66C5042BE/Documents/INSA_2011_-/4IR_B1_S2/Ptut/insasheep/milkymist-various/boards/digilent-nexys3/synthesis/build/system-routed.ncd
+OUTFILE=/media/30FD58A66C5042BE/Documents/INSA_2011_-/4IR_B1_S2/Ptut/insasheep/milkymist-various/boards/digilent-nexys3/synthesis/build/system.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=/home/matt/Desktop/milkymist-various/boards/digilent-nexys3/synthesis/build
+WORKINGDIR=/media/30FD58A66C5042BE/Documents/INSA_2011_-/4IR_B1_S2/Ptut/insasheep/milkymist-various/boards/digilent-nexys3/synthesis/build
 LICENSE=WebPack
-USER_INFO=210720836_0_0_456
+USER_INFO=210721177_0_0_415

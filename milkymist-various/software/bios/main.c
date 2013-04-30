@@ -470,9 +470,9 @@ static void do_command(char *c)
 	else if(strcmp(token, "wcsr") == 0) wcsr(get_token(&c), get_token(&c));
 
 	else if(strcmp(token, "") != 0)
-#endif 
+#endif
     if(strcmp(token, "help") == 0) help();
-    else if(strcmp(token, "special") == 0) specialBoot();
+    //else if(strcmp(token, "special") == 0) specialBoot();
     else printf("Command not found\n");
 		
 }
@@ -588,9 +588,11 @@ static void readstr(char *s, int size)
 				}
 				break;
 			case '\e':
+
 #ifdef FIXME
 				vga_set_console(!vga_get_console());
 #endif
+
 				break;
 			case 0x07:
 				break;
