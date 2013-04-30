@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/calculator/top_level.xst" -ofn "/home/clems/Xilinx_projects/suites/calculator/top_level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../increment -nt off -uc top_level.ucf -p xc6slx16-csg324-3 top_level.ngc top_level.ngd  
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/calculator/top_level.xst" -ofn "/home/clems/Xilinx_projects/suites/calculator/top_level.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt off -a -uc top_level.ucf -p xc6slx16-csg324-3 top_level.ngc top_level.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level.ucf -p xc6slx16-csg324-3 top_level.ngc top_level.ngd  
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/calculator/top_level.xst" -ofn "/home/clems/Xilinx_projects/suites/calculator/top_level.syr" 
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/calculator/top_level.xst" -ofn "/home/clems/Xilinx_projects/suites/calculator/top_level.syr" 
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/calculator/top_level.xst" -ofn "/home/clems/Xilinx_projects/suites/calculator/top_level.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level.ucf -p xc6slx16-csg324-3 top_level.ngc top_level.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level.ucf -p xc6slx16-csg324-3 top_level.ngc top_level.ngd  
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/calculator/top_level.xst" -ofn "/home/clems/Xilinx_projects/suites/calculator/top_level.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level.ucf -p xc6slx16-csg324-3 top_level.ngc top_level.ngd  

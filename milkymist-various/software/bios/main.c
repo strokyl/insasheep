@@ -389,7 +389,7 @@ static void mdiow(char *reg, char *value)
 
 	mdio_write(brd_desc->ethernet_phyadr, reg2, value2);
 }
-
+#endif
 /* Init + command line */
 
 static void help(void)
@@ -417,7 +417,7 @@ static void help(void)
 	puts("reboot     - system reset");
 	puts("reconf     - reload FPGA configuration");
 }
-#endif
+
 
 static char *get_token(char **str)
 {
@@ -471,7 +471,10 @@ static void do_command(char *c)
 
 	else if(strcmp(token, "") != 0)
 #endif 
-		printf("Command not found\n");
+    if(strcmp(token, "help") == 0) help();
+    else if(strcmp(token, "special") == 0) specialBoot();
+    else printf("Command not found\n");
+		
 }
 
 #ifdef FIXME
@@ -540,12 +543,12 @@ static void print_mac(void)
 }
 #endif
 
-static const char banner[] =
+static const char banner[] = "Coucou\n\n";/*
 	"\nMILKYMIST(tm) v"VERSION" BIOS   http://www.milkymist.org\n"
 	"(c) Copyright 2007, 2008, 2009, 2010, 2011 Sebastien Bourdeauducq\n\n"
 	"This program is free software: you can redistribute it and/or modify\n"
 	"it under the terms of the GNU General Public License as published by\n"
-	"the Free Software Foundation, version 3 of the License.\n\n";
+	"the Free Software Foundation, version 3 of the License.\n\n";*/
 
 #ifdef FIXME
 static void boot_sequence(void)
@@ -663,6 +666,7 @@ int main(int i, char **c)
 	vga_unblank();
 	vga_set_console(1);
 #endif
+    specialBoot();
 	while(1) {
 		putsnonl("\e[1mBIOS>\e[0m ");
 		readstr(buffer, 64);

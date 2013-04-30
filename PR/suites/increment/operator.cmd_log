@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/increment/operator.xst" -ofn "/home/clems/Xilinx_projects/suites/increment/operator.syr" 
+xst -intstyle ise -ifn "/home/clems/Xilinx_projects/suites/increment/operator.xst" -ofn "/home/clems/Xilinx_projects/suites/increment/operator.syr" 

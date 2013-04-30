@@ -1,0 +1,15 @@
+
+# PlanAhead Generated physical constraints 
+
+#INST "reconfig_operator" AREA_GROUP = "AG_reconfig_operator";
+#AREA_GROUP "AG_reconfig_operator" RANGE=SLICE_X84Y0:SLICE_X91Y79;
+
+NET "led_out[0]" LOC = U16;
+NET "led_out[1]" LOC = V16;
+NET "led_out[2]" LOC = U15;
+NET "led_out[3]" LOC = V15;
+NET "led_out[4]" LOC = M11;
+NET "led_out[5]" LOC = N11;
+NET "led_out[6]" LOC = R11;
+NET "led_out[7]" LOC = T11;
+NET "clk_100MHz" LOC = V10;

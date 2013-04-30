@@ -42,18 +42,36 @@
 extern const struct board_desc *brd_desc;
 extern int rescue;
 
+void (*fptr)(void);
+
 extern void boot_helper(unsigned int r1, unsigned int r2, unsigned int r3, unsigned int r4, unsigned int addr);
 
 static void __attribute__((noreturn)) boot(unsigned int r1, unsigned int r2, unsigned int r3, unsigned int r4, unsigned int addr)
 {
+printf("Z\n");
+#ifdef FIXME
 	vga_blank();
-	uart_force_sync(1);
-	irq_setmask(0);
-	irq_enable(0);
-	boot_helper(r1, r2, r3, r4, addr);
+#endif
+	//uart_force_sync(1);
+printf("Z1\n");	
+
+	//irq_setmask(0);
+printf("Z2\n");
+
+	//irq_enable(0);
+printf("Z3\n");
+
+    boot_helper(r1, r2, r3, r4, addr);
+		
+
+ 
+ /*fptr = (void (*)(void)) FLASH_OFFSET_REGULAR_BIOS;
+ printf("Z4\n");
+ //while(1);
+ fptr();*/
 	while(1);
 }
-
+#ifdef FIXME
 /* Note that we do not use the hw timer so that this function works
  * even if the system controller does not.
  */
@@ -331,51 +349,85 @@ static void lzma_error(char *x)
 {
 	printf("LZMA error: %s\n", x);
 }
-
+#endif
 void flashboot(void)
 {
 	unsigned int *flashbase;
 	unsigned int length;
 	unsigned int crc;
+#ifdef FIXME
 	unsigned int got_crc;
+	int r = 0;
+#endif
 	int lzma;
-	int r;
+	//int i;
 
-	printf("I: Booting from flash...\n");
-	if(rescue)
+	
+	if(rescue) {
+	    printf("G: Booting from flash (rescue)...\n");
 		flashbase = (unsigned int *)FLASH_OFFSET_RESCUE_APP;
-	else
+	}
+	else {
+	    //printf("F: Booting from flash...\n");
 		flashbase = (unsigned int *)FLASH_OFFSET_REGULAR_APP;
+	}
 	length = *flashbase++;
 	if(length & 0x80000000) {
 		length &= 0x7fffffff;
 		lzma = 1;
+		printf("E: LZMA mode enable\n");
 	} else
 		lzma = 0;
 	crc = *flashbase++;
-	if((length < 32) || (length > 4*1024*1024)) {
-		printf("E: Invalid flash boot image length\n");
+	
+    length = 2628328;
+    
+	if(length < 32) {
+		printf("E: Invalid flash boot image length: length < 32\n");
 		return;
 	}
+	if(length > 4*1024*1024) {
+		printf("E: Invalid flash boot image length: length > 4*1024*1024\n");
+		return;
+	}
+
 	if(lzma) {
+	printf("D: Decompressing LZMA\n");
+#ifdef FIXME
 		printf("I: Decompressing %d bytes from flash...\n", length);
 		got_crc = crc32((unsigned char *)flashbase, length);
 		if(crc != got_crc) {
 			printf("E: CRC failed (expected %08x, got %08x)\n", crc, got_crc);
 			return;
 		}
+
 		r = unlzma((unsigned char *)flashbase, length, NULL, NULL, (void *)SDRAM_BASE, NULL, lzma_error);
+
 		if(r < 0)
 			return;
+#endif
 	} else {
-		printf("I: Loading %d bytes from flash...\n", length);
-		memcpy((void *)SDRAM_BASE, flashbase, length);
+		//printf("I: Loading %d bytes from flash...\n", length);
+        //printf("A: Start Loading bytes from flash...\n");
+		if((memcpy((void *)SDRAM_BASE, flashbase, length)) == NULL)
+		    printf("C: memcpy return NULL.\n");
+	   // printf("B: Loading bytes from flash over...\n");
+#ifdef FIXME
 		got_crc = crc32((unsigned char *)SDRAM_BASE, length);
 		if(crc != got_crc) {
 			printf("E: CRC failed (expected %08x, got %08x)\n", crc, got_crc);
 			return;
 		}
+#endif
 	}
-	printf("I: Booting...\n");
+
+	//printf("H: Booting...\n");
 	boot(0, 0, 0, rescue, SDRAM_BASE);
+}
+
+void specialBoot(void)
+{
+    printf("I: Special Booting...\n");
+	//boot(cmdline_adr, initrdstart_adr, initrdend_adr, rescue, FLASH_OFFSET_REGULAR_APP);
+	boot(0, 0, 0, rescue, FLASH_OFFSET_REGULAR_APP);
 }
