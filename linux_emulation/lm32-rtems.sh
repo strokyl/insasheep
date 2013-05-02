@@ -89,7 +89,7 @@ ln -s ../binutils-2.21/ld ld
 ln -s ../newlib-1.19.0/newlib newlib
 ln -s ../newlib-1.19.0/libgloss libgloss
 
-ln -s ../gdb-7.4.1 gdb
+
 ln -s ../mpc-0.8.1 mpc
 ln -s ../mpfr-2.4.2 mpfr
 ln -s ../gmp-4.3.2 gmp

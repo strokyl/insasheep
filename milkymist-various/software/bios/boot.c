@@ -48,27 +48,24 @@ extern void boot_helper(unsigned int r1, unsigned int r2, unsigned int r3, unsig
 
 static void __attribute__((noreturn)) boot(unsigned int r1, unsigned int r2, unsigned int r3, unsigned int r4, unsigned int addr)
 {
-printf("Z\n");
+
 #ifdef FIXME
 	vga_blank();
 #endif
-	//uart_force_sync(1);
+	/*uart_force_sync(1);
 printf("Z1\n");	
 
-	//irq_setmask(0);
+	irq_setmask(0);
 printf("Z2\n");
 
-	//irq_enable(0);
-printf("Z3\n");
+	irq_enable(0);
+printf("Z3\n");*/
+   /*printf("disable irq\n");
+   irq_setmask(0);
+   irq_enable(0);*/
 
-    boot_helper(r1, r2, r3, r4, addr);
-		
-
- 
- /*fptr = (void (*)(void)) FLASH_OFFSET_REGULAR_BIOS;
- printf("Z4\n");
- //while(1);
- fptr();*/
+   printf("jump to %d\n", addr);
+   boot_helper(r1, r2, r3, r4, addr);
 	while(1);
 }
 #ifdef FIXME
@@ -428,6 +425,8 @@ void flashboot(void)
 void specialBoot(void)
 {
     printf("I: Special Booting...\n");
+    //if((memcpy((void *)FLASH_OFFSET_REGULAR_APP, (void *)(FLASH_OFFSET_REGULAR_BIOS+0xAB), 7794)) == NULL);
+    //   printf("C: memcpy return NULL.\n");
 	//boot(cmdline_adr, initrdstart_adr, initrdend_adr, rescue, FLASH_OFFSET_REGULAR_APP);
 	boot(0, 0, 0, rescue, FLASH_OFFSET_REGULAR_APP);
 }

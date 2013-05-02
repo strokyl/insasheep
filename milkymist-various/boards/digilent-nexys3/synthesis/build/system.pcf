@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.49d on Thu Mar 14 16:33:09 2013
+// Written by: Map M.70d on Sun Apr 14 21:54:41 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -176,36 +176,37 @@ PIN fmlbrg/datamem/Mram_ram0_pins<22> = BEL "fmlbrg/datamem/Mram_ram0" PINNAME
         CLKA;
 PIN fmlbrg/datamem/Mram_ram0_pins<23> = BEL "fmlbrg/datamem/Mram_ram0" PINNAME
         CLKB;
-PIN _i000038/Mram_mem4_pins<9> = BEL "_i000038/Mram_mem4" PINNAME CLKA;
-PIN _i000038/Mram_mem2_pins<9> = BEL "_i000038/Mram_mem2" PINNAME CLKA;
-PIN _i000038/Mram_mem1_pins<9> = BEL "_i000038/Mram_mem1" PINNAME CLKA;
-PIN _i000038/Mram_mem3_pins<9> = BEL "_i000038/Mram_mem3" PINNAME CLKA;
+PIN _i000038/Mram_mem4_pins<11> = BEL "_i000038/Mram_mem4" PINNAME CLKA;
+PIN _i000038/Mram_mem3_pins<11> = BEL "_i000038/Mram_mem3" PINNAME CLKA;
+PIN _i000038/Mram_mem2_pins<11> = BEL "_i000038/Mram_mem2" PINNAME CLKA;
+PIN _i000038/Mram_mem1_pins<11> = BEL "_i000038/Mram_mem1" PINNAME CLKA;
 PIN ODDR2_INST_pins<1> = BEL "ODDR2_INST" PINNAME CK0;
 PIN ODDR2_INST_pins<2> = BEL "ODDR2_INST" PINNAME CK1;
 PIN cpu/cpu/multiplier/Mmult_n00231_pins<110> = BEL
         "cpu/cpu/multiplier/Mmult_n00231" PINNAME CLK;
-TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
+TIMEGRP clk80_pll = BEL "trigger_reset" BEL "sys_rst" BEL "locked_addr_i" BEL
+        "locked_addr_d" BEL "flash_rstcounter_0" BEL "flash_rstcounter_1" BEL
+        "flash_rstcounter_2" BEL "flash_rstcounter_3" BEL "flash_rstcounter_4"
+        BEL "flash_rstcounter_5" BEL "flash_rstcounter_6" BEL
+        "flash_rstcounter_7" BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "rst_debounce_2" BEL "rst_debounce_3" BEL "rst_debounce_4" BEL
         "rst_debounce_5" BEL "rst_debounce_6" BEL "rst_debounce_7" BEL
         "rst_debounce_8" BEL "rst_debounce_9" BEL "rst_debounce_10" BEL
         "rst_debounce_11" BEL "rst_debounce_12" BEL "rst_debounce_13" BEL
         "rst_debounce_14" BEL "rst_debounce_15" BEL "rst_debounce_16" BEL
         "rst_debounce_17" BEL "rst_debounce_18" BEL "rst_debounce_19" BEL
-        "flash_rstcounter_0" BEL "flash_rstcounter_1" BEL "flash_rstcounter_2"
-        BEL "flash_rstcounter_3" BEL "flash_rstcounter_4" BEL
-        "flash_rstcounter_5" BEL "flash_rstcounter_6" BEL "flash_rstcounter_7"
-        BEL "clkgen720_b2" BEL "psram/state_FSM_FFd2" BEL
-        "psram/state_FSM_FFd3" BEL "psram/state_FSM_FFd12" BEL
-        "psram/state_FSM_FFd4" BEL "psram/state_FSM_FFd13" BEL
-        "psram/state_FSM_FFd5" BEL "psram/state_FSM_FFd14" BEL
-        "psram/state_FSM_FFd6" BEL "psram/state_FSM_FFd15" BEL
-        "psram/state_FSM_FFd7" BEL "psram/state_FSM_FFd16" BEL
-        "psram/state_FSM_FFd1" BEL "psram/state_FSM_FFd17" BEL
-        "psram/state_FSM_FFd8" BEL "psram/state_FSM_FFd18" BEL
-        "psram/state_FSM_FFd9" BEL "psram/state_FSM_FFd19" BEL
-        "psram/state_FSM_FFd10" BEL "psram/state_FSM_FFd20" BEL
-        "psram/state_FSM_FFd11" BEL "psram/state_FSM_FFd21" BEL
-        "psram/state_FSM_FFd26" BEL "psram/cntr_13" BEL "psram/cntr_11" BEL
+        "clkgen720_b2" BEL "psram/state_FSM_FFd2" BEL "psram/state_FSM_FFd3"
+        BEL "psram/state_FSM_FFd12" BEL "psram/state_FSM_FFd4" BEL
+        "psram/state_FSM_FFd13" BEL "psram/state_FSM_FFd5" BEL
+        "psram/state_FSM_FFd14" BEL "psram/state_FSM_FFd6" BEL
+        "psram/state_FSM_FFd15" BEL "psram/state_FSM_FFd7" BEL
+        "psram/state_FSM_FFd16" BEL "psram/state_FSM_FFd1" BEL
+        "psram/state_FSM_FFd17" BEL "psram/state_FSM_FFd8" BEL
+        "psram/state_FSM_FFd18" BEL "psram/state_FSM_FFd9" BEL
+        "psram/state_FSM_FFd19" BEL "psram/state_FSM_FFd10" BEL
+        "psram/state_FSM_FFd20" BEL "psram/state_FSM_FFd11" BEL
+        "psram/state_FSM_FFd21" BEL "psram/state_FSM_FFd26" BEL
+        "psram/cntr_14" BEL "psram/cntr_13" BEL "psram/cntr_11" BEL
         "psram/cntr_10" BEL "psram/cntr_12" BEL "psram/cntr_8" BEL
         "psram/cntr_7" BEL "psram/cntr_9" BEL "psram/cntr_5" BEL
         "psram/cntr_4" BEL "psram/cntr_6" BEL "psram/cntr_3" BEL
@@ -213,40 +214,68 @@ TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "psram/state_FSM_FFd22" BEL "psram/state_FSM_FFd23" BEL
         "psram/state_FSM_FFd25" BEL "psram/state_FSM_FFd24" BEL
         "psram/state_FSM_FFd28" BEL "psram/state_FSM_FFd27" BEL
-        "uart/csr_do_15" BEL "uart/csr_do_14" BEL "uart/csr_do_13" BEL
-        "uart/csr_do_12" BEL "uart/csr_do_11" BEL "uart/csr_do_10" BEL
-        "uart/csr_do_9" BEL "uart/csr_do_8" BEL "uart/csr_do_7" BEL
-        "uart/csr_do_6" BEL "uart/csr_do_5" BEL "uart/csr_do_4" BEL
-        "uart/csr_do_3" BEL "uart/csr_do_2" BEL "uart/csr_do_1" BEL
-        "uart/csr_do_0" BEL "uart/divisor_15" BEL "uart/divisor_14" BEL
-        "uart/divisor_13" BEL "uart/divisor_12" BEL "uart/divisor_11" BEL
-        "uart/divisor_10" BEL "uart/divisor_9" BEL "uart/divisor_8" BEL
-        "uart/divisor_7" BEL "uart/divisor_6" BEL "uart/divisor_5" BEL
-        "uart/divisor_4" BEL "uart/divisor_3" BEL "uart/divisor_2" BEL
-        "uart/divisor_1" BEL "uart/divisor_0" BEL "uart/tx_irq_en" BEL
-        "uart/rx_irq_en" BEL "uart/thru_en" BEL
-        "uart/transceiver/tx_count16_3" BEL "uart/transceiver/tx_count16_2"
-        BEL "uart/transceiver/tx_count16_1" BEL
-        "uart/transceiver/tx_count16_0" BEL "uart/transceiver/tx_bitcount_3"
-        BEL "uart/transceiver/tx_bitcount_2" BEL
-        "uart/transceiver/tx_bitcount_1" BEL "uart/transceiver/tx_bitcount_0"
-        BEL "uart/transceiver/rx_bitcount_3" BEL
-        "uart/transceiver/rx_bitcount_2" BEL "uart/transceiver/rx_bitcount_1"
-        BEL "uart/transceiver/rx_bitcount_0" BEL "uart/transceiver/break" BEL
-        "uart/transceiver/rx_done" BEL "uart/transceiver/rx_data_7" BEL
-        "uart/transceiver/rx_data_6" BEL "uart/transceiver/rx_data_5" BEL
-        "uart/transceiver/rx_data_4" BEL "uart/transceiver/rx_data_3" BEL
-        "uart/transceiver/rx_data_2" BEL "uart/transceiver/rx_data_1" BEL
-        "uart/transceiver/rx_data_0" BEL "uart/transceiver/rx_reg_7" BEL
-        "uart/transceiver/rx_reg_6" BEL "uart/transceiver/rx_reg_5" BEL
-        "uart/transceiver/rx_reg_4" BEL "uart/transceiver/rx_reg_3" BEL
-        "uart/transceiver/rx_reg_2" BEL "uart/transceiver/rx_reg_1" BEL
-        "uart/transceiver/rx_reg_0" BEL "uart/transceiver/tx_reg_7" BEL
-        "uart/transceiver/tx_reg_6" BEL "uart/transceiver/tx_reg_5" BEL
-        "uart/transceiver/tx_reg_4" BEL "uart/transceiver/tx_reg_3" BEL
-        "uart/transceiver/tx_reg_2" BEL "uart/transceiver/tx_reg_1" BEL
-        "uart/transceiver/tx_reg_0" BEL "uart/transceiver/enable16_counter_15"
-        BEL "uart/transceiver/enable16_counter_14" BEL
+        "psram/data_63" BEL "psram/data_62" BEL "psram/data_61" BEL
+        "psram/data_60" BEL "psram/data_59" BEL "psram/data_58" BEL
+        "psram/data_57" BEL "psram/data_56" BEL "psram/data_55" BEL
+        "psram/data_54" BEL "psram/data_53" BEL "psram/data_52" BEL
+        "psram/data_51" BEL "psram/data_50" BEL "psram/data_49" BEL
+        "psram/data_48" BEL "psram/data_47" BEL "psram/data_46" BEL
+        "psram/data_45" BEL "psram/data_44" BEL "psram/data_43" BEL
+        "psram/data_42" BEL "psram/data_41" BEL "psram/data_40" BEL
+        "psram/data_39" BEL "psram/data_38" BEL "psram/data_37" BEL
+        "psram/data_36" BEL "psram/data_35" BEL "psram/data_34" BEL
+        "psram/data_33" BEL "psram/data_32" BEL "psram/data_31" BEL
+        "psram/data_30" BEL "psram/data_29" BEL "psram/data_28" BEL
+        "psram/data_27" BEL "psram/data_26" BEL "psram/data_25" BEL
+        "psram/data_24" BEL "psram/data_23" BEL "psram/data_22" BEL
+        "psram/data_21" BEL "psram/data_20" BEL "psram/data_19" BEL
+        "psram/data_18" BEL "psram/data_17" BEL "psram/data_16" BEL
+        "psram/data_15" BEL "psram/data_14" BEL "psram/data_13" BEL
+        "psram/data_12" BEL "psram/data_11" BEL "psram/data_10" BEL
+        "psram/data_9" BEL "psram/data_8" BEL "psram/data_7" BEL
+        "psram/data_6" BEL "psram/data_5" BEL "psram/data_4" BEL
+        "psram/data_3" BEL "psram/data_2" BEL "psram/data_1" BEL
+        "psram/data_0" BEL "psram/addr_22" BEL "psram/addr_21" BEL
+        "psram/addr_20" BEL "psram/addr_19" BEL "psram/addr_18" BEL
+        "psram/addr_17" BEL "psram/addr_16" BEL "psram/addr_15" BEL
+        "psram/addr_14" BEL "psram/addr_13" BEL "psram/addr_12" BEL
+        "psram/addr_11" BEL "psram/addr_10" BEL "psram/addr_9" BEL
+        "psram/addr_8" BEL "psram/addr_7" BEL "psram/addr_6" BEL
+        "psram/addr_5" BEL "psram/addr_4" BEL "uart/csr_do_15" BEL
+        "uart/csr_do_14" BEL "uart/csr_do_13" BEL "uart/csr_do_12" BEL
+        "uart/csr_do_11" BEL "uart/csr_do_10" BEL "uart/csr_do_9" BEL
+        "uart/csr_do_8" BEL "uart/csr_do_7" BEL "uart/csr_do_6" BEL
+        "uart/csr_do_5" BEL "uart/csr_do_4" BEL "uart/csr_do_3" BEL
+        "uart/csr_do_2" BEL "uart/csr_do_1" BEL "uart/csr_do_0" BEL
+        "uart/divisor_15" BEL "uart/divisor_14" BEL "uart/divisor_13" BEL
+        "uart/divisor_12" BEL "uart/divisor_11" BEL "uart/divisor_10" BEL
+        "uart/divisor_9" BEL "uart/divisor_8" BEL "uart/divisor_7" BEL
+        "uart/divisor_6" BEL "uart/divisor_5" BEL "uart/divisor_4" BEL
+        "uart/divisor_3" BEL "uart/divisor_2" BEL "uart/divisor_1" BEL
+        "uart/divisor_0" BEL "uart/tx_irq_en" BEL "uart/rx_irq_en" BEL
+        "uart/thru_en" BEL "uart/transceiver/tx_count16_3" BEL
+        "uart/transceiver/tx_count16_2" BEL "uart/transceiver/tx_count16_1"
+        BEL "uart/transceiver/tx_count16_0" BEL
+        "uart/transceiver/tx_bitcount_3" BEL "uart/transceiver/tx_bitcount_2"
+        BEL "uart/transceiver/tx_bitcount_1" BEL
+        "uart/transceiver/tx_bitcount_0" BEL "uart/transceiver/rx_bitcount_3"
+        BEL "uart/transceiver/rx_bitcount_2" BEL
+        "uart/transceiver/rx_bitcount_1" BEL "uart/transceiver/rx_bitcount_0"
+        BEL "uart/transceiver/break" BEL "uart/transceiver/rx_done" BEL
+        "uart/transceiver/rx_data_7" BEL "uart/transceiver/rx_data_6" BEL
+        "uart/transceiver/rx_data_5" BEL "uart/transceiver/rx_data_4" BEL
+        "uart/transceiver/rx_data_3" BEL "uart/transceiver/rx_data_2" BEL
+        "uart/transceiver/rx_data_1" BEL "uart/transceiver/rx_data_0" BEL
+        "uart/transceiver/rx_reg_7" BEL "uart/transceiver/rx_reg_6" BEL
+        "uart/transceiver/rx_reg_5" BEL "uart/transceiver/rx_reg_4" BEL
+        "uart/transceiver/rx_reg_3" BEL "uart/transceiver/rx_reg_2" BEL
+        "uart/transceiver/rx_reg_1" BEL "uart/transceiver/rx_reg_0" BEL
+        "uart/transceiver/tx_reg_7" BEL "uart/transceiver/tx_reg_6" BEL
+        "uart/transceiver/tx_reg_5" BEL "uart/transceiver/tx_reg_4" BEL
+        "uart/transceiver/tx_reg_3" BEL "uart/transceiver/tx_reg_2" BEL
+        "uart/transceiver/tx_reg_1" BEL "uart/transceiver/tx_reg_0" BEL
+        "uart/transceiver/enable16_counter_15" BEL
+        "uart/transceiver/enable16_counter_14" BEL
         "uart/transceiver/enable16_counter_13" BEL
         "uart/transceiver/enable16_counter_12" BEL
         "uart/transceiver/enable16_counter_11" BEL
@@ -1425,42 +1454,18 @@ TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "sysctl/icap/write_r" BEL "sysctl/icap/ce_r" BEL
         "sysctl/icap/icap_clk_r" BEL "fmlbrg/state_FSM_FFd1" BEL
         "fmlbrg/state_FSM_FFd2" BEL "fmlbrg/state_FSM_FFd3" BEL
-        "fmlbrg/state_FSM_FFd4" BEL "fmlbrg/fml_adr_13" BEL
-        "fmlbrg/fml_adr_12" BEL "fmlbrg/fml_adr_11" BEL "fmlbrg/fml_adr_6" BEL
+        "fmlbrg/state_FSM_FFd4" BEL "fmlbrg/fml_adr_22" BEL
+        "fmlbrg/fml_adr_21" BEL "fmlbrg/fml_adr_20" BEL "fmlbrg/fml_adr_19"
+        BEL "fmlbrg/fml_adr_18" BEL "fmlbrg/fml_adr_17" BEL
+        "fmlbrg/fml_adr_16" BEL "fmlbrg/fml_adr_15" BEL "fmlbrg/fml_adr_14"
+        BEL "fmlbrg/fml_adr_13" BEL "fmlbrg/fml_adr_12" BEL
+        "fmlbrg/fml_adr_11" BEL "fmlbrg/fml_adr_10" BEL "fmlbrg/fml_adr_9" BEL
+        "fmlbrg/fml_adr_8" BEL "fmlbrg/fml_adr_7" BEL "fmlbrg/fml_adr_6" BEL
         "fmlbrg/fml_adr_5" BEL "fmlbrg/bcounter_1" BEL "fmlbrg/bcounter_0" BEL
-        "fmlbrg/tag_r_12" BEL "fmlbrg/tag_r_11" BEL "fmlbrg/tag_r_10" BEL
-        "fmlbrg/tag_r_9" BEL "fmlbrg/tag_r_8" BEL "fmlbrg/tag_r_7" BEL
-        "fmlbrg/tag_r_6" BEL "fmlbrg/tag_r_5" BEL "fmlbrg/tag_r_4" BEL
-        "fmlbrg/tag_r_3" BEL "fmlbrg/tag_r_2" BEL "fmlbrg/tag_r_1" BEL
-        "fmlbrg/tag_r_0" BEL "fmlbrg/wordsel" BEL "csrbrg/state_FSM_FFd1" BEL
-        "csrbrg/wb_dat_o_31" BEL "csrbrg/wb_dat_o_30" BEL "csrbrg/wb_dat_o_29"
-        BEL "csrbrg/wb_dat_o_28" BEL "csrbrg/wb_dat_o_27" BEL
-        "csrbrg/wb_dat_o_26" BEL "csrbrg/wb_dat_o_25" BEL "csrbrg/wb_dat_o_24"
-        BEL "csrbrg/wb_dat_o_23" BEL "csrbrg/wb_dat_o_22" BEL
-        "csrbrg/wb_dat_o_21" BEL "csrbrg/wb_dat_o_20" BEL "csrbrg/wb_dat_o_19"
-        BEL "csrbrg/wb_dat_o_18" BEL "csrbrg/wb_dat_o_17" BEL
-        "csrbrg/wb_dat_o_16" BEL "csrbrg/wb_dat_o_15" BEL "csrbrg/wb_dat_o_14"
-        BEL "csrbrg/wb_dat_o_13" BEL "csrbrg/wb_dat_o_12" BEL
-        "csrbrg/wb_dat_o_11" BEL "csrbrg/wb_dat_o_10" BEL "csrbrg/wb_dat_o_9"
-        BEL "csrbrg/wb_dat_o_8" BEL "csrbrg/wb_dat_o_7" BEL
-        "csrbrg/wb_dat_o_6" BEL "csrbrg/wb_dat_o_5" BEL "csrbrg/wb_dat_o_4"
-        BEL "csrbrg/wb_dat_o_3" BEL "csrbrg/wb_dat_o_2" BEL
-        "csrbrg/wb_dat_o_1" BEL "csrbrg/wb_dat_o_0" BEL "csrbrg/csr_do_31" BEL
-        "csrbrg/csr_do_30" BEL "csrbrg/csr_do_29" BEL "csrbrg/csr_do_28" BEL
-        "csrbrg/csr_do_27" BEL "csrbrg/csr_do_26" BEL "csrbrg/csr_do_25" BEL
-        "csrbrg/csr_do_24" BEL "csrbrg/csr_do_23" BEL "csrbrg/csr_do_22" BEL
-        "csrbrg/csr_do_21" BEL "csrbrg/csr_do_20" BEL "csrbrg/csr_do_19" BEL
-        "csrbrg/csr_do_18" BEL "csrbrg/csr_do_17" BEL "csrbrg/csr_do_16" BEL
-        "csrbrg/csr_do_15" BEL "csrbrg/csr_do_14" BEL "csrbrg/csr_do_13" BEL
-        "csrbrg/csr_do_12" BEL "csrbrg/csr_do_11" BEL "csrbrg/csr_do_10" BEL
-        "csrbrg/csr_do_9" BEL "csrbrg/csr_do_8" BEL "csrbrg/csr_do_7" BEL
-        "csrbrg/csr_do_6" BEL "csrbrg/csr_do_5" BEL "csrbrg/csr_do_4" BEL
-        "csrbrg/csr_do_3" BEL "csrbrg/csr_do_2" BEL "csrbrg/csr_do_1" BEL
-        "csrbrg/csr_do_0" BEL "csrbrg/csr_a_2" BEL "csrbrg/csr_a_1" BEL
-        "csrbrg/csr_a_0" BEL "wbswitch/arb/state_FSM_FFd1" BEL
-        "wbswitch/slave_sel_r_5" BEL "wbswitch/slave_sel_r_4" BEL
-        "wbswitch/slave_sel_r_1" BEL "wbswitch/slave_sel_r_0" BEL
-        "_i000038/wb_ack_o" BEL "norflash/state_FSM_FFd1" BEL
+        "fmlbrg/tag_r_8" BEL "fmlbrg/tag_r_7" BEL "fmlbrg/tag_r_6" BEL
+        "fmlbrg/tag_r_5" BEL "fmlbrg/tag_r_4" BEL "fmlbrg/tag_r_3" BEL
+        "fmlbrg/tag_r_2" BEL "fmlbrg/tag_r_1" BEL "fmlbrg/tag_r_0" BEL
+        "fmlbrg/wordsel" BEL "norflash/state_FSM_FFd1" BEL
         "norflash/state_FSM_FFd2" BEL "norflash/counter_3" BEL
         "norflash/counter_2" BEL "norflash/counter_1" BEL "norflash/counter_0"
         BEL "norflash/wb_dat_o_31" BEL "norflash/wb_dat_o_30" BEL
@@ -1479,6 +1484,14 @@ TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "norflash/wb_dat_o_5" BEL "norflash/wb_dat_o_4" BEL
         "norflash/wb_dat_o_3" BEL "norflash/wb_dat_o_2" BEL
         "norflash/wb_dat_o_1" BEL "norflash/wb_dat_o_0" BEL
+        "norflash/flash_do_15" BEL "norflash/flash_do_14" BEL
+        "norflash/flash_do_13" BEL "norflash/flash_do_12" BEL
+        "norflash/flash_do_11" BEL "norflash/flash_do_10" BEL
+        "norflash/flash_do_9" BEL "norflash/flash_do_8" BEL
+        "norflash/flash_do_7" BEL "norflash/flash_do_6" BEL
+        "norflash/flash_do_5" BEL "norflash/flash_do_4" BEL
+        "norflash/flash_do_3" BEL "norflash/flash_do_2" BEL
+        "norflash/flash_do_1" BEL "norflash/flash_do_0" BEL
         "norflash/flash_adr_r_23" BEL "norflash/flash_adr_r_22" BEL
         "norflash/flash_adr_r_21" BEL "norflash/flash_adr_r_20" BEL
         "norflash/flash_adr_r_19" BEL "norflash/flash_adr_r_18" BEL
@@ -1490,16 +1503,43 @@ TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "norflash/flash_adr_r_7" BEL "norflash/flash_adr_r_6" BEL
         "norflash/flash_adr_r_5" BEL "norflash/flash_adr_r_4" BEL
         "norflash/flash_adr_r_3" BEL "norflash/flash_adr_r_2" BEL
-        "norflash/flash_adr_r_1" BEL "norflash/flash_adr_r_0" BEL "uart/thre"
-        BEL "uart/transceiver/rx_count16_2" BEL
-        "uart/transceiver/rx_count16_1" BEL "uart/transceiver/rx_count16_0"
-        BEL "uart/transceiver/uart_tx" BEL "uart/transceiver/tx_busy" BEL
-        "uart/transceiver/rx_busy" BEL "fmlarb/dack1/mask" BEL
-        "cpu/cpu/write_enable_m" BEL "cpu/cpu/write_idx_m_4" BEL
-        "cpu/cpu/write_idx_m_3" BEL "cpu/cpu/write_idx_m_2" BEL
-        "cpu/cpu/write_idx_m_1" BEL "cpu/cpu/write_idx_m_0" BEL
-        "cpu/cpu/use_buf" BEL "cpu/cpu/ext_break_r" BEL
-        "cpu/cpu/data_bus_error_seen" BEL
+        "norflash/flash_adr_r_1" BEL "norflash/flash_adr_r_0" BEL
+        "csrbrg/state_FSM_FFd1" BEL "csrbrg/wb_dat_o_31" BEL
+        "csrbrg/wb_dat_o_30" BEL "csrbrg/wb_dat_o_29" BEL "csrbrg/wb_dat_o_28"
+        BEL "csrbrg/wb_dat_o_27" BEL "csrbrg/wb_dat_o_26" BEL
+        "csrbrg/wb_dat_o_25" BEL "csrbrg/wb_dat_o_24" BEL "csrbrg/wb_dat_o_23"
+        BEL "csrbrg/wb_dat_o_22" BEL "csrbrg/wb_dat_o_21" BEL
+        "csrbrg/wb_dat_o_20" BEL "csrbrg/wb_dat_o_19" BEL "csrbrg/wb_dat_o_18"
+        BEL "csrbrg/wb_dat_o_17" BEL "csrbrg/wb_dat_o_16" BEL
+        "csrbrg/wb_dat_o_15" BEL "csrbrg/wb_dat_o_14" BEL "csrbrg/wb_dat_o_13"
+        BEL "csrbrg/wb_dat_o_12" BEL "csrbrg/wb_dat_o_11" BEL
+        "csrbrg/wb_dat_o_10" BEL "csrbrg/wb_dat_o_9" BEL "csrbrg/wb_dat_o_8"
+        BEL "csrbrg/wb_dat_o_7" BEL "csrbrg/wb_dat_o_6" BEL
+        "csrbrg/wb_dat_o_5" BEL "csrbrg/wb_dat_o_4" BEL "csrbrg/wb_dat_o_3"
+        BEL "csrbrg/wb_dat_o_2" BEL "csrbrg/wb_dat_o_1" BEL
+        "csrbrg/wb_dat_o_0" BEL "csrbrg/csr_do_31" BEL "csrbrg/csr_do_30" BEL
+        "csrbrg/csr_do_29" BEL "csrbrg/csr_do_28" BEL "csrbrg/csr_do_27" BEL
+        "csrbrg/csr_do_26" BEL "csrbrg/csr_do_25" BEL "csrbrg/csr_do_24" BEL
+        "csrbrg/csr_do_23" BEL "csrbrg/csr_do_22" BEL "csrbrg/csr_do_21" BEL
+        "csrbrg/csr_do_20" BEL "csrbrg/csr_do_19" BEL "csrbrg/csr_do_18" BEL
+        "csrbrg/csr_do_17" BEL "csrbrg/csr_do_16" BEL "csrbrg/csr_do_15" BEL
+        "csrbrg/csr_do_14" BEL "csrbrg/csr_do_13" BEL "csrbrg/csr_do_12" BEL
+        "csrbrg/csr_do_11" BEL "csrbrg/csr_do_10" BEL "csrbrg/csr_do_9" BEL
+        "csrbrg/csr_do_8" BEL "csrbrg/csr_do_7" BEL "csrbrg/csr_do_6" BEL
+        "csrbrg/csr_do_5" BEL "csrbrg/csr_do_4" BEL "csrbrg/csr_do_3" BEL
+        "csrbrg/csr_do_2" BEL "csrbrg/csr_do_1" BEL "csrbrg/csr_do_0" BEL
+        "csrbrg/csr_a_2" BEL "csrbrg/csr_a_1" BEL "csrbrg/csr_a_0" BEL
+        "wbswitch/arb/state_FSM_FFd1" BEL "wbswitch/slave_sel_r_5" BEL
+        "wbswitch/slave_sel_r_4" BEL "wbswitch/slave_sel_r_1" BEL
+        "wbswitch/slave_sel_r_0" BEL "_i000038/wb_ack_o" BEL "uart/thre" BEL
+        "uart/transceiver/rx_count16_2" BEL "uart/transceiver/rx_count16_1"
+        BEL "uart/transceiver/rx_count16_0" BEL "uart/transceiver/uart_tx" BEL
+        "uart/transceiver/tx_busy" BEL "uart/transceiver/rx_busy" BEL
+        "fmlarb/dack1/mask" BEL "cpu/cpu/write_enable_m" BEL
+        "cpu/cpu/write_idx_m_4" BEL "cpu/cpu/write_idx_m_3" BEL
+        "cpu/cpu/write_idx_m_2" BEL "cpu/cpu/write_idx_m_1" BEL
+        "cpu/cpu/write_idx_m_0" BEL "cpu/cpu/use_buf" BEL
+        "cpu/cpu/ext_break_r" BEL "cpu/cpu/data_bus_error_seen" BEL
         "cpu/cpu/instruction_unit/bus_error_f" BEL
         "cpu/cpu/instruction_unit/i_cyc_o" BEL
         "cpu/cpu/load_store_unit/d_sel_o_3" BEL
@@ -1521,12 +1561,11 @@ TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "sysctl/bus_errors_en" BEL "sysctl/ar1" BEL "sysctl/ar0" BEL
         "norflash/lsb" BEL "cpu/cpu/valid_f" BEL "sysctl/hard_reset" BEL
         "uart/transceiver/tx_done" BEL "fmlarb/dack1/ack_read2" BEL
-        "sysctl/timer0_irq" BEL "sysctl/timer1_irq" BEL
-        "csrbrg/state_FSM_FFd2" BEL "csrbrg/csr_we" BEL "norflash/flash_we_n"
-        BEL "uart/rx_event" BEL "uart/tx_event" BEL
-        "uart/transceiver/rx_count16_3" BEL "cpu/cpu/dflush_m" BEL
-        "trigger_reset" BEL "locked_addr_i" BEL "sys_rst" BEL "locked_addr_d"
-        PIN "cpu/cpu/reg_1/Mram_mem_pins<16>" PIN
+        "sysctl/timer0_irq" BEL "sysctl/timer1_irq" BEL "norflash/flash_we_n"
+        BEL "norflash/flash_oe_n" BEL "csrbrg/state_FSM_FFd2" BEL
+        "csrbrg/csr_we" BEL "uart/rx_event" BEL "uart/tx_event" BEL
+        "uart/transceiver/rx_count16_3" BEL "cpu/cpu/dflush_m" PIN
+        "cpu/cpu/reg_1/Mram_mem_pins<16>" PIN
         "cpu/cpu/reg_1/Mram_mem_pins<17>" PIN
         "cpu/cpu/reg_0/Mram_mem_pins<16>" PIN
         "cpu/cpu/reg_0/Mram_mem_pins<17>" PIN
@@ -1570,9 +1609,9 @@ TIMEGRP clk80_pll = BEL "rst_debounce_0" BEL "rst_debounce_1" BEL
         "fmlbrg/datamem/Mram_ram1_pins<22>" PIN
         "fmlbrg/datamem/Mram_ram1_pins<23>" PIN
         "fmlbrg/datamem/Mram_ram0_pins<22>" PIN
-        "fmlbrg/datamem/Mram_ram0_pins<23>" PIN "_i000038/Mram_mem4_pins<9>"
-        PIN "_i000038/Mram_mem2_pins<9>" PIN "_i000038/Mram_mem1_pins<9>" PIN
-        "_i000038/Mram_mem3_pins<9>" BEL "flash_rstcounter_7_1" BEL
+        "fmlbrg/datamem/Mram_ram0_pins<23>" PIN "_i000038/Mram_mem4_pins<11>"
+        PIN "_i000038/Mram_mem3_pins<11>" PIN "_i000038/Mram_mem2_pins<11>"
+        PIN "_i000038/Mram_mem1_pins<11>" BEL "flash_rstcounter_7_1" BEL
         "sysctl/gpio_outputs_7_1" BEL "sysctl/gpio_outputs_6_1" BEL
         "sysctl/gpio_outputs_5_1" BEL "sysctl/gpio_outputs_4_1" BEL
         "sysctl/gpio_outputs_3_1" BEL "sysctl/gpio_outputs_2_1" BEL
