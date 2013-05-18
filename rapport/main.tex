@@ -1,12 +1,20 @@
-\documentclass{report}
+\documentclass[a4paper]{report}
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{pdfpages}
-%\usepackage[cyr]{aeguill}
 \usepackage[utf8]{inputenc}
 \usepackage{xspace}
+\usepackage{mathtools}
 \usepackage[francais]{babel}
 \usepackage{listingsutf8}
-\usepackage{hyperref}
-\usepackage{graphics}
+\usepackage{listings}
+% addresse du tuto pour activer la coloration du code
+% http://blog.hikoweb.net/index.php?post/2012/02/04/Colorer-du-code-source-dans-un-rapport-LaTeX-avec-Minted
+\usepackage{minted}
+%\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage[framemethod=tikz]{mdframed}
+\graphicspath{ {./img/} }
 \DeclareUnicodeCharacter{B0}{\textdegree}
 \renewcommand{\contentsname}{Sommaire}
 %% \usepackage{natbib}
@@ -38,7 +46,7 @@
 
 \renewcommand{\footrulewidth}{0.4pt}
 
-\lfoot{Etat de l'art associé au projet tuteuré}
+\lfoot{System On Chip OpenSources}
 
 \cfoot{}
 
@@ -46,14 +54,17 @@
 
 \begin{document}
 
-
 \begin{titlepage}
   \centering
-  \vspace{5\baselineskip}
-  {\Large Etat de l'art associ\'e au projet tutoré: }
-  \vspace{0.5cm}
-
-  {\large{\bf Développement d'un System-On-Chip open-source}}
+  \vspace{7\baselineskip}
+  {\huge Compte-rendu de projet }\\
+  \vspace{1cm}
+  {\Huge{\bf Développement d'un System-On-Chip open-source }}\\
+  \vspace{1cm}
+  Encadrants :\\
+  {\bf Fernand LONE SANG}\\
+  {\bf Vincent NICOMETTE}\\
+  
   \par
   \normalfont
   \vspace{1cm}
@@ -71,8 +82,13 @@
   {\tt longo@etud.insa-toulouse.fr}\\
   {\tt cmichaud@etud.insa-toulouse.fr}\\
   \vspace{1cm}
-  4IR 2012-2013 
+  4IR 2012-2013
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{INSA-logo.eps}
+  \end{figure}
   
+  \vspace{3cm}
   \vfill {\bf R\'esum\'e du projet}\medskip \\
   \fbox{
     \begin{minipage}{0.9\textwidth}
@@ -93,173 +109,169 @@
 \tableofcontents
 
 \chapter*{Introduction} \addcontentsline{toc}{chapter}{Introduction}
-\input{intro}
+\input{intro-1}
+\newpage
 
-\chapter{Conception du matériel}
+\chapter{Organisation}
+\newpage
 
-\section{Langage de description de circuits logiques} \input{langage} \newpage
+\chapter{Les aspects essentiels du projet}
+\newpage
 
-\section{Technologie de fabrication} \input{fpga_asic}
+\section{Langage de description de circuits logiques}
+
+\subsection{Présentation de Verilog et VHDL}
+\input{langage-1} \newpage
+
+\subsection{Les autres HDL existants}
+\input{langage-2} \newpage
+
+\subsection{Verilog VS VHDL}
+\input{langage-3} \newpage
+
+\subsection{Le HDL de Milkymist : Migen}
+\input{langage-4} \newpage
+
+\section{Technologie de fabrication}
+
+\subsection{ASIC}
+\input{fpga-asic-1} \newpage
+
+\subsection{FPGA}
+\input{fpga-asic-2} \newpage
 
 \section{Le monde de l'\textit{open source} et son avancement sur les FPGA}
-\input{open_source} \newpage
+\input{opensource-1} \newpage
 
-\chapter{Adaptation d'un \textit{System-on-Chip} libre : \textit{Milkymist}}
-
-\section{Le projet \textit{Milkymist}}
-\input{milky_mist} \newpage
-
-\section{Le travail à réaliser}
-
-\subsection{Portage sur le Nexys3}
-
-\input{portabilite} \newpage
-
-\subsection{Adapter le système logiciel associé}
-\input{systeme_logiciel}
+\chapter{Tentative de portage d'un \textit{System-on-Chip} libre : \textit{Milkymist}}
 \newpage
 
-\subsection{Reconfiguration du matériel à la volée}
-\input{reconfigurable}
-\newpage
+\section{Portage du système}
 
-\chapter*{Conclusion}
-\addcontentsline{toc}{chapter}{Conclusion}
-\input{conclusion}
+\subsection{La simulation}
+\input{portage-1} \newpage
 
+\subsection{La dure réalité}
+\input{portage-2} \newpage
 
-\bibliographystyle{plainnat}
-\begin{thebibliography}{1}
-  %\input{references}
-  
-  \bibitem{RUBOW}
-RUBOW, Erik. \textit{Open Source Hardware}. \textbf{[en ligne]}. États-Unis d'Amérique : University of California, San Diego, Cours, 2008, 5p. Disponible sur \url{http://cseweb.ucsd.edu/classes/fa08/cse237a/topicresearch/erubow\_tr\_report.pdf} (Consulté le 24 janvier 2013).
+\section{Hardware à tester}
 
-\bibitem{ACOSTA}
-ACOSTA, Roberto. \textit{Open Source Hardware}. \textbf{[en ligne]}. États-Unis d'Amérique : Massachusetts Institute of Technology, 2009, 83p. Disponible sur \url{http://18.7.29.232/bitstream/handle/1721.1/55201/609411873.pdf} (Consulté le 24 janvier 2013).
+\subsection{La PSRAM}
+\input{test-hardware-1} \newpage
 
-\bibitem{BAXTER_BENNETT}
-BAXTER, Julius, BENNETT, Jeremy et opencores.org. \textit{Practical System-on-Chip}. \textbf{In} : \textit{Open Source Hardware User Group} \textbf{[en ligne]}. (Modifié le 29 mars 2012). Disponible sur \url{http://oshug.org/presentations/openrisc-oshug17-final.pdf} (Consulté le 24 janvier 2013).
+\subsection{Le totalité du système}
+\input{test-hardware-2} \newpage
 
-\bibitem{GAISLER}
-GAISLER, Jiri. \textit{Industrial use of open-source IP cores}. \textit{45th IFIP WG 10.4 - Workshop on "Open Source and Dependability"}. Moorea polynésie française, 5-9 mars 2004. Disponible sur \url{http://webhost.laas.fr/TSF/IFIPWG/Workshops\&Meetings/45/06-Gaisler.pdf} (Consulté le 24 janvier 2013).
+\section{La \textit{Partial Reconfiguration} (PR)}
 
-\bibitem{INMAN_FRITSKY}
-INMAN, Kurt and FRITSKY, Lauren. \textit{What Is an IP Core?}. \textbf{In} : \textit{wiseGEEK} \textbf{[en ligne]}. Disponible sur \url{http://www.wisegeek.com/what-is-an-ip-core.htm} (Consulté le 24 janvier 2013).
+\subsection{Les différents types de PR possibles}
+\input{partial-reconfiguration-1} \newpage
 
-\bibitem{SALEM_KHATIB}
-SALEM, Mohamed A. and KHATIB, Jamil I. An introduction to open-source hardware development. EETimes. Modifié le 07 janvier 2004. Disponible sur \url{http://eetimes.com/electronics-news/4155052/An-introduction-to-open-source-hardware-development}.
+\subsection{\textit{PlanAhead} et l'incompatibilité avec la Spartan6}
+\input{partial-reconfiguration-2} \newpage
 
-\bibitem{OSHW}
-OSHW. \textit{Definition of Free Cultural Works} \textbf{[en ligne]}. (modifié le 9 janvier 2013). Disponible sur : \url{http://freedomdefined.org/OSHW}. (Consulté le 24 janvier 2013).
+\subsection{La tentative de diff based}
+\input{partial-reconfiguration-3} \newpage
 
-\bibitem{WITZ_CHAMBON}
-WITZ, Jean-François, CHAMBON, Olivier. \textit{Matériel OpenSource (OpenHardware) et la recherche}. \textbf{In} : \textit{PLUME} \textbf{[en ligne]}. (Modifié le 29 août 2011). Disponible sur \url{https://www.projet-plume.org/ressource/openhardware} (Consulté le 24 janvier 2013).
+\section{Bilan technique}
 
-\bibitem{TORRONE_FRIED}
-TORRONE, Phillip et FRIED, Limor. \textit{Million dollar baby}. \textit{Foo Camp East 2010} (\url{http://foocamp10.wiki.oreilly.com/wiki/index.php/Main\_Page}). Sebastopol, Californie, 25-27 juin 2010. Disponible sur \url{http://www.adafruit.com/pt/fooeastignite2010.pdf} (Consulté le 27 janvier 2013).
+\subsection{Les raisons de l'échec}
+\input{bilan-milkymist-1} \newpage
 
-\bibitem{LIST_OSHW_WIKI}
-List of open-source hardware projects. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 17 janver 2013). Disponible sur : \url{http://en.wikipedia.org/w/index.php?title=List\_of\_open-source\_hardware\_projects\&oldid=533515806}. (Consulté le 27 janvier 2013).
+\subsection{Réorientation vers une nouvelle solution from scratch}
+\input{bilan-milkymist-2} \newpage
 
-%DUZAN Luc
+\chapter{Vers un nouveau SoC}
 
-\bibitem{ASIC_WIKI}
-Application-specific integrated circuit. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 08 janver 2013). Disponible sur : \url{http://en.wikipedia.org/wiki/Application-specific\_integrated\_circuit}. (Consulté le 20 janvier 2013).
+\section{De nouveaux objectifs}
 
-\bibitem{PLD_WIKI}
-Programmable logic device. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 11 janver 2013). Disponible sur : \url{http://en.wikipedia.org/wiki/Programmable\_logic\_device}. (Consulté le 20 janvier 2013).
+\subsection{Déportation du PR vers la Virtex5}
+\input{nouveaux-objectifs-1} \newpage
 
-\bibitem{POITI}
-POITI, Alexis. \textit{Cours en ligne de {TELECOM} Paristech sur les {HDL}}. \textbf{[en ligne]}. France : Paristech, Cours en ligne, 2005. Disponible sur \url{http://comelec.enst.fr/hdl/} (Consulté le 24 janvier 2013).
+\subsection{Linkage de la Virtex5 à la Nexys3}
+\input{nouveaux-objectifs-2} \newpage
 
-\bibitem{FOUND_MODEL_WIKI}
-Foundry model. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 09 janver 2013). Disponible sur : \url{http://en.wikipedia.org/wiki/Foundry\_model}. (Consulté le 20 janvier 2013).
+\section{Réalisations hardware}
 
-\bibitem{NETLIST_WIKI}
-Netlist. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 09 janver 2013). Disponible sur : \url{http://en.wikipedia.org/wiki/Netlist}. (Consulté le 20 janvier 2013).
+\subsection{Rassemblement d'IPs}
+\input{realisations-hardware-1} \newpage
 
-%fin luc 
+\subsection{Création de nouveaux modules}
+\input{realisations-hardware-2} \newpage
 
-\bibitem{RTL_WIKI}
-Register-transfer level. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 01 janver 2013). Disponible sur : \url{http://en.wikipedia.org/w/index.php?title=Register-transfer\_level\&oldid=530759637}. (Consulté le 24 janvier 2013).
+\section{Développement un noyau ultra léger}
 
-\bibitem{THOMAS_MOORBY}
-THOMAS, Donald E. et MOORBY, Philip R. \textit{The Verilog® Hardware Description Language.} \textbf{[en ligne]}. Springer. Etats-Unis d'Amérique : 2002, 408p. Format google book. Disponible sur \url{http://books.google.fr/books?id=DxQGrz7q-SwC\&printsec=frontcover\&hl=fr#v=onepage\&q\&f=false} (Consulté le 24 janvier 2013).
+\subsection{Les spécifications}
+\input{realisations-software-1} \newpage
 
-\bibitem{MILKY_WIKI}
-Milkymist. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 13 janvier 2013). Disponible sur : \url{http://en.wikipedia.org/w/index.php?title=Milkymist\&oldid=532830955} (Consulté le 24 janvier 2013).
+\subsection{Le BIOS}
+\input{realisations-software-2} \newpage
 
-\bibitem{KASHAP}
-KASHAP, Satish. Lec 08 Hardware Description Language (HDL). [18 mars 2012] [enregistrement vidéo] \textbf{In :} Youtube [1h 07' 54"]. Disponible sur : \url{http://www.youtube.com/watch?v=rdAPXzxeaxs}. (Consulté le 20 janvier 2013).
+\subsection{Le kernel}
+\input{realisations-software-3} \newpage
 
-\bibitem{GIOMI}
-GIOMI, Jean-Charles et TARROUX, Gerard. \textit{Integrated circuit fabrication using state machine extraction from ...}. Brevet 5537580. 21 décembre 1994.
+\subsection{Une API système simple}
+\input{realisations-software-4} \newpage
 
-\bibitem{HDL_WIKI}
-Hardware description language. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 14 janvier 2013). Disponible sur : \url{http://en.wikipedia.org/w/index.php?title=Hardware\_description\_language\&oldid=532956772} (Consulté le 24 janvier 2013).
+\subsection{Un pseudo-terminal}
+\input{realisations-software-5} \newpage
 
-\bibitem{SMITH}
-SMITH, Douglas J. VHDL \& Verilog Compared \& Contrasted Plus Modeled Example Written in VHDL, Verilog and C. In Rajesh Bawankule's Verilo Center. \textbf{[en ligne]}. (Denière mise à jour du site : 12 février 2003) Disponible sur \url{http://www.angelfire.com/in/rajesh52/verilogvhdl.html} (Consulté le 07 janvier 2013).
+\subsection{Le driver pour le VGA}
+\input{realisations-software-6} \newpage
 
-\bibitem{CHAKRABARTI}
-CHAKRABARTI, Indrajit. \textit{VERILOG Hardware Description Language} \textbf{[en ligne]}. Inde : IIT Kharagpur, Cours, 2007, 24p. Dispobible sur \url{http://www.smdp.iitkgp.ernet.in/PDF\%5CVLSI_DSP\%5CIC-Verilog.pdf} (Consulté le 05 janvier 2013).
+\subsection{Le driver pour l'Ethernet}
+\input{realisations-software-7} \newpage
 
-\bibitem{VERILOG_WIKI}
-Verilog. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 7 septembre 2012). Disponible sur : \url{http://fr.wikipedia.org/w/index.php?title=Verilog\&oldid=82794321}. (Consulté le 20 janvier 2013).
+\chapter*{Bilan final}
+\addcontentsline{toc}{chapter}{Bilan final}
 
-\bibitem{DON}
-DON, Thomas. \textit{The Verilog Hardware Description Language}. \textbf{[en ligne]}. Etats-Unis d'Amérique : University of Iowa, Cours, 1998, 11p. Disponible sur \url{http://www.engineering.uiowa.edu/~hpca/LectureNotes/VerilogTutorialSpring11.pdf} (Consulté le 05 janvier 2013).
+\section{Lessons learned}
 
-\bibitem{VHDL_WIKI}
-VHDL. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 4 décembre 2012). Disponible sur : \url{http://fr.wikipedia.org/w/index.php?title=VHDL\&oldid=86139857}. (Consulté le 20 janvier 2013).
+\subsection{En terme technique}
+\input{lesson-learned-1}
 
-\bibitem{IEEE_VHDL_87}
-1076-1987 - IEEE Standard VHDL Language Reference. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1076-1987.html} (Consulté le 20 janvier 2013).
+\subsection{En terme d'échec}
+\input{lesson-learned-2}
 
-\bibitem{IEEE_VHDL_93}
-1076-1993 - IEEE Standard VHDL Language Reference. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1076-1993.html} (Consulté le 20 janvier 2013).
+\subsection{En terme d'organisation/d'implication}
+\input{lesson-learned-3}
 
-\bibitem{IEEE_VHDL}
-P1076 - VHDL Analysis and Standardization Group. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/develop/wg/P1076.html} (Consulté le 20 janvier 2013).
+\section{Future works}
 
-\bibitem{IEEE_VERILOG_1995}
-1364-1995 - IEEE Standard Hardware Description Language Based on the Verilog(R) Hardware Description Language \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1364-1995.html} (Consulté le 20 janvier 2013).
+\subsection{ICAP}
+\input{future-works-1}
 
-\bibitem{IEEE_VERILOG_2001}	
-1364-2001 - IEEE Standard Verilog Hardware Description Language. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1364-2001.html} (Consulté le 20 janvier 2013).
+\subsection{L'intégration du driver Ethernet au kernel}
+\input{future-works-2}
 
-\bibitem{IEEE_VERILOG_2005}
-1364-2005 - IEEE Standard for Verilog Hardware Description Language. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1364-2005.html} (Consulté le 20 janvier 2013).
+\subsection{Établir un protocole de communication entre les cartes}
+\input{future-works-3}
 
-%clem
-\bibitem{RECOMPUT_WIKI}
-Reconfigurable Computing Wikipedia. \textit{Wikipedia} \textbf{[en ligne]}. (modifié le 01 janvier 2013). Disponible sur : \url{http://en.wikipedia.org/wiki/Reconfigurable\_computing}. (Consulté le 16 janvier 2013).
+\subsection{Tests de crypto soft VS hard}
+\input{future-works-4}
 
-\bibitem{MILKY_SITE}
-Milkymist official website. \textit{Milkymist} \textbf{[en ligne]}. Disponible sur : \url{http://milkymist.org/3/}. (Consulté le 20 janvier 2013).
+%\appendix
 
+% \chapter{Code des fichiers modifiés}
 
-%matt
-\bibitem{SALEH_MIRABBASI}
-SALEH, Resve; MIRABBASI, Shahriar; LEMIEUX, Lemieux; GRECU, Cristian. System-on-Chip: Reuse and Integration \textbf{[en ligne]. In :} \textit{Proceedings of the IEEE}, vol. 94, No. 6, June 2006. Disponible sur : \url{http://eecs.wsu.edu/~pande/Journal\_Papers/Paper\_IEEE\_Proceedings.pdf} (Consulté le 05/01/2013)
+% \section{global.h}
+% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/global.h}
+% \newpage
 
-\bibitem{WINZKER}
-M. WINZKER. \textit{Advenced FPGA Design}. \textbf{[en ligne]} Buenos Aires : Universidad Tecnológica Nacional. Cours, 2010, 15 slides. Disponible sur : \url{http://www.electron.frba.utn.edu.ar/dplab/CursoLP/Lecture\_FPGA\_5.pdf} (Consulté le 05/01/2013)
+% \section{global.c}
+% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/global.c}
+% \newpage
 
-\bibitem{BOURDEAUDUCQ}
-BOURDEAUDUCQ, Sébastien. \textit{A performance-driven SoC architecture for video synthesis}. \textbf{[en ligne]} Master of Science Thesis in System-on-Chip Design, Stockholm, Royal Institute of Technology, 2010. 109. Disponible sur : \url{http://milkymist.org/3/thesis/thesis.pdf} (Consulté le 01/01/2013)
+% \section{fonctions.h}
+% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/fonctions.h}
+% \newpage
 
-\bibitem{LATTICE}
-Lattice semiconductor. \textit{LatticeMico32 architecture} \textbf{[en ligne]}. Disponible sur : \url{http://www.latticesemi.com/products/intellectualproperty/ipcores/mico32/index.cfm}. (Consulté le 19 janvier 2013).
+% \section{fonctions.c}
+% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/fonctions.c}
+% \newpage
 
-\bibitem{UCLINUX}
-uClinux. \textit{Embedded Linux/Microcontroller Project} \textbf{[en ligne]}. Disponible sur : \url{http://www.uclinux.org/}. (Consulté le 20 janvier 2013).
-
-\bibitem{NEUMANN}
-Wikipedia. \textit{Architecture de Von Neumann} \textbf{[en ligne]}. Disponible sur : \url{http://fr.wikipedia.org/wiki/Architecture_de_von_Neumann}. (Consulté le 20 janvier 2013).
-\end{thebibliography}
-
+%  \section{main.c}
+% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/main.c}
 
 \end{document}
 

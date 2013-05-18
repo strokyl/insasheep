@@ -17,11 +17,11 @@ LOT=$(TEX:.tex=.lot)
 all: $(PDF)
 
 main.dvi: main.tex
-	latex -shell-escape main.tex
-	latex -shell-escape main.tex
+	latex main.tex
+	latex main.tex
 
 %.dvi: %.tex
-	latex -shell-escape $<
+	latex $<
 
 %.ps: %.dvi
 	dvips $<
@@ -30,13 +30,10 @@ main.dvi: main.tex
 	ps2pdf $<
 
 #%.pdf: %.tex
-#	pdflatex -shell-escape $<
+#	pdflatex $<
 
 clean:
 	rm -f *.aux *.pdf $(AUX) $(DVI) $(PS) $(PDF) $(AUX) $(LOG) $(SNM) $(OUT) $(NAV) $(TOC) $(BBL) $(BLG) $(LOF) $(LOT) *~
-
-open:
-	emacs *.tex &
 
 read:
 	evince main.pdf &
