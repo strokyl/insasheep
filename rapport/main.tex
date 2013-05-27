@@ -1,23 +1,27 @@
 \documentclass[a4paper]{report}
 \usepackage{anysize}
-\marginsize{2cm}{2cm}{2cm}{2cm}
-\usepackage{pdfpages}
+\marginsize{3cm}{3cm}{2cm}{2cm}
 \usepackage[utf8]{inputenc}
-\usepackage{xspace}
-\usepackage{mathtools}
-\usepackage[francais]{babel}
-\usepackage{listingsutf8}
-\usepackage{listings}
-% addresse du tuto pour activer la coloration du code
-% http://blog.hikoweb.net/index.php?post/2012/02/04/Colorer-du-code-source-dans-un-rapport-LaTeX-avec-Minted
-\usepackage{minted}
-%\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[french]{babel}
 \usepackage{graphicx}
-\usepackage[framemethod=tikz]{mdframed}
-\graphicspath{ {./img/} }
-\DeclareUnicodeCharacter{B0}{\textdegree}
-\renewcommand{\contentsname}{Sommaire}
-%% \usepackage{natbib}
+\usepackage{float}
+\graphicspath{ {img/} }
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
+
+\newcommand{\english}[1]{\textit{#1}}
+\newcommand{\brand}[1]{\textbf{#1}}
+\newcommand{\nexys} {Nexys3}
+\newcommand{\virtex} {Virtex5}
+\newcommand{\fpga} {FPGA}
+\newcommand{\fpgas} {FPGAs}
+\newcommand{\TODO}[1]{\textbf{\textcolor{blue}{#1}}}
+\newcommand{\ac}[1]{\textit{#1}}
+\newcommand{\languagetoto}[1]{\textbf{#1}}
+%% laissez laguagetoto, language est déjà déclaré dans une library quelque part
+
 \usepackage{hyperref}
 \hypersetup{
     bookmarks=true,         % show bookmarks bar?
@@ -27,251 +31,215 @@
     linkcolor=black,        % color of internal links (change box color with linkbordercolor)
     citecolor=magenta,        % color of links to bibliography
     filecolor=magenta,      % color of file links
-    urlcolor=blue           % color of external links
+    urlcolor=[rgb]{0,0,0.5}           % color of external links
 }
-\usepackage{breakurl}
-\usepackage[T1]{fontenc}
-\usepackage[nottoc, notlof, notlot]{tocbibind}
+
+% Pieds de page et en-tête
 \usepackage{fancyhdr}
-\usepackage{lastpage} 
-
 \pagestyle{fancy}
-
-
 \lhead{}
 \chead{}
-\rhead{} 
-
+\rhead{}
 \renewcommand{\headrulewidth}{0pt}
-
 \renewcommand{\footrulewidth}{0.4pt}
-
-\lfoot{System On Chip OpenSources}
-
+\lfoot{System-On-Chip adaptatif OpenSource}
 \cfoot{}
-
 \rfoot{Page \thepage}
+
 
 \begin{document}
 
 \begin{titlepage}
-  \centering
-  \vspace{7\baselineskip}
-  {\huge Compte-rendu de projet }\\
-  \vspace{1cm}
-  {\Huge{\bf Développement d'un System-On-Chip open-source }}\\
-  \vspace{1cm}
-  Encadrants :\\
-  {\bf Fernand LONE SANG}\\
-  {\bf Vincent NICOMETTE}\\
-  
-  \par
-  \normalfont
-  \vspace{1cm}
-  DUZAN Luc\\
-  \vspace{0.3cm}
-  FARACHE Gabriel\\
-  \vspace{0.3cm}
-  LONGO Matthieu\\
-  \vspace{0.3cm}
-  MICHAUD Clément\\
-  \vspace{1cm}
-  \par
-  {\tt duzan@etud.insa-toulouse.fr}\\
-  {\tt farache@etud.insa-toulouse.fr}\\
-  {\tt longo@etud.insa-toulouse.fr}\\
-  {\tt cmichaud@etud.insa-toulouse.fr}\\
-  \vspace{1cm}
-  4IR 2012-2013
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{INSA-logo.eps}
-  \end{figure}
-  
-  \vspace{3cm}
-  \vfill {\bf R\'esum\'e du projet}\medskip \\
+
+\centering
+{\Large {\bf Projet tutoré}}\\
+
+\vspace{30pt}
+
+{\huge System-On-Chip OpenSource adaptatif \\
+            grâce aux \fpgas{}}\\
+
+\vspace{30pt}
+
+\underline{Tuteurs :} \\
+\vspace{5pt}
+Fernand LONE-SANG \\
+Vincent NICOMETTE
+
+\vspace{30pt}
+
+\underline{Equipe :} \\
+\vspace{5pt}
+Luc DUZAN\\
+Gabriel FARACHE\\
+Matthieu LONGO\\
+Clément MICHAUD
+
+\vspace{5pt}
+
+\par
+{\tt duzan@etud.insa-toulouse.fr}\\
+{\tt farache@etud.insa-toulouse.fr}\\
+{\tt longo@etud.insa-toulouse.fr}\\
+{\tt cmichaud@etud.insa-toulouse.fr}\\
+
+\vspace{30pt}
+
+Accompagné de Sami HAMADOUCHE \\
+Tuteur pilotage management de projet innovant
+
+\vspace{30pt}
+
+\vfill {\bf Description}\medskip \\
   \fbox{
     \begin{minipage}{0.9\textwidth}
-      Dans notre projet tutoré, nous allons nous intéresser plus particulièrement au
-      \textit{Milkymist} SoC, qui est un SoC \textit{open-source}, c'est à dire que le code HDL qui le décrit
-      est libre de droit.  Ce SoC a été conçu pour être programmé sur un FPGA spécifique le
-      Virtex-4 XC4VLX25.  Notre but est d'adapter le code de ce SoC pour le rendre
-      compatible avec le Xilinx Spartan6 qui est utilisé à l'INSA de Toulouse.  Nous
-      allons aussi ajouter un module à \textit{Milkymist} permettant d'exploiter la propriété de
-      certains FPGA qui est de pouvoir être reprogrammé à la volée. C'est-à-dire que nous
-      allons permettre au système \textit{Milkymist} de pouvoir ajouter à chaud (sans redémarrer le
-      système) des périphériques (à partir de leurs descriptions structurelles) sur le FPGA
-      et de les connecter au SoC.
+Adapter l'architecture et le système d'exploitation du projet OpenSource \textit{Milkymist} sur la carte de développement Digilent \nexys{} et y ajouter une partie hardware reconfigurable à chaud.
     \end{minipage} 
   }
+
+\vspace{20pt}
+
+\vfill {\bf Objectifs}\medskip \\
+  \fbox{
+    \begin{minipage}{0.9\textwidth}
+Ajouter de la modularité au niveau matériel et augmenter la vitesse de traitement des systèmes embarqués.
+    \end{minipage} 
+  }
+  
+\vspace{50px}
+
+
+\begin{center}
+2012-2013
+\end{center}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.45]{logoINSA.jpg}
+\end{figure}
+
+
+\begin{center}
+\LaTeX
+\end{center}
+
 \end{titlepage}
 
+
 \tableofcontents
+
+\newpage
 
 \chapter*{Introduction} \addcontentsline{toc}{chapter}{Introduction}
 \input{intro-1}
 \newpage
 
-\chapter{Organisation}
+
+\chapter{Organisation et management de projet}
+
+\section{Organisation et méthode}
+\input{organisation-1}
+
+\section{Espace communautaire}
+\input{organisation-2}
+
+\section{Communication intra-équipe}
+\input{organisation-3}
+
 \newpage
 
-\chapter{Les aspects essentiels du projet}
+\chapter{Contexte du sujet}
+\section{Les puces \fpgas{} ou \english{Field-Programmable Gate Array}}
+\input{contexte-projet-1}
+
+\section{Les langages HDL}
+\input{contexte-projet-2}
+
+\section{Le système embarqué OpenSource \textit{Milkymist}}
+\input{contexte-projet-3}
+
 \newpage
 
-\section{Langage de description de circuits logiques}
 
-\subsection{Présentation de Verilog et VHDL}
-\input{langage-1} \newpage
+%%%%%%%%%
 
-\subsection{Les autres HDL existants}
-\input{langage-2} \newpage
+\chapter{Adaptation d'un système embarqué libre : \textit{Milkymist}}
 
-\subsection{Verilog VS VHDL}
-\input{langage-3} \newpage
+\section{Adaptation du système}
+\input{tentative-adaptation-1}
 
-\subsection{Le HDL de Milkymist : Migen}
-\input{langage-4} \newpage
-
-\section{Technologie de fabrication}
-
-\subsection{ASIC}
-\input{fpga-asic-1} \newpage
-
-\subsection{FPGA}
-\input{fpga-asic-2} \newpage
-
-\section{Le monde de l'\textit{open source} et son avancement sur les FPGA}
-\input{opensource-1} \newpage
-
-\chapter{Tentative de portage d'un \textit{System-on-Chip} libre : \textit{Milkymist}}
-\newpage
-
-\section{Portage du système}
-
-\subsection{La simulation}
-\input{portage-1} \newpage
-
-\subsection{La dure réalité}
-\input{portage-2} \newpage
-
-\section{Hardware à tester}
-
-\subsection{La PSRAM}
-\input{test-hardware-1} \newpage
-
-\subsection{Le totalité du système}
-\input{test-hardware-2} \newpage
-
-\section{La \textit{Partial Reconfiguration} (PR)}
-
-\subsection{Les différents types de PR possibles}
-\input{partial-reconfiguration-1} \newpage
-
-\subsection{\textit{PlanAhead} et l'incompatibilité avec la Spartan6}
-\input{partial-reconfiguration-2} \newpage
-
-\subsection{La tentative de diff based}
-\input{partial-reconfiguration-3} \newpage
+\section{La \english{Partial Reconfiguration} (PR)}
+\input{tentative-adaptation-2}
 
 \section{Bilan technique}
+\input{tentative-adaptation-3}
 
-\subsection{Les raisons de l'échec}
-\input{bilan-milkymist-1} \newpage
+\newpage
 
-\subsection{Réorientation vers une nouvelle solution from scratch}
-\input{bilan-milkymist-2} \newpage
 
 \chapter{Vers un nouveau SoC}
 
-\section{De nouveaux objectifs}
+\section{Réalisations matérielles}
+\input{nouveau-soc-2}
 
-\subsection{Déportation du PR vers la Virtex5}
-\input{nouveaux-objectifs-1} \newpage
+\section{Développement d'un noyau minimal}
+\input{nouveau-soc-3}
 
-\subsection{Linkage de la Virtex5 à la Nexys3}
-\input{nouveaux-objectifs-2} \newpage
+\section{Externalisation du PR}
+\input{nouveau-soc-1}
 
-\section{Réalisations hardware}
+\newpage
 
-\subsection{Rassemblement d'IPs}
-\input{realisations-hardware-1} \newpage
 
-\subsection{Création de nouveaux modules}
-\input{realisations-hardware-2} \newpage
 
-\section{Développement un noyau ultra léger}
+\chapter{Bilan et acquis techniques}
 
-\subsection{Les spécifications}
-\input{realisations-software-1} \newpage
+\section{Un projet riche en expériences}
+\input{bilan-1}
 
-\subsection{Le BIOS}
-\input{realisations-software-2} \newpage
+\section{Les évolutions futures}
+\input{bilan-2}
 
-\subsection{Le kernel}
-\input{realisations-software-3} \newpage
 
-\subsection{Une API système simple}
-\input{realisations-software-4} \newpage
+\newpage
 
-\subsection{Un pseudo-terminal}
-\input{realisations-software-5} \newpage
+\chapter*{Conclusion} \addcontentsline{toc}{chapter}{Conclusion}
+\input{conclu}
+ 
+\newpage
 
-\subsection{Le driver pour le VGA}
-\input{realisations-software-6} \newpage
+\bibliographystyle{plainnat}
+\begin{thebibliography}{1}
 
-\subsection{Le driver pour l'Ethernet}
-\input{realisations-software-7} \newpage
+\bibitem{VHDL_WIKI}
+VHDL. \textit{Wikipedia} \textbf{[en ligne]}. (Modifié le 4 dÃ©cembre 2012). Disponible sur : \url{http://fr.wikipedia.org/w/index.php?title=VHDL\&oldid=86139857}. (Consulté le 20 janvier 2013).
 
-\chapter*{Bilan final}
-\addcontentsline{toc}{chapter}{Bilan final}
+\bibitem{IEEE_VHDL_87}
+1076-1987 - IEEE Standard VHDL Language Reference. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1076-1987.html} (Consulté le 20 janvier 2013).
 
-\section{Lessons learned}
+\bibitem{IEEE_VHDL_93}
+1076-1993 - IEEE Standard VHDL Language Reference. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1076-1993.html} (Consulté le 20 janvier 2013).
 
-\subsection{En terme technique}
-\input{lesson-learned-1}
+\bibitem{IEEE_VHDL}
+P1076 - VHDL Analysis and Standardization Group. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/develop/wg/P1076.html} (Consulté le 20 janvier 2013).
 
-\subsection{En terme d'échec}
-\input{lesson-learned-2}
+\bibitem{IEEE_VERILOG_1995}
+1364-1995 - IEEE Standard Hardware Description Language Based on the Verilog(R) Hardware Description Language \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1364-1995.html} (Consulté le 20 janvier 2013).
 
-\subsection{En terme d'organisation/d'implication}
-\input{lesson-learned-3}
+\bibitem{IEEE_VERILOG_2001} 
+1364-2001 - IEEE Standard Verilog Hardware Description Language. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1364-2001.html} (Consulté le 20 janvier 2013).
 
-\section{Future works}
+\bibitem{IEEE_VERILOG_2005}
+1364-2005 - IEEE Standard for Verilog Hardware Description Language. \textit{IEEE Standard Association} \textbf{[en ligne]}. Disponible sur \url{http://standards.ieee.org/findstds/standard/1364-2005.html} (Consulté le 20 janvier 2013).
 
-\subsection{ICAP}
-\input{future-works-1}
+\bibitem{BOURDEAUDUCQ}
+BOURDEAUDUCQ, Sébastien. \textit{A performance-driven SoC architecture for video synthesis}. \textbf{[en ligne]} Master of Science Thesis in System-on-Chip Design, Stockholm, Royal Institute of Technology, 2010. 109. Disponible sur : \url{http://milkymist.org/3/thesis/thesis.pdf} (Consulté le 01/01/2013)
 
-\subsection{L'intégration du driver Ethernet au kernel}
-\input{future-works-2}
+\bibitem{LATTICE}
+Lattice semiconductor. \textit{LatticeMico32 architecture} \textbf{[en ligne]}. Disponible sur : \url{http://www.latticesemi.com/products/intellectualproperty/ipcores/mico32/index.cfm}. (Consulté le 19 janvier 2013).
 
-\subsection{Établir un protocole de communication entre les cartes}
-\input{future-works-3}
+\end{thebibliography}
 
-\subsection{Tests de crypto soft VS hard}
-\input{future-works-4}
-
-%\appendix
-
-% \chapter{Code des fichiers modifiés}
-
-% \section{global.h}
-% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/global.h}
-% \newpage
-
-% \section{global.c}
-% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/global.c}
-% \newpage
-
-% \section{fonctions.h}
-% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/fonctions.h}
-% \newpage
-
-% \section{fonctions.c}
-% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/fonctions.c}
-% \newpage
-
-%  \section{main.c}
-% \inputminted[linenos=true,frame=single,fontsize=\scriptsize]{c}{../projet_destijl/superviseur/main.c}
+\addcontentsline{toc}{chapter}{Table des figures}
+\listoffigures
 
 \end{document}
-

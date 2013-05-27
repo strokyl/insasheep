@@ -16,21 +16,22 @@ LOT=$(TEX:.tex=.lot)
 
 all: $(PDF)
 
-main.dvi: main.tex
-	latex -shell-escape main.tex
-	latex -shell-escape main.tex
+#main.dvi: main.tex
+#	latex -shell-escape main.tex
+#	latex -shell-escape main.tex
 
-%.dvi: %.tex
-	latex -shell-escape $<
+#%.dvi: %.tex
+#	latex -shell-escape $<
 
-%.ps: %.dvi
-	dvips $<
+#%.ps: %.dvi
+#	dvips $<
 
-%.pdf: %.ps
-	ps2pdf $<
+#%.pdf: %.ps
+#	ps2pdf $<
 
-#%.pdf: %.tex
-#	pdflatex -shell-escape $<
+%.pdf: %.tex
+	pdflatex -shell-escape $<
+	pdflatex -shell-escape $<
 
 clean:
 	rm -f *.aux *.pdf $(AUX) $(DVI) $(PS) $(PDF) $(AUX) $(LOG) $(SNM) $(OUT) $(NAV) $(TOC) $(BBL) $(BLG) $(LOF) $(LOT) *~
@@ -40,5 +41,9 @@ open:
 
 read:
 	evince main.pdf &
+
+tar:	clean
+	tar cvf ../rapport.tar ../rapport/
+	gzip ../rapport.tar
 
 .PHONY: clean

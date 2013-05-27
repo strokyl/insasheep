@@ -1,0 +1,26 @@
+\subsection{En terme technique}
+
+Malgré la difficulté de réalisation de ce projet et le manque de temps pour le développer complétement, les acquis techniques des membres sont conséquents.\\
+Ce projet a permis à chacun d'appronfondir grandement sa compréhension des \fpgas{} et leur contenu, c'est-à-dire tout ce que l'on trouve à l'intérieur. On peut citer les \english{logic-blocks}, les \english{I/O blocks}, les blocs de mémoire internes, les arbres d'horloge.\\
+La \english{partial reconfiguration} a également permis d'aller plus loin sur la programmation des \fpgas{}, leur configuration interne ainsi que le fonctionnement de la norme JTAG qui permet le débogage du matériel. D'ailleurs, le développement d'un outil JTAG a fortement aidé à sa compréhension.\\
+
+La \english{partial reconfiguration} est une technologie très récente qui a été largement étudiée durant ce projet. Ce savoir pourra tout à fait être réutilisé pour un autre projet ou plus tard dans une entreprise. Les différentes méthodes existantes ont été abordées ainsi que d'autres méthodes développées à partir de la méthode \english{difference-based}, publiées sur internet par des doctorants.\\
+
+Le projet est aussi passé par l'apprentissage des fonctionnalités de la suite de logiciels proposée par \brand{Xilinx} pour programmer leurs \fpgas{}.
+ISE, l'éditeur de code et gestionnaire de projet et PlanAhead, utile pour le mappage des \english{pins} du \fpga{} et pour le PR, sont des outils très complexes qui demanderaient plusieurs années pour être entièrement maîtrisés. Nous sommes aujourd'hui capables d'instancier un projet de \english{partial reconfiguration} avec PlanAhead ou même d'utiliser les outils \brand{Xilinx} en ligne de commande pour une compilation sous forme de script.\\
+En plus de cela, le fonctionnement des périphériques d'un système tels qu'une carte graphique, un MMU, un processeur avec une architecture Harvard paraissait flou pour certains. Ce projet a finalement amélioré leur compréhension de ce matériel et du fonctionnement global du système. Cette compréhension n'a pu être vraiment compléte qu'après avoir vu les éléments de base d'un noyau de système d'exploitation.\\
+
+La norme du bus \textit{Wishbone} a largement été abordée tout au long du projet. Par ailleurs, la documentation associée est très bien organisée et les chronogrammes présentant chaque opérations permettent aisément de comprendre le fonctionnement de chacunes d'elles et ainsi de créer des périphériques \english{Wishbone-compliant}.\\
+
+Le nouveau noyau a été une partie intéressante dans le projet car elle reflète à plus petite échelle l'agencement et le fonctionnement d'un noyau Linux. De plus, le développement d'un tas pour l'allocation dynamique, des handlers d'interruptions et des appels systèmes est une chose très importante dans la compréhension des systèmes d'exploitation.
+
+\subsection{En terme de difficultés rencontrées}
+
+Nous avons fait face à de nombreux problèmes lors de la réalisation du projet. La principale difficulté a été le découragement face à un projet de grande ampleur sur lequel nous avons passé un temps considérable. Nous avons dû adapter un projet déjà existant dont nous ne maîtrisions pas tous les tenants. De fait, le débogage des parties logicielle et matérielle a été fastidieux. Pour la partie système, nous n'avions pas la possibilité de faire un débogage précis à cause du non-fonctionnement des \texttt{printf}. De même, pour la partie matérielle, nous avons dû nous familiariser avec un langage de programmation que nous ne connaissions pas (\textit{Verilog}).\\
+Cependant, ces difficultés nous ont permis de savoir comment réagir lorsque ces problèmes surviennent (manque de motivation, découragement, prise en main d'un projet déjà existant). Cela nous permettra à l'avenir de ne pas reproduire les mêmes erreurs mais surtout de cibler et de mettre des priorités de traitement sur les problèmes rencontrés.
+
+\subsection{En terme d'organisation}
+
+Bien que le projet ne soit pas arrivé à terme, nous avons pu tirer des leçons quant à l'organisation. Au début du projet, nous ne nous rendions pas compte de la charge de travail effective. Les objectifs n'ont pas été énoncés assez clairement. Il s'agissait plutôt d'une liste de tâches à réaliser sans contraintes temporelles.\\
+Nous avons cependant été efficaces au niveau de l'organisation des réunions avec les tuteurs et les membres du groupe. Nous nous réunissions une à deux fois par semaine pour faire un état du projet, discuter de nos problèmes, réfléchir à des solutions et réorganiser les tâches du projet.
+
