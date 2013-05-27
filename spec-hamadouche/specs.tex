@@ -1,0 +1,217 @@
+\documentclass[a4paper]{article}
+\usepackage{anysize}
+\marginsize{3cm}{3cm}{2cm}{2cm}
+\usepackage[latin9]{inputenc}
+\usepackage[french]{babel}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[final]{pdfpages} 
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand{\TODO}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+
+\begin{titlepage}
+\begin{center}
+{\Large Projet tutoré}\\
+\vspace{30pt}
+{\huge System-On-Chip open source adaptatif \\
+			grâce au FPGA }\\
+\vspace{30pt}
+{\large \underline{Tuteurs :} \\
+Fernand LONE-SANG \\
+Vincent NICOMETTE}
+\end{center}
+\begin{center}
+\underline{Equipe :} \\
+Luc DUZAN\\
+Gabriel FARACHE\\
+Matthieu LONGO\\
+Clément MICHAUD
+\end{center}
+\begin{center}
+Accompagné de Sami HAMADOUCHE \\
+Tuteur pilotage management de projet innovant
+\end{center}
+\vspace{30px}
+\underline{Description :} Adapter l'architecture et le système d'exploitation open source Milkymist sur la carte de développement Digilent Nexys3 et y ajouter une partie hardware reconfigurable à chaud.\\\\
+\underline{Objectif :} Ajouter de la modularité au niveau matériel et augmenter la vitesse de traitement des systèmes embarqués.\\
+\vspace{70px}
+\begin{center}
+2012-2013 
+\end{center}
+\begin{center}
+\LaTeX
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Trombinoscope}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{trombinoscope.png}
+\end{figure}
+
+\newpage
+
+\section{Présentation de l'équipe}
+
+%\includegraphics[scale=0.6, page=1]{cv.pdf}
+%\includegraphics[scale=0.6, page=2]{cv.pdf}
+
+\newpage
+
+\section{Spécifications techniques}
+
+Le système que nous allons développer devra s'adapter au matériel de la carte Digilent Nexys3 et devra faire fonctionner un noyau linux.
+Il devra être capable, {\it in fine}, à partir d'une bibliothèque de matériels, de charger un ou plusieurs d'entre eux dans sa zone reconfigurable pour exécuter la fonctionnalité associée et renvoyer le résultat au processeur.
+
+\subsection{Spécifications détaillées}
+
+1/ Être capable d'exécuter un code compilé et utiliser les librairies standards d'un système Linux.\\
+
+2/ Associer au système une zone reconfigurable à chaud dans laquelle il est possible de charger des modules matériels.\\
+
+{\it Un module matériel est une architecture matérielle developpée dans un langage de description matériel, tel que VHDL ou Verilog, faisant partie d'une architecture globale et pouvant être remplacer par une autre.}\\
+
+3/ Créer une bibliothèque de modules que l'on peut charger indépendamment les uns des autres.\\
+
+\newpage
+
+\section{Architecture du projet initial Milkymist}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{milkymist_architecture.png}
+\end{figure}
+
+\newpage
+
+\section{Travail à fournir}
+Le système de base que nous allons essayer d'adapter est le système Milkymist qui comprend une architecture matérielle développée en langage de description matériele Verilog et un système d'exploitation fondé sur le noyau Linux.\\
+
+La carte Milkymist a pour vocation primaire de faire du traitement multimédia tant audio que vidéo, c'est pourquoi la carte est dotée d'entrées et sorties audio et video telles que du VGA, des ports MIDI et des prises jack. Elle dispose d'une puce FPGA \textit{Spartan 6} de l'entreprise Xilinx, d'un petit bloc de 128 MB de RAM, 32 MB de mémoire flash, d'une interface Ethernet et série pour communiquer avec l'extérieur et d'un lecteur de carte SD.\\
+
+La carte dont dispose l'INSA, la Digilent Nexys3, comprend également une \textit{Spartan 6} ainsi qu'un bloc de 16 MB de RAM, une interface de sortie VGA, un connecteur USB et un port Ethernet.\\
+
+Le travail à effectuer va se découper en deux grandes parties. Premièrement, l'adaptation du software pour que tout ce qui est inutile soit supprimé et que ce qui manque soit ajouté comme les drivers des périphériques non présents sur la Milkymist. Deuxièmement, la création de la partie adaptable à chaud. Il faudra faire en sorte d'instancier un nouveau matériel à un endroit donné du FPGA en interrompant uniquement cette partie et laissant donc fonctionner le système global.\\
+
+\TODO{I/ Adapter le système d'exploitation Linux de la Milkymist.}\\
+
+\TODO{II/ Créer la zone reconfigurable à chaud.}\\
+
+Les deux sections suivantes détailleront ces deux parties.
+
+\subsection{Adapter le système d'exploitation Linux de la Milkymist.}
+Cette partie nécessite une compréhension profonde du fonctionnement des ordinateurs et systèmes embarqués ainsi que du processus de démarrage de ceux-ci.\\
+\\
+Le démarrage du système passe toujours par un programme appellé le BIOS. C'est un code qui se trouve en général à une adresse fixe de la mémoire du système afin que lorsqu'on démarre celui-ci, il soit capable de trouver le BIOS immédiatement puisqu'il n'a alors très souvent aucune fonctionnalité à ce moment-là.\\
+\\
+\TODO{1/ Il faudra chercher où se trouve le BIOS, c'est-à-dire, trouver l'adresse fixe où le matériel va aller le chercher pour ensuite charger un BIOS qui permette de commencer à ajouter des fonctionnalités au système.}\\
+\\
+\TODO{2/ On reprendra le BIOS déjà existant dans Milkymist et nous l'adapterons pour obtenir un invité de commande qui nous permettra de pouvoir communiquer avec le sytème.}\\
+\\
+En parallèle, il est nécessaire de modifier le matériel correspondant dans le FPGA. Pour exécuter un programme, un système a besoin de mémoire volatile ou non volatile. Malheureusement, les interfaces entre la mémoire de Milkymist tant de la RAM que de la flash et celles de la Nexys3 sont bien différentes.\\
+\\
+\TODO{3/ Créer une interface matériel qui permettra de communiquer avec la mémoire flash présente sur la Nexys3. Il faudra également utiliser de la RAM pour exécuter le BIOS. Pour ce faire nous allons instancier une RAM en FPGA qui a pour inconvénient d'être très petite.}\\
+\TODO{3.1/ Créer l'interface pour la flash.}\\
+\TODO{3.2/ Créer une petite RAM en FPGA pour tester le BIOS.}\\
+\\
+Pour revenir au système logiciel nous pourrions tout à fait implémenter toutes les fonctions que nous désirons dans le BIOS mais pour des raisons de modularité il est préférable de pouvoir charger un système beaucoup plus évolué qui gérera bien mieux tous les drivers et qui permettra une bien plus grande flexibilité. C'est pourquoi, il est nécessaire à partir du BIOS de charger ce système qui dans notre cas sera un noyau Linux que l'équipe de Milkymist a créé à partir d'un noyau orienté système embarqué.\\
+Le but ultime du BIOS sera, ici, de recopier le code du système (peu importe où il se trouve) dans la RAM.\\
+\\
+\TODO{4/ Charger ce système d'exploitation au bon endroit en RAM à partir du BIOS pour qu'il puisse s'éxécuter.}\\
+\\
+Dans Milkymist, le système d'exploitation pouvait être chargé depuis la carte SD ou l'interface Ethernet. Nous nous limiterons pour l'instant à le stocker dans la flash dans la mesure du possible et de le copier à partir de là dans la RAM.\\
+\\
+Une fois que le système fonctionnera correctement, nous pourrons alors commencer à développer les périphériques que nous voulons ajouter au système de base. Il peuvent aller d'un GPIO jusqu'à nos propres périphériques tels qu'une carte son, une carte graphique ou n'importe quel autre.\\
+Il faudra en même temps développer les drivers correspondants.\\
+\\
+\TODO{5/ Développer un périphérique GPIO pour pouvoir tester la zone adaptable.}\\
+\\
+Nous allons également essayer d'adapter l'affichage en VGA même si ce n'est pas une priorité. En effet, le convertisseur numérique analogique associé à l'interface VGA est de 8 bits par couleur sur la Milkymist alors qu'il est un peu plus limité sur la Nexys3. Il est de 2 ou 3 bits suivant la couleur.\\
+\\
+\TODO{6/ Adapter le driver VGA.}
+
+\newpage
+
+\subsection{Créer la zone reconfigurable à chaud.}
+
+Cette partie est un peu plus délicate puisqu'elle obligera à utiliser des outils très complexes et performants permettant de manipuler une technologie très récente (2009), chez Xilinx on l'appelle {\it Partial Reconfiguration}.\\
+
+La première des tâches très importante va être de comprendre le fonctionnement de cette technologie et surtout de savoir l'utiliser. Pour cela nous allons créer un petit test qui consistera à calculer des suites complexes dont l'opération dépendra du rang.\\
+
+Exemple : 
+	$$ 
+	u_{n+1}=\left\{
+		\begin{array}{ll}
+			u_n+1 & \mbox{si } n<=10 \\
+			u_n+7 & \mbox{si } n>10 \mbox{ et } n<=30 \\
+			u_n-3 & \mbox{si } n>30
+		\end{array}
+		\right.
+	$$
+\\
+\TODO{1/ Instancier ce problème sur le FPGA avec du hardware reconfigurable pour appréhender la reconfiguration à chaud.}\\
+
+Une fois que ce problème sera résolu, nous allons créer une architecture matérielle qui gérera indépendamment du reste cette zone reconfigurable à chaud. Il faudra également développer le driver associé. La partie reconfigurable comprendra donc, une interface entre le bus de donnée (bus Wishbone) de la Milkymist et la zone allouée du FPGA. Cette interface devra pouvoir télécharger depuis la flash le code du matériel à instancier. Nous appelons ce code représentant une architecture, une instance de la zone reconfigurable ou un module matériel. Dans un premier temps, nous nous limiterons à l'exécution d'une instance unique à un temps \textit{t}.\\
+
+\TODO{2/ Créer l'interface de communication entre processeur, mémoire flash et zone reconfigurable.}\\
+\TODO{2.1/ Créer la partie matérielle en Verilog.}\\
+\TODO{2.2/ Communiquer avec cette zone reconfigurable à partir du BIOS (en attendant que le système fonctionne).}\\
+
+Une fois que le système fonctionnera, il faudra créer le driver correspondant pour le linux embarqué que nous exécutons.\\
+
+\TODO{3/ Créer le driver linux qui pilotera la zone reconfigurable.}\\
+
+Finalement, quand cette partie fonctionnera parfaitement, nous commencerons à développer une bibliothèque d'instances dans la limite du temps qu'il nous restera. Cette librairie devrait compter au moins une instance de cryptographie (probablement AES).\\
+
+\TODO{4/ Démarrer le codage d'un librairie et l'interfacage de cette librairie avec le système d'exploitation.}
+
+\newpage
+
+\section{Management du projet}
+\subsection{Organisation et méthode de conduite du projet}
+
+Tout d'abord, la recherche documentaire a permis de fixer les spécifications techniques et les limites du projets. Par la suite, en prenant un peu de recul on s'aperçoit que ce projet peut facilement être partagé en deux grandes parties qu'il est aisé de développer en parallèle. C'est pourquoi nous avons choisi cette méthode de travail.
+Cependant, nous avons aussi du adopté en partie la méthode Agile en adaptant le travail de certaines personnes en fonction des besoins essentiels de l'équipe à court terme.
+
+
+\subsection{Organisation hiérarchique de l'équipe}
+
+L'équipe est composée de quatre personnes : Luc DUZAN, Matthieu LONGO, Gabriel FARACHE et Clément MICHAUD.\\
+Ce dernier a été désigné chef de projet par les membres de l'équipe à la fin de la rédaction du projet documentaire. Puis à la suite d'un cours de Conduite de Projet donné par M. HAMADOUCHE, Gabriel FARACHE a été choisi comme modérateur de l'équipe.
+
+\subsection{Stockage communautaire}
+
+Le projet, qu'on parle des documents écrits ou des codes sources et outils, est partagé entre tous les membres de l'équipe sur un serveur Git hébergé par Github. Cela permet d'avoir des versions toujours à jour des fichiers que chacun modifie. L'espace de stockage est largement suffisant pour stocker tout le projet et s'échanger des fichiers volumineux. 
+
+
+\subsection{Communication intra équipe}
+
+L'équipe utilise principalement l'email, moyen efficace et rapide de communiquer qui permet de transmettre du texte comme des données (dans une limite raisonnable) instantanément.
+Nous organisons régulièrement des rendez-vous pour synchroniser nos états d'avancement et définir les nouvelles répartitions des tâches. Nous avons d'ailleurs mis en place un tableau des "restes à faire" proposé par M. HAMADOUCHE.
+
+\newpage
+
+\section{Contact}
+\vspace{30pt}
+Vous pouvez contacter les membres de cette équipe à leurs adresses respectives.\\
+
+\begin{tabular}{ll}
+Luc DUZAN & duzan@etud.insa-toulouse.fr \\
+Gabriel FARACHE &  farache@etud.insa-toulouse.fr\\
+Matthieu LONGO & longo@etud.insa-toulouse.fr  \\ 
+Clément MICHAUD & cmichaud@etud.insa-toulouse.fr
+
+\end{tabular}
+\end{document}
